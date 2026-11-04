@@ -241,10 +241,10 @@
       },
       "neediu": {
         "badge": "B2C · Marketplace",
-        "tagline": "Servizi a domicilio, collegamento intelligente",
-        "description": "Connette privati e professionisti con i migliori fornitori di servizi a domicilio, in base alla localizzazione e alle recensioni verificate.",
+        "tagline": "Servizi di prossimità, abbinamento intelligente con professionisti",
+        "description": "Mette in contatto privati e professionisti di servizi di prossimità, in base alla posizione e alle recensioni pubblicate dopo ogni servizio.",
         "capability": "Orchestrare una rete di prestatori indipendenti",
-        "keywords": "rete di prestatori · prenotazione istantanea · recensioni verificate · vicinanza"
+        "keywords": "rete di professionisti · servizi di prossimità · prenotazione online · recensioni dopo il servizio"
       },
       "movtoo": {
         "badge": "B2C · Trasporto",
@@ -1244,17 +1244,18 @@
         "orgs": "Studi legali, family office e direzioni legali (licenza white label), PMI e imprenditori che firmano contratti senza ufficio legale interno."
       },
       "neediu": {
-        "longDesc": "Mette in contatto i privati con i migliori fornitori di servizi domestici. Pulizie, giardinaggio, fai-da-te, babysitting: un abbinamento intelligente basato sulla posizione e sulle recensioni verificate.",
+        "longDesc": "Mette in contatto i privati con professionisti di servizi di prossimità: abbinamento in base alla posizione, con recensioni pubblicate dopo ogni servizio.",
         "audience": "Privati, professionisti",
         "features": [
-          "Abbinamento in tempo reale",
-          "Fornitori verificati e valutati",
+          "Abbinamento in base alla posizione",
+          "Profili esaminati dal team prima dell’attivazione",
+          "Assicurazione di responsabilità civile professionale richiesta ai prestatori",
+          "Recensioni pubblicate dopo ogni servizio",
           "Pagamento sicuro integrato",
-          "Monitoraggio missione in diretta",
-          "Assicurazione della prestazione inclusa",
-          "Copertura Svizzera ed Europa"
+          "Monitoraggio della missione in tempo reale",
+          "Apertura progressiva, città per città"
         ],
-        "need": "Trovare un prestatore di fiducia a domicilio resta lento e incerto: elenchi obsoleti, recensioni non verificate, disponibilità opache.",
+        "need": "Trovare un professionista di fiducia vicino a casa resta lento e incerto: elenchi obsoleti, recensioni non verificate, disponibilità opache.",
         "skills": [
           "Sviluppo del concept",
           "Studio di fattibilità",
@@ -1266,7 +1267,7 @@
           "Sviluppo tecnico",
           "Strategia di lancio"
         ],
-        "orgs": "Assicurazioni e banche (reti di riparatori, assistenza), Sanità (cure a domicilio), Commercio & Servizi (installazione, post-vendita), collettività."
+        "orgs": "Assicurazioni e banche (reti di riparatori, assistenza), Sanità (cure di prossimità), Commercio & Servizi (installazione, post-vendita), collettività."
       },
       "primiom": {
         "longDesc": "Reinventa le transazioni immobiliari ponendo il venditore al centro del processo di acquisto e vendita. Valutazione precisa, analisi di mercato in tempo reale e accompagnamento personalizzato dalla A alla Z.",
@@ -1464,8 +1465,8 @@
         "status": "Limitato, solo su invito"
       },
       "neediu": {
-        "headline": "L'abbinamento intelligente per i servizi domestici.",
-        "p1": "neediu mette in contatto i privati con fornitori qualificati per tutte le esigenze domestiche: pulizie, giardinaggio, fai-da-te, assistenza all'infanzia e altro ancora.",
+        "headline": "L’abbinamento intelligente per i servizi di prossimità.",
+        "p1": "neediu mette in contatto i privati con professionisti per le loro esigenze di prossimità.",
         "p2": "L'algoritmo analizza disponibilità, posizione e valutazioni per suggerire il fornitore ideale in pochi secondi.",
         "market": "B2C · Marketplace",
         "zone": "Regione parigina → Francia",
@@ -1738,7 +1739,8 @@
     "col5Title": "Seguici",
     "taglines": "Built to Last · Rare by selection",
     "col2Verify": "Verificare un certificato",
-    "footerCraftFrameDeliver": "Inquadrare e realizzare"
+    "footerCraftFrameDeliver": "Inquadrare e realizzare",
+    "storeTrademarks": "App Store è un marchio di Apple Inc. Google Play è un marchio di Google LLC."
   },
   "gradingSystem": {
     "meta": {
@@ -5542,11 +5544,11 @@
     "sectionDpn": "(01)",
     "h1": "Informativa sulla Protezione dei Dati, Aegryn neediu",
     "disclaimer": "Disclaimer: La presente informativa sulla protezione dei dati è una traduzione generata dall'intelligenza artificiale, fornita a scopo puramente informativo. In caso di divergenze o incongruenze, prevarrà la versione inglese.",
-    "updated": "Ultimo aggiornamento: 01/03/2026",
+    "updated": "Ultimo aggiornamento: 04/11/2026",
     "dpn": {
       "intro": {
         "h": "Introduzione",
-        "p1": "neediu è una piattaforma che consente agli utenti di identificarsi e connettersi rapidamente con professionisti o privati di fiducia che offrono assistenza per le esigenze domestiche nella loro area. Poiché attribuiamo grande importanza alla protezione dei vostri dati e alla vostra privacy, abbiamo redatto questa informativa per spiegare cosa facciamo con i vostri dati quando utilizzate la nostra piattaforma.",
+        "p1": "neediu è una piattaforma che consente agli utenti di identificarsi e connettersi rapidamente con professionisti o privati di fiducia che offrono servizi di prossimità nella loro area. Poiché attribuiamo grande importanza alla protezione dei vostri dati e alla vostra privacy, abbiamo redatto questa informativa per spiegare cosa facciamo con i vostri dati quando utilizzate la nostra piattaforma.",
         "p2": "La presente informativa copre esclusivamente il trattamento dei dati relativo alla nostra piattaforma. Il nostro obiettivo è garantire un'adeguata protezione dei dati personali in conformità a tutte le leggi sulla protezione dei dati applicabili, incluse la Legge federale svizzera sulla protezione dei dati (LPD) e il Regolamento generale sulla protezione dei dati (GDPR).",
         "p3": "In Svizzera, la protezione dei vostri dati si basa in particolare sulla Legge federale del 25 settembre 2020 sulla protezione dei dati (LPD) e sull'Ordinanza federale del 31 agosto sulla protezione dei dati (OPD). La nostra informativa sulla protezione dei dati e le nostre pratiche sono allineate con le disposizioni legislative contenute in tale legislazione.",
         "p4": "Sebbene facciamo del nostro meglio per semplificare la nostra informativa, la difficoltà di comprensione deriva dal linguaggio specifico del quadro giuridico. Per questo motivo, abbiamo raggruppato le principali definizioni per facilitare la comprensione dell'informativa, tratte dalla LPD.",
@@ -5607,9 +5609,16 @@
         "economicH": "Dati economici",
         "economicP": "Metodo di pagamento, importi pagati o ricevuti, cronologia delle transazioni, commissioni applicabili, indirizzo di fatturazione, coordinate bancarie per i pagamenti. I dati relativi ai metodi di pagamento sono trattati esclusivamente dai nostri fornitori terzi, non trattiamo numeri di carta di credito né codici CVC.",
         "internetH": "Dati Internet e di connessione",
-        "internetP": "Indirizzo IP, informazioni sul vostro provider Internet e sul sistema operativo del dispositivo, URL di riferimento, browser utilizzato, data e ora di accesso, contenuti consultati.",
+        "internetP": "Indirizzo IP, informazioni sul vostro provider Internet e sul sistema operativo del dispositivo, URL di riferimento, browser utilizzato, data e ora di accesso, contenuti consultati. Quando l'app incontra un errore, viene registrato un rapporto tecnico (schermata interessata, messaggio di errore, sistema e versione dell'app, identificativo dell'account) per correggere il problema; viene conservato per sei mesi.",
         "otherH": "Altri dati",
-        "otherP": "Tipo e portata dell'incarico, dimensioni o condizioni dell'abitazione o dei locali, data e ora desiderate, foto o descrizioni che chiariscono la natura dell'incarico, dati identificativi nell'ambito della procedura KYC."
+        "otherP": "Tipo e portata dell'incarico, dimensioni o condizioni dell'abitazione o dei locali, data e ora desiderate, foto o descrizioni che chiariscono la natura dell'incarico, dati identificativi nell'ambito della procedura KYC, attestato di assicurazione di responsabilità civile professionale dei Fornitori (documento, data di validità, decisione di convalida).",
+        "economicRewards": "Questo trattamento include anche i dati relativi a crediti, buoni sconto e programma di presentazione di neediu Rewards: crediti, buoni ottenuti, utilizzati o scaduti e presentazioni associate al vostro codice personale.",
+        "locationH": "Dati di localizzazione",
+        "locationP": "Posizione GPS del vostro dispositivo, utilizzata solo quando la autorizzate nelle impostazioni del telefono: individuazione dell'indirizzo dell'intervento, ricerca di prestatori disponibili nelle vicinanze, calcolo del percorso e dell'ora di arrivo e allerta SOS. Per un Fornitore, la posizione è condivisa con il Cliente interessato solo durante una missione con stato «in viaggio» (inviata al massimo ogni 5 minuti, o dopo uno spostamento di circa 300 metri) e cessa all'arrivo. Per ricevere le richieste vicine, un Fornitore disponibile con l'app aperta invia inoltre la propria posizione a neediu all'apertura, a ogni nuova richiesta e al massimo ogni 30 minuti; non è visibile ad alcun altro utente e viene utilizzata solo se risale a meno di un'ora. La vostra ultima posizione nota serve a determinare la città e il raggio d'azione; non viene venduta né utilizzata a fini pubblicitari.",
+        "trustedH": "Dati relativi ai vostri contatti di fiducia",
+        "trustedP": "Se registrate un contatto di fiducia (nome e numero di telefono), queste informazioni sono conservate nel vostro account per permettervi di chiamarlo o di inviargli, dal vostro telefono, un SMS con la vostra posizione. neediu non invia alcun SMS a questo contatto e non lo contatta. Spetta a voi informarlo che figura tra i vostri contatti di fiducia e ottenere il suo consenso.",
+        "waitlistH": "Dati di preiscrizione dei professionisti",
+        "waitlistP": "Se vi preiscrivete come professionista sulla lista d'attesa di neediu: nome, cognome, indirizzo e-mail, numero di telefono, nome della società e numero di partita IVA, paese, città, servizi offerti, lingua della pagina, data e ora del vostro consenso e della conferma della vostra iscrizione. Questi dati sono raccolti da Aegryn, titolare del trattamento, sulla base del vostro consenso."
       },
       "sensitive": {
         "h": "Cosa accade con i dati sensibili?",
@@ -5621,7 +5630,9 @@
       },
       "why": {
         "h": "Perché trattiamo i vostri dati?",
-        "p": "Trattiamo i vostri dati personali per consentirvi di accedere alle funzionalità della nostra piattaforma e garantire la corretta erogazione dei servizi offerti. Ciò include in particolare la creazione e la gestione del vostro account, la messa in relazione tra Clienti e Fornitori di Servizi, l'elaborazione dei pagamenti, la trasmissione di messaggi e la visualizzazione di informazioni pertinenti. Trattiamo anche i vostri dati per comunicare con voi, rispondere alle vostre richieste, esercitare i vostri diritti e generare statistiche di utilizzo utili al miglioramento della Piattaforma. Infine, trattiamo i vostri dati per rispettare le leggi, le direttive e le raccomandazioni delle autorità applicabili."
+        "p": "Trattiamo i vostri dati personali per consentirvi di accedere alle funzionalità della nostra piattaforma e garantire la corretta erogazione dei servizi offerti. Ciò include in particolare la creazione e la gestione del vostro account, la messa in relazione tra Clienti e Fornitori di Servizi, l'elaborazione dei pagamenti, la trasmissione di messaggi e la visualizzazione di informazioni pertinenti. Trattiamo anche i vostri dati per comunicare con voi, rispondere alle vostre richieste, esercitare i vostri diritti e generare statistiche di utilizzo utili al miglioramento della Piattaforma. Infine, trattiamo i vostri dati per rispettare le leggi, le direttive e le raccomandazioni delle autorità applicabili.",
+        "p2": "I dati di localizzazione servono anche alla sicurezza delle persone (allerta SOS) e al calcolo dei percorsi; le notifiche (push e nell'app) vi sono inviate nella lingua scelta nel vostro account.",
+        "p3": "Utilizziamo i dati di preiscrizione esclusivamente per confermare la vostra iscrizione via e-mail (doppia conferma), avvisarvi quando neediu aprirà nella vostra città, invitarvi ad attivare il vostro account e ricontattarvi in merito alla vostra preiscrizione. La preiscrizione è senza impegno, non costituisce accettazione del vostro profilo e non garantisce alcun volume di richieste. Potete revocare il vostro consenso in qualsiasi momento contattandoci (si veda «Quali sono i vostri diritti?»)."
       },
       "automated": {
         "h": "Prendiamo decisioni individuali automatizzate?",
@@ -5647,7 +5658,8 @@
       },
       "storage": {
         "h": "Dove e per quanto tempo vengono conservati i vostri dati?",
-        "p": "I dati personali sono conservati nelle nostre strutture e nei centri di trattamento gestiti dai nostri fornitori terzi. Li conserviamo per tutto il tempo necessario al conseguimento delle finalità del trattamento o finché abbiamo un interesse legittimo a conservarli. Per determinati dati, il periodo di conservazione può arrivare a dieci anni. Alla scadenza di questi termini, distruggiamo i vostri dati personali."
+        "p": "I dati personali sono conservati nelle nostre strutture e nei centri di trattamento gestiti dai nostri fornitori terzi. Li conserviamo per tutto il tempo necessario al conseguimento delle finalità del trattamento o finché abbiamo un interesse legittimo a conservarli. Per determinati dati, il periodo di conservazione può arrivare a dieci anni. Alla scadenza di questi termini, distruggiamo i vostri dati personali.",
+        "p2": "Le preiscrizioni non confermate, cioè per le quali il link di conferma ricevuto via e-mail non è stato aperto, sono eliminate dopo 60 giorni. Le preiscrizioni confermate sono conservate fino alla revoca del vostro consenso o fino all'attivazione del vostro account, poi eliminate o trasferite nel vostro account."
       },
       "sharing": {
         "h": "Con chi condividiamo i vostri dati?",
@@ -5675,8 +5687,44 @@
             "Google Analytics",
             "Servizio di analisi per monitorare l'utilizzo della piattaforma e compilare report di attività.",
             "SEE/USA"
+          ],
+          [
+            "Mapbox",
+            "Calcolo di percorsi e orari di arrivo, geocodifica e ricerca di indirizzi (sono trasmesse le coordinate necessarie al calcolo; nessun nome viene comunicato).",
+            "SEE/USA"
+          ],
+          [
+            "Google (Maps)",
+            "Visualizzazione delle mappe su Android e calcolo dei percorsi quando attivato.",
+            "SEE/USA"
+          ],
+          [
+            "Apple (Mappe)",
+            "Visualizzazione delle mappe su iOS.",
+            "SEE/USA"
+          ],
+          [
+            "Expo / Firebase (Google)",
+            "Recapito delle notifiche push ai dispositivi.",
+            "SEE/USA"
+          ],
+          [
+            "Twilio",
+            "Invio di codici di verifica e messa in contatto telefonico con numero nascosto.",
+            "SEE/USA"
+          ],
+          [
+            "Resend",
+            "Invio delle e-mail di servizio (promemoria, avvisi di sicurezza, risposte del supporto).",
+            "SEE/USA"
+          ],
+          [
+            "Sentry",
+            "Monitoraggio degli errori tecnici dell'app (dati personali ridotti al minimo).",
+            "SEE/USA"
           ]
-        ]
+        ],
+        "p2b": "Sono condivisi in particolare: l'indirizzo dell'intervento con il Fornitore scelto, la posizione del Fornitore con il Cliente durante il tragitto (stato «in viaggio») e, in caso di allerta SOS, il nome, la posizione e l'indirizzo indicativo della persona con i Clienti nelle vicinanze."
       },
       "social": {
         "h": "Social media",
@@ -5685,6 +5733,10 @@
       "final": {
         "h": "Disposizioni finali (Informativa)",
         "p": "Ci riserviamo il diritto di modificare i termini della presente informativa a nostra esclusiva discrezione. Qualsiasi versione modificata sarà pubblicata sulla nostra piattaforma."
+      },
+      "sos": {
+        "h": "Come funziona l'allerta SOS?",
+        "p": "L'allerta SOS è attivata volontariamente da un Cliente. È trasmessa solo ai Clienti con un account neediu situati nelle vicinanze (raggio definito da neediu, al massimo 2 km), che siano connessi o meno all'app; i Fornitori non la ricevono mai. I destinatari ricevono soltanto il nome della persona, la sua posizione GPS e un indirizzo indicativo, per poterle prestare soccorso; possono visualizzare il percorso nell'app e avviare la guida. Il Cliente che attiva l'allerta può anche chiamare il proprio contatto di fiducia o inviargli la propria posizione tramite SMS dal proprio telefono. Il pulsante «Chiama il 112» apre semplicemente la chiamata telefonica nativa del dispositivo. L'allerta SOS non sostituisce i servizi di emergenza: in caso di pericolo di vita, chiamate il 112 (o il numero di emergenza locale)."
       }
     },
     "cgu": {
@@ -5718,12 +5770,12 @@
       "s4TelecomTitle": "Telecomunicazioni.",
       "s4Telecom": "Non siamo un fornitore di servizi di telecomunicazione. Le funzionalità di chiamata e chat operano tramite Internet (VoIP/dati) e non sono collegate alle reti mobili o fisse. Non utilizzatele per i servizi di emergenza.",
       "s5H": "5. Funzionalità e Servizi",
-      "s5": "La Piattaforma fornisce un servizio digitale che consente agli utenti di connettersi con professionisti o privati che offrono assistenza per esigenze domestiche. La Piattaforma facilita il contatto iniziale ma non interviene nell'esecuzione dei servizi. Non assumiamo alcuna responsabilità in merito alla qualità, alla puntualità o al risultato dei servizi eseguiti da terzi.",
+      "s5": "La Piattaforma fornisce un servizio digitale che consente agli utenti di connettersi con professionisti o privati che offrono servizi di prossimità. La Piattaforma facilita il contatto iniziale ma non interviene nell'esecuzione dei servizi. Non assumiamo alcuna responsabilità in merito alla qualità, alla puntualità o al risultato dei servizi eseguiti da terzi.",
       "s6H": "6. Utilizzo della Piattaforma",
       "s6RightTitle": "Diritto d'uso.",
-      "s6Right": "Vi è concesso un diritto revocabile, non esclusivo e non trasferibile di accedere e utilizzare la Piattaforma esclusivamente allo scopo di cercare, offrire o beneficiare di servizi di assistenza domestica.",
+      "s6Right": "Vi è concesso un diritto revocabile, non esclusivo e non trasferibile di accedere e utilizzare la Piattaforma esclusivamente allo scopo di cercare, offrire o beneficiare di servizi di prossimità.",
       "s6RestrictTitle": "Restrizioni.",
-      "s6Restrict": "È severamente vietato: (i) utilizzare la Piattaforma per scopi diversi da quelli previsti; (ii) riprodurre, modificare o creare opere derivate dalla Piattaforma; (iii) accedere al codice sorgente tramite decompilazione o reverse engineering; (iv) raccogliere indirizzi e-mail a fini di spam.",
+      "s6Restrict": "È severamente vietato: (i) utilizzare la Piattaforma per scopi diversi da quelli previsti; (ii) riprodurre, modificare o creare opere derivate dalla Piattaforma; (iii) accedere al codice sorgente tramite decompilazione o reverse engineering; (iv) raccogliere indirizzi e-mail a fini di spam; (v) attivare un'allerta SOS senza reale necessità, servirsene per molestare o localizzare una persona, o utilizzare le informazioni di un'allerta per uno scopo diverso dal prestare aiuto.",
       "s7H": "7. Contenuto degli utenti",
       "s7ContentTitle": "Contenuto degli utenti.",
       "s7Content": "Gli Utenti hanno la possibilità di visualizzare, trasmettere o creare link dalla Piattaforma e/o dai Servizi, testi, file, immagini, foto o altri materiali (il Contenuto degli utenti). In particolare, un Utente può descrivere per iscritto ad altri Utenti un problema per illustrare un articolo danneggiato o spiegare il tipo di servizio richiesto.",
@@ -5735,15 +5787,6 @@
       "s7Warranty": "Qualsiasi Contenuto degli utenti pubblicato, trasmesso o referenziato sulla Piattaforma è di esclusiva responsabilità dell'Utente che lo ha creato. Non monitoriamo sistematicamente il Contenuto degli utenti, né l'utilizzo della Piattaforma da parte di altri Utenti. Non offriamo alcuna garanzia, espressa o implicita, in merito all'accuratezza, all'attualità o alla completezza del Contenuto degli utenti e non assumiamo alcuna responsabilità a tale riguardo.",
       "s8H": "8. Pagamenti e commissioni",
       "s8": "Tutti i pagamenti effettuati tramite la Piattaforma sono elaborati da fornitori terzi di servizi di pagamento. Non conserviamo né trattiamo direttamente le informazioni della vostra carta di pagamento.",
-      "s8ClientFeeTitle": "Commissioni del Cliente.",
-      "s8ClientFee": "In qualità di Cliente, vi verranno addebitati solo i Servizi che avrete selezionato ed espressamente approvato tramite la Piattaforma. Il prezzo totale, incluse tutte le tasse, spese di servizio o oneri aggiuntivi applicabili, sarà chiaramente visualizzato prima che confermiate la vostra richiesta.",
-      "s8FeesTitle": "Commissioni del Fornitore di Servizi.",
-      "s8FeesIntro": "In qualità di Fornitore di Servizi, siete soggetti a una commissione per ogni servizio completato con successo:",
-      "s8Fees": [
-        "Livello Starter (meno di 150 missioni): 20%",
-        "Livello Pro (da 150 a 300 missioni): 17,5%",
-        "Livello Elite (più di 300 missioni): 15%"
-      ],
       "s8TierTitle": "Livello di categoria.",
       "s8Tier": "Il livello di categoria viene periodicamente rivalutato per garantire una corretta applicazione delle aliquote di commissione. Cancellazioni ripetute dopo l'arrivo sul posto, il mancato rispetto delle nostre politiche o altre infrazioni possono avere un impatto negativo sul vostro livello di categoria e sull'accesso a future missioni sulla Piattaforma. Infrazioni gravi o ripetute possono comportare una revisione del vostro account e portare a una sospensione o rimozione definitiva.",
       "s8Payout": "I pagamenti vengono generalmente elaborati entro 5-7 giorni lavorativi dal completamento del servizio, a condizione che nessuna controversia o richiesta di rimborso sia stata avviata dal Cliente. Ci riserviamo il diritto di ritardare o sospendere i pagamenti in caso di sospetto di frode, violazione delle presenti CdU o in attesa della risoluzione di una controversia.",
@@ -5781,7 +5824,47 @@
       "s17JurisTitle": "Giurisdizione.",
       "s17Juris": "Qualsiasi controversia sarà sottoposta alla giurisdizione esclusiva dei tribunali competenti nella sede legale di Aegryn.",
       "s18H": "18. Contatto",
-      "s18": "Potete contattarci all'indirizzo legal@boha-group.com."
+      "s18": "Potete contattarci all'indirizzo legal@boha-group.com.",
+      "s3VerifTitle": "Verifica dei Fornitori.",
+      "s3Verif": "Un Fornitore deve dimostrare di avere un'assicurazione di responsabilità civile professionale in corso di validità. Il suo profilo e il suo attestato sono esaminati dal nostro team entro 48 ore; viene informato tramite notifica dell'accettazione o del rifiuto (motivato). neediu può consultare la completezza delle informazioni del suo account (identità, servizi, disponibilità, verifica di pagamento, assicurazione).",
+      "s3WaitlistTitle": "Preiscrizione dei Fornitori.",
+      "s3Waitlist": "La preiscrizione sulla lista d'attesa non crea un Account, non vincola né Aegryn né il professionista, non costituisce accettazione del suo profilo e non garantisce alcun volume di richieste. L'attivazione di un Account all'apertura resta soggetta alle presenti Condizioni d'Uso, alla verifica del profilo e all'assicurazione di responsabilità civile professionale. I dati di preiscrizione sono trattati in conformità con l'Informativa sulla Protezione dei Dati.",
+      "s5SosTitle": "Allerta SOS.",
+      "s5Sos": "La funzione SOS consente a un Cliente di allertare i Clienti vicini e di avvisare il proprio contatto di fiducia. Non è un servizio di emergenza: non garantisce né la ricezione dell'allerta né che qualcuno possa o accetti di intervenire e non sostituisce mai la chiamata ai servizi di soccorso (112 o numero di emergenza locale). Ogni utente che riceve un'allerta agisce liberamente e sotto la propria responsabilità, senza mettere in pericolo la propria sicurezza. Attivando un'allerta, accettate che il vostro nome, la vostra posizione e un indirizzo indicativo siano comunicati ai Clienti vicini. Vi assicurate che la persona registrata come contatto di fiducia abbia accettato di esserlo. Un uso improprio può comportare la sospensione dell'Account.",
+      "s7CoordTitle": "Dati di contatto personali vietati.",
+      "s7Coord": "Per la sicurezza dei dati dei nostri Clienti e Fornitori, è vietato indicare un indirizzo e-mail o un numero di telefono nella messaggistica dell'app o nella nota al Fornitore. La Piattaforma rileva e blocca tali inserimenti prima dell'invio o dell'ordine. Le chiamate passano dall'app e non rivelano il numero dell'interlocutore. Possono essere indicati solo il codice d'ingresso dell'edificio, la porta o il piano, per la durata dell'intervento: queste informazioni sono automaticamente oscurate («*******») nella nota al Fornitore, nella chat e nella cronologia non appena la missione passa allo stato «terminata».",
+      "s8PriceTitle": "Prezzi dei Servizi.",
+      "s8Price": "I prezzi dei Servizi sono fissati liberamente dai Fornitori. Il Cliente paga solo i Servizi che ha espressamente approvato; il prezzo totale, comprensivo di tutte le imposte e spese, è mostrato nell'app prima della conferma dell'ordine. Il prezzo indicativo mostrato al momento dell'ordine è solo un'indicazione.",
+      "s8CommTitle": "Commissione della Piattaforma.",
+      "s8Comm": "neediu percepisce una commissione su ogni servizio completato con successo; l'aliquota applicabile al Fornitore è comunicata nell'app.",
+      "s8CancelTitle": "Annullamento da parte del Fornitore.",
+      "s8Cancel": "Quando un Fornitore annulla una missione già pagata, il Cliente è rimborsato integralmente. Se il Fornitore annulla dopo la partenza (in viaggio o arrivato) o lo stesso giorno di una missione programmata già pagata, una penale proporzionata al prezzo della missione, compresa tra 5 e 50 EUR/CHF, è detratta dal suo prossimo pagamento. Una missione in corso non può più essere annullata.",
+      "s8MethodsTitle": "Metodi di pagamento accettati.",
+      "s8Methods": "Carta bancaria (Visa, Mastercard, American Express), Apple Pay (iPhone), Google Pay (Android), pagamento ospitato Stripe Checkout e TWINT (Clienti in Svizzera, pagamento in CHF). Il pagamento è addebitato al momento della conferma dell'ordine; i fondi sono conservati da neediu e sono versati al Fornitore solo dopo la convalida del servizio da parte del Cliente. I pagamenti sono elaborati da Stripe; neediu non conserva alcun numero di carta.",
+      "s8CreditTitle": "Credito neediu.",
+      "s8Credit": "Quando un annullamento è rimborsato sotto forma di credito, l'importo pagato dal Cliente è già stato addebitato sul suo metodo di pagamento e resta detenuto da neediu: il credito è un credito del Cliente nei confronti di neediu, utilizzabile subito al prossimo ordine (riduce l'importo addebitato sulla carta). Il credito non è rimborsabile in contanti. È mostrato nello spazio «Cagnotte» dell'app, con la sua cronologia. Le eventuali spese di spostamento (5 EUR / CHF 5) restano dovute al Fornitore in caso di annullamento mentre è in viaggio o arrivato.",
+      "s8ExtTitle": "Estensioni di missione.",
+      "s8Ext": "Un'estensione è un nuovo ordine collegato al primo, con il proprio pagamento, la propria fattura e la propria convalida. Il pagamento della missione originale è prima convalidato e liberato; l'estensione è poi proposta dal Fornitore (o richiesta dal Cliente), quindi confermata e pagata dal Cliente entro 15 minuti. L'importo di un'estensione è fissato dal Fornitore e limitato a 500 (EUR o CHF) per la sicurezza del Cliente.",
+      "s8ReportTitle": "Segnalare un problema.",
+      "s8Report": "Prima di convalidare una prestazione, il Cliente può segnalare un problema (prestazione non eseguita, incompleta, danno, comportamento inappropriato). La segnalazione sospende il rilascio del pagamento e apre una pratica prioritaria presso il supporto neediu, che emette la propria decisione dopo aver sentito entrambe le parti.",
+      "s8IndicTitle": "Prezzo indicativo.",
+      "s8Indic": "Il prezzo indicativo mostrato prima dell'ordine è la media rilevata delle missioni pagate per lo stesso servizio nella stessa città negli ultimi 180 giorni (in mancanza, di tutte le località). È fornito a titolo indicativo; il prezzo applicabile è quello proposto dal Fornitore.",
+      "s8RewardsTitle": "Crediti, buoni sconto e presentazione (neediu Rewards).",
+      "s8Rewards": "neediu Rewards raggruppa i crediti, i buoni sconto e il programma di presentazione della Piattaforma, disciplinati dalle seguenti regole.",
+      "s8FriendTitle": "Buoni per la presentazione di amici.",
+      "s8Friend": "Ogni utente dispone di un codice di presentazione amico unico. Quando una persona presentata applica il codice di un presentatore e poi paga la sua prima prestazione di almeno 10 EUR/CHF, la persona presentata e il presentatore ricevono ciascuno un buono sconto del 10 % sul loro prossimo servizio pagato. Ogni buono reca un codice unico e una data di scadenza (360 giorni dall'emissione). Un utente può applicare un solo codice di presentazione, una sola volta e solo prima di qualsiasi primo acquisto. Un presentatore può presentare fino a 10 persone.",
+      "s8ProvRefTitle": "Presentazione di Fornitori.",
+      "s8ProvRef": "Un Fornitore dispone di un codice di presentazione Fornitore, distinto dal codice amico. Un Fornitore presentato può utilizzarlo una sola volta. Quando la persona presentata completa la sua prima missione pagata, beneficia, come il suo presentatore se è un Fornitore, di uno sconto del 50 % sulla commissione della Piattaforma per la sua prossima missione pagata. Un presentatore Cliente riceve allora un buono del 10 % sul suo prossimo servizio pagato. La Piattaforma può proporre codici promozionali riservati ai Fornitori, di durata limitata e utilizzabili una sola volta per Fornitore.",
+      "s8CancelCreditTitle": "Credito di annullamento.",
+      "s8CancelCredit": "Un annullamento effettuato secondo le regole della Piattaforma può dare luogo a un credito neediu, utilizzato automaticamente al pagamento successivo in deduzione dell'importo del servizio ordinato.",
+      "s8CondTitle": "Condizioni degli sconti.",
+      "s8Cond": "Ogni sconto: (i) vale per un solo servizio e non è cumulabile; (ii) è limitato a 50 EUR/CHF e al 50 % del prezzo del servizio; (iii) scade 360 giorni dopo lo sblocco; (iv) non è mai convertibile in contanti né cedibile; (v) è calcolato dalla Piattaforma, scegliendo il Cliente il buono da applicare prima del pagamento; in mancanza di scelta, è proposto per primo il buono che scade prima. Il costo degli sconti è interamente a carico di Aegryn: il Fornitore è sempre pagato sulla tariffa IVA inclusa che ha richiesto; lo sconto non riduce mai il suo reddito né la commissione della Piattaforma.",
+      "s8DisputeRwTitle": "Annullamento e controversia.",
+      "s8DisputeRw": "Uno sconto utilizzato su un servizio annullato prima della sua esecuzione, o rimborsato a seguito di una controversia, è restituito al Cliente (se non scaduto). I buoni accordati da un servizio annullato o rimborsato sono annullati.",
+      "s8FraudTitle": "Frode.",
+      "s8Fraud": "Sono vietate le presentazioni incrociate o circolari, gli account multipli appartenenti a una stessa persona (e-mail alias, stesso numero di telefono) e qualsiasi collusione tra un Cliente e un Fornitore. In caso di frode o manipolazione accertata, i punti e gli sconti interessati sono annullati e l'Account può essere sospeso o eliminato.",
+      "s9PayTitle": "Pagamento e annullamento.",
+      "s9Pay": "L'importo del servizio è addebitato immediatamente alla prenotazione e conservato in sicurezza sul conto della Piattaforma: il Fornitore è pagato solo dopo la prestazione terminata e convalidata dal Cliente: è la garanzia neediu. L'annullamento è gratuito finché il Fornitore non è ancora in viaggio (prima della sua partenza): il rimborso in credito neediu è istantaneo, sempre gratuito e senza limiti; il rimborso bancario è integrale entro il limite di uno al mese e per Cliente. Oltre (Fornitore in viaggio o arrivato, o rimborso bancario supplementare nello stesso mese), spese di 5 EUR/CHF maggiorate delle spese di elaborazione del pagamento sono detratte dal rimborso; le spese prelevate dal prestatore di pagamento non sono mai restituite, nemmeno in caso di rimborso. Una volta iniziata la prestazione, l'annullamento non è più possibile tramite la Piattaforma e il pagamento resta dovuto. Il rimborso può essere richiesto in credito neediu: istantaneo e senza spese bancarie (resta detratto solo lo spostamento già effettuato dal Fornitore), riutilizzabile subito alla prenotazione successiva."
     }
   },
   "experts": {
@@ -6483,8 +6566,8 @@
       },
       "neediu": {
         "title": "neediu nella rivista Gala",
-        "excerpt": "neediu, la piattaforma che mette in contatto privati e fornitori di servizi domestici, è stata oggetto di un servizio video nella rivista Gala.",
-        "context": "Copertura su Gala, rivista di riferimento per il grande pubblico. Servizio video su neediu, asset Aegryn nel settore dei servizi domestici."
+        "excerpt": "neediu, la piattaforma che mette in contatto privati e professionisti di servizi di prossimità, è stata oggetto di un servizio video nella rivista Gala.",
+        "context": "Copertura su Gala, rivista di riferimento per il grande pubblico. Servizio video su neediu, progetto bandiera di Aegryn nel settore dei servizi di prossimità."
       }
     },
     "notify": {
@@ -7183,10 +7266,22 @@
       "responseLead": "Aegryn riunisce le due cose.",
       "response": "Una base di consulenza corporate, <strong>la società integrata</strong>, che inquadra, realizza e accompagna le decisioni dei dirigenti. E un verticale imprenditoriale, <strong>La Boutique</strong>, che guida dall’inizio alla fine un numero limitato di progetti signature. Ciò che raccomanda ai suoi clienti, Aegryn lo applica a sé stessa.",
       "reasoning": [
-        { "lead": "Inquadrare senza realizzare", "consequence": "è consegnare una mappa senza il territorio." },
-        { "lead": "Realizzare senza inquadrare", "consequence": "è eseguire senza rotta." },
-        { "lead": "Accompagnare senza aver costruito", "consequence": "è consigliare dall’esterno." },
-        { "lead": "Selezionare senza progetto", "consequence": "è reclutare nel vuoto." }
+        {
+          "lead": "Inquadrare senza realizzare",
+          "consequence": "è consegnare una mappa senza il territorio."
+        },
+        {
+          "lead": "Realizzare senza inquadrare",
+          "consequence": "è eseguire senza rotta."
+        },
+        {
+          "lead": "Accompagnare senza aver costruito",
+          "consequence": "è consigliare dall’esterno."
+        },
+        {
+          "lead": "Selezionare senza progetto",
+          "consequence": "è reclutare nel vuoto."
+        }
       ],
       "closingLead": "In Aegryn, ogni modo di agire rafforza il successivo.",
       "closing": "È questa catena che fa reggere un progetto, per i nostri clienti come per noi.",
@@ -7909,5 +8004,86 @@
     "sovereignty": "Sovranità",
     "method": "Metodo",
     "quit": "Esci"
+  },
+  "neediuPro": {
+    "meta": {
+      "title": "Preiscrizione dei professionisti | neediu",
+      "desc": "Preiscriviti in 2 minuti, senza impegno, per unirti a neediu prima dell’apertura nella tua città."
+    },
+    "back": "Scopri il progetto neediu",
+    "eyebrow": "Per i professionisti",
+    "title": "Unisciti a neediu prima dell’apertura",
+    "intro": "L’app dei servizi di prossimità apre presto. Preiscriviti in 2 minuti:\nti avviseremo non appena il tuo servizio sarà disponibile vicino a te.",
+    "soon": "Presto",
+    "stepsLabel": "Tre passaggi",
+    "steps": [
+      {
+        "t": "Mi preiscrivo",
+        "d": "2 minuti"
+      },
+      {
+        "t": "Preparo il mio dossier",
+        "d": "quando voglio"
+      },
+      {
+        "t": "Attivo il mio account",
+        "d": "invito all’apertura"
+      }
+    ],
+    "trust": [
+      "Stabilisco le mie tariffe e le mie disponibilità",
+      "Accetto o rifiuto ogni richiesta",
+      "Iscrizione senza impegno"
+    ],
+    "reassurance": "La tua preiscrizione non costituisce accettazione e non garantisce alcun volume di richieste.",
+    "form": {
+      "firstName": "Nome",
+      "lastName": "Cognome",
+      "email": "E-mail",
+      "phone": "Telefono",
+      "country": "Paese",
+      "city": "Città",
+      "services": "Servizi offerti",
+      "servicesHint": "Scegli uno o più servizi",
+      "servicesCount": "selezionato/i",
+      "consentBefore": "Accetto che Aegryn, titolare del trattamento, utilizzi queste informazioni per ricontattarmi in merito alla mia preiscrizione e avvisarmi quando neediu aprirà vicino a me, in conformità con l’",
+      "consentLink": "informativa sulla protezione dei dati",
+      "consentAfter": ".",
+      "submit": "Entra nella lista d’attesa",
+      "sending": "Invio in corso…",
+      "closed": "Il modulo aprirà presto. Non è ancora attivo.",
+      "success": "Controlla la tua e-mail per confermare la preiscrizione.",
+      "confirmed": "La tua preiscrizione è confermata. Ti scriveremo quando aprirà la tua città.",
+      "notConfirmed": "Questo link di conferma non è più valido. Puoi preiscriverti di nuovo.",
+      "error": "Si è verificato un errore. Riprova.",
+      "validation": "Controlla i campi evidenziati.",
+      "companyName": "Nome della società",
+      "vat": "Partita IVA",
+      "cityPlaceholder": "Seleziona una città",
+      "cities": {
+        "bruxelles": "Bruxelles",
+        "paris": "Parigi",
+        "geneve": "Ginevra",
+        "lausanne": "Losanna"
+      },
+      "testMode": "Modalità di prova (preview): i dati inseriti non sono stati salvati.",
+      "dialCode": "Prefisso",
+      "countryAuto": "In base alla città",
+      "phoneInvalid": "Controlla il numero di telefono."
+    },
+    "stores": {
+      "label": "Prossimamente su",
+      "apple": "App Store",
+      "google": "Google Play"
+    },
+    "heroLink": "Sei un professionista? Entra nella lista d’attesa",
+    "sideTab": "Pro: preiscrizione",
+    "fiche": {
+      "availability": "Disponibilità",
+      "availabilityValue": "Prossimamente su App Store\ne Google Play",
+      "docs": "Documenti legali",
+      "cgu": "Condizioni generali d’uso e di vendita (CGU/CGV)",
+      "notice": "Informativa sulla protezione dei dati"
+    }
   }
 }

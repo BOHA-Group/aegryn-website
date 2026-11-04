@@ -265,6 +265,9 @@ export default function Footer() {
             <p className="font-sans text-[10px] text-white/70">
               {t('aiNotice')}
             </p>
+            <p className="font-sans text-[10px] text-white/70">
+              {t('storeTrademarks')}
+            </p>
             <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-white/70 mt-1">
               {t('taglines')}
             </p>

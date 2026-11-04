@@ -241,10 +241,10 @@
       },
       "neediu": {
         "badge": "B2C · Marktplatz",
-        "tagline": "Haushaltsdienstleistungen, intelligente Vermittlung",
-        "description": "Verbindet Privatpersonen und Fachleute mit den besten Haushaltsdienstleistern, basierend auf Standort und verifizierten Bewertungen.",
+        "tagline": "Lokale Dienstleistungen, intelligente Vermittlung von Profis",
+        "description": "Verbindet Privatpersonen und Profis für lokale Dienstleistungen, basierend auf Standort und nach jedem Service veröffentlichten Bewertungen.",
         "capability": "Ein Netzwerk unabhängiger Anbieter orchestrieren",
-        "keywords": "Anbieternetzwerk · Sofortbuchung · verifizierte Bewertungen · Nähe"
+        "keywords": "Profi-Netzwerk · lokale Dienstleistungen · Online-Buchung · Bewertungen nach dem Service"
       },
       "movtoo": {
         "badge": "B2C · Transport",
@@ -1244,17 +1244,18 @@
         "orgs": "Anwaltskanzleien, Family Offices und Rechtsabteilungen (White-Label-Lizenz), KMU und Unternehmer, die Verträge ohne eigene Rechtsabteilung unterzeichnen."
       },
       "neediu": {
-        "longDesc": "Verbindet Privatpersonen mit den besten Haushaltsdienstleistern. Reinigung, Gartenarbeit, Heimwerken, Babysitting: intelligente Vermittlung auf Basis von Standort und verifizierten Bewertungen.",
+        "longDesc": "Verbindet Privatpersonen mit Profis für lokale Dienstleistungen: Vermittlung nach Standort, mit nach jedem Service veröffentlichten Bewertungen.",
         "audience": "Privatpersonen, Fachleute",
         "features": [
-          "Echtzeit-Vermittlung",
-          "Verifizierte und bewertete Dienstleister",
+          "Vermittlung nach Standort",
+          "Profile werden vor der Aktivierung vom Team geprüft",
+          "Berufshaftpflichtversicherung für Dienstleister erforderlich",
+          "Nach jedem Service veröffentlichte Bewertungen",
           "Integrierte sichere Zahlung",
-          "Live-Auftragsverfolgung",
-          "Leistungsversicherung inbegriffen",
-          "Abdeckung Schweiz und Europa"
+          "Live-Verfolgung des Einsatzes",
+          "Schrittweise Eröffnung, Stadt für Stadt"
         ],
-        "need": "Einen vertrauenswürdigen Anbieter für Dienstleistungen zu Hause zu finden bleibt langsam und unsicher: veraltete Verzeichnisse, ungeprüfte Bewertungen, undurchsichtige Verfügbarkeiten.",
+        "need": "Einen vertrauenswürdigen Profi in der Nähe zu finden bleibt langsam und unsicher: veraltete Verzeichnisse, ungeprüfte Bewertungen, undurchsichtige Verfügbarkeit.",
         "skills": [
           "Konzeptentwicklung",
           "Machbarkeitsstudie",
@@ -1266,7 +1267,7 @@
           "Technische Entwicklung",
           "Launch-Strategie"
         ],
-        "orgs": "Versicherung und Banken (Reparaturnetzwerke, Assistance), Gesundheit (häusliche Pflege), Handel & Dienstleistungen (Installation, Kundendienst), Gemeinden."
+        "orgs": "Versicherung und Banken (Reparaturnetzwerke, Assistance), Gesundheit (wohnortnahe Pflege), Handel & Dienstleistungen (Installation, Kundendienst), Gemeinden."
       },
       "primiom": {
         "longDesc": "Erfindet Immobilientransaktionen neu, indem der Verkäufer in den Mittelpunkt des Kauf- und Verkaufsprozesses gestellt wird. Präzise Bewertung, Echtzeit-Marktanalyse und persönliche Begleitung von A bis Z.",
@@ -1464,8 +1465,8 @@
         "status": "Eingeschränkt, nur auf Einladung"
       },
       "neediu": {
-        "headline": "Intelligente Vermittlung für Haushaltsdienstleistungen.",
-        "p1": "neediu verbindet Privatpersonen mit qualifizierten Dienstleistern für alle Haushaltsbedürfnisse: Reinigung, Gartenarbeit, Heimwerken, Kinderbetreuung und mehr.",
+        "headline": "Intelligente Vermittlung für lokale Dienstleistungen.",
+        "p1": "neediu verbindet Privatpersonen mit Profis für ihre Anliegen in der Nähe.",
         "p2": "Der Algorithmus analysiert Verfügbarkeit, Standort und Bewertungen, um den idealen Anbieter in Sekunden vorzuschlagen.",
         "market": "B2C · Marktplatz",
         "zone": "Großraum Paris → Frankreich",
@@ -1738,7 +1739,8 @@
     "col5Title": "Folgen Sie uns",
     "taglines": "Built to Last · Rare by selection",
     "col2Verify": "Zertifikat prüfen",
-    "footerCraftFrameDeliver": "Rahmen setzen und umsetzen"
+    "footerCraftFrameDeliver": "Rahmen setzen und umsetzen",
+    "storeTrademarks": "App Store ist eine Marke von Apple Inc. Google Play ist eine Marke von Google LLC."
   },
   "gradingSystem": {
     "meta": {
@@ -5542,11 +5544,11 @@
     "sectionDpn": "(01)",
     "h1": "Datenschutzhinweis, Aegryn neediu",
     "disclaimer": "Haftungsausschluss: Dieser Datenschutzhinweis ist eine KI-generierte Übersetzung und dient nur zu Informationszwecken. Bei Abweichungen oder Widersprüchen gilt die englische Fassung.",
-    "updated": "Letzte Aktualisierung: 01.03.2026",
+    "updated": "Letzte Aktualisierung: 04.11.2026",
     "dpn": {
       "intro": {
         "h": "Einleitung",
-        "p1": "neediu ist eine Plattform, die es Nutzern ermöglicht, schnell vertrauenswürdige Fachleute oder Privatpersonen zu finden, die in ihrer Region Hilfe bei häuslichen Bedürfnissen anbieten. Da uns der Schutz Ihrer Daten und Ihrer Privatsphäre sehr wichtig ist, haben wir diesen Datenschutzhinweis erstellt, um zu erläutern, was wir mit Ihren Daten tun, wenn Sie unsere Plattform nutzen.",
+        "p1": "neediu ist eine Plattform, die es Nutzern ermöglicht, schnell vertrauenswürdige Fachleute oder Privatpersonen zu finden, die in ihrer Region lokale Dienstleistungen anbieten. Da uns der Schutz Ihrer Daten und Ihrer Privatsphäre sehr wichtig ist, haben wir diesen Datenschutzhinweis erstellt, um zu erläutern, was wir mit Ihren Daten tun, wenn Sie unsere Plattform nutzen.",
         "p2": "Dieser Datenschutzhinweis betrifft ausschließlich die mit unserer Plattform verbundene Datenverarbeitung. Unser Ziel ist ein angemessener Schutz personenbezogener Daten gemäß allen anwendbaren Datenschutzgesetzen, einschließlich des Schweizer Datenschutzgesetzes (DSG) und der Datenschutz-Grundverordnung (DSGVO).",
         "p3": "In der Schweiz beruht der Schutz Ihrer Daten insbesondere auf dem Bundesgesetz vom 25. September 2020 über den Datenschutz (DSG) sowie auf der Bundesverordnung vom 31. August über den Datenschutz (DSV). Unser Datenschutzhinweis und unsere Praktiken sind auf die in dieser Gesetzgebung enthaltenen Rechtsvorschriften abgestimmt.",
         "p4": "Obwohl wir uns bemühen, unseren Datenschutzhinweis zu vereinfachen, liegt die Verständnisschwierigkeit in der spezifischen Sprache des rechtlichen Rahmens. Deshalb haben wir die wichtigsten Definitionen zusammengefasst, um den Hinweis leichter verständlich zu machen; diese Definitionen entstammen dem DSG.",
@@ -5607,9 +5609,16 @@
         "economicH": "Wirtschaftliche Daten",
         "economicP": "Zahlungsmethode, gezahlte oder erhaltene Beträge, Transaktionshistorie, anfallende Provisionen, Rechnungsadresse, Bankdaten für Auszahlungen. Zahlungsmethodendaten werden ausschließlich von unseren Drittanbietern verarbeitet, wir verarbeiten keine Kreditkartennummern oder CVC-Codes.",
         "internetH": "Internet- und Verbindungsdaten",
-        "internetP": "IP-Adresse, Angaben zu Ihrem Internetanbieter und Betriebssystem, Referenz-URL, verwendeter Browser, Zugriffsdatum und -uhrzeit, angesehene Inhalte.",
+        "internetP": "IP-Adresse, Angaben zu Ihrem Internetanbieter und Betriebssystem, Referenz-URL, verwendeter Browser, Zugriffsdatum und -uhrzeit, angesehene Inhalte. Wenn die App auf einen Fehler stößt, wird zur Behebung des Problems ein technischer Bericht (betroffener Bildschirm, Fehlermeldung, System und App-Version, Konto-Kennung) gespeichert; er wird sechs Monate aufbewahrt.",
         "otherH": "Sonstige Daten",
-        "otherP": "Art und Umfang der Aufgabe, Größe oder Zustand des Hauses oder der Räumlichkeiten, gewünschter Termin, Fotos oder Beschreibungen zur Auftragsklärung, Identifikationsdaten im Rahmen des KYC-Verfahrens."
+        "otherP": "Art und Umfang der Aufgabe, Größe oder Zustand des Hauses oder der Räumlichkeiten, gewünschter Termin, Fotos oder Beschreibungen zur Auftragsklärung, Identifikationsdaten im Rahmen des KYC-Verfahrens, Nachweis der Berufshaftpflichtversicherung der Dienstleister (Dokument, Gültigkeitsdatum, Prüfentscheid).",
+        "economicRewards": "Diese Verarbeitung umfasst auch die Daten zu Guthaben, Rabattgutscheinen und Empfehlungen von neediu Rewards: Guthaben, erhaltene, eingelöste oder abgelaufene Gutscheine sowie die mit Ihrem persönlichen Code verbundenen Empfehlungen.",
+        "locationH": "Standortdaten",
+        "locationP": "GPS-Position Ihres Geräts, die nur verwendet wird, wenn Sie dies in den Einstellungen Ihres Telefons erlauben: Ermittlung der Einsatzadresse, Suche nach verfügbaren Dienstleistern in der Nähe, Berechnung der Route und der Ankunftszeit sowie SOS-Alarm. Bei einem Dienstleister wird die Position nur während eines Einsatzes mit dem Status „unterwegs“ mit dem betreffenden Kunden geteilt (höchstens alle 5 Minuten oder nach einer Bewegung von etwa 300 Metern) und endet bei der Ankunft. Um Anfragen in der Nähe zu erhalten, sendet ein verfügbarer Dienstleister, dessen App geöffnet ist, seine Position außerdem beim Öffnen, bei jeder neuen Anfrage und höchstens alle 30 Minuten an neediu; sie ist für keinen anderen Nutzer sichtbar und wird nur verwendet, wenn sie weniger als eine Stunde alt ist. Ihre zuletzt bekannte Position dient zur Bestimmung der Stadt und des Aktionsradius; sie wird weder verkauft noch für Werbezwecke verwendet.",
+        "trustedH": "Daten zu Ihren Vertrauenskontakten",
+        "trustedP": "Wenn Sie einen Vertrauenskontakt (Name und Telefonnummer) speichern, werden diese Angaben in Ihrem Konto gespeichert, damit Sie ihn anrufen oder ihm von Ihrem eigenen Telefon aus eine SMS mit Ihrer Position senden können. neediu sendet keine SMS an diesen Kontakt und kontaktiert ihn nicht. Es liegt in Ihrer Verantwortung, ihn darüber zu informieren, dass er in Ihren Vertrauenskontakten aufgeführt ist, und sein Einverständnis einzuholen.",
+        "waitlistH": "Daten der Vorabanmeldung von Profis",
+        "waitlistP": "Wenn Sie sich als Profi auf der neediu-Warteliste vorab anmelden: Vorname, Nachname, E-Mail-Adresse, Telefonnummer, Firmenname und Umsatzsteuernummer (MWST-Nr.), Land, Stadt, angebotene Services, Sprache der Seite sowie Datum und Uhrzeit Ihrer Einwilligung und der Bestätigung Ihrer Anmeldung. Diese Daten werden von Aegryn als Verantwortlicher auf der Grundlage Ihrer Einwilligung erhoben."
       },
       "sensitive": {
         "h": "Was gilt für besondere Kategorien personenbezogener Daten?",
@@ -5621,7 +5630,9 @@
       },
       "why": {
         "h": "Warum verarbeiten wir Ihre Daten?",
-        "p": "Wir verarbeiten Ihre personenbezogenen Daten, um Ihnen den Zugang zu den Funktionen unserer Plattform zu ermöglichen und die ordnungsgemäße Erbringung der angebotenen Dienste zu gewährleisten. Dazu gehören insbesondere die Erstellung und Verwaltung Ihres Kontos, die Vermittlung zwischen Kunden und Dienstleistern, die Zahlungsabwicklung, die Übermittlung von Nachrichten und die Anzeige relevanter Informationen. Wir verarbeiten Ihre Daten auch, um mit Ihnen zu kommunizieren, auf Ihre Anfragen zu reagieren, Ihre Rechte wahrzunehmen und nützliche Nutzungsstatistiken zur Verbesserung der Plattform zu erstellen. Schließlich verarbeiten wir Ihre Daten, um geltende Gesetze, Richtlinien und Empfehlungen der Behörden einzuhalten."
+        "p": "Wir verarbeiten Ihre personenbezogenen Daten, um Ihnen den Zugang zu den Funktionen unserer Plattform zu ermöglichen und die ordnungsgemäße Erbringung der angebotenen Dienste zu gewährleisten. Dazu gehören insbesondere die Erstellung und Verwaltung Ihres Kontos, die Vermittlung zwischen Kunden und Dienstleistern, die Zahlungsabwicklung, die Übermittlung von Nachrichten und die Anzeige relevanter Informationen. Wir verarbeiten Ihre Daten auch, um mit Ihnen zu kommunizieren, auf Ihre Anfragen zu reagieren, Ihre Rechte wahrzunehmen und nützliche Nutzungsstatistiken zur Verbesserung der Plattform zu erstellen. Schließlich verarbeiten wir Ihre Daten, um geltende Gesetze, Richtlinien und Empfehlungen der Behörden einzuhalten.",
+        "p2": "Standortdaten dienen auch der Sicherheit von Personen (SOS-Alarm) und der Routenberechnung; Benachrichtigungen (Push und in der App) werden Ihnen in der in Ihrem Konto gewählten Sprache gesendet.",
+        "p3": "Wir verwenden die Daten der Vorabanmeldung ausschließlich, um Ihre Anmeldung per E-Mail zu bestätigen (doppelte Bestätigung), Sie zu informieren, sobald neediu in Ihrer Stadt startet, Sie zur Aktivierung Ihres Kontos einzuladen und Sie zu Ihrer Vorabanmeldung zu kontaktieren. Die Vorabanmeldung ist unverbindlich, gilt nicht als Annahme Ihres Profils und garantiert kein Anfragevolumen. Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie uns kontaktieren (siehe „Welche Rechte haben Sie?“)."
       },
       "automated": {
         "h": "Treffen wir automatisierte Einzelentscheidungen?",
@@ -5647,7 +5658,8 @@
       },
       "storage": {
         "h": "Wo und wie lange werden Ihre Daten gespeichert?",
-        "p": "Personenbezogene Daten werden in unseren Räumlichkeiten sowie in Rechenzentren unserer Drittanbieter gespeichert. Wir bewahren sie so lange auf, wie es der Verarbeitungszweck erfordert oder wir ein berechtigtes Interesse daran haben. Für bestimmte Daten kann die Aufbewahrungsfrist bis zu zehn Jahre betragen. Nach Ablauf dieser Fristen vernichten wir Ihre personenbezogenen Daten."
+        "p": "Personenbezogene Daten werden in unseren Räumlichkeiten sowie in Rechenzentren unserer Drittanbieter gespeichert. Wir bewahren sie so lange auf, wie es der Verarbeitungszweck erfordert oder wir ein berechtigtes Interesse daran haben. Für bestimmte Daten kann die Aufbewahrungsfrist bis zu zehn Jahre betragen. Nach Ablauf dieser Fristen vernichten wir Ihre personenbezogenen Daten.",
+        "p2": "Nicht bestätigte Vorabanmeldungen, bei denen der per E-Mail erhaltene Bestätigungslink also nicht geöffnet wurde, werden nach 60 Tagen gelöscht. Bestätigte Vorabanmeldungen werden bis zum Widerruf Ihrer Einwilligung oder bis zur Aktivierung Ihres Kontos aufbewahrt und anschließend gelöscht oder in Ihr Konto übernommen."
       },
       "sharing": {
         "h": "Mit wem teilen wir Ihre Daten?",
@@ -5675,8 +5687,44 @@
             "Google Analytics",
             "Analysedienst zur Überwachung der Plattformnutzung und Erstellung von Aktivitätsberichten.",
             "EWR/USA"
+          ],
+          [
+            "Mapbox",
+            "Berechnung von Routen und Ankunftszeiten, Geokodierung und Adresssuche (die für die Berechnung nötigen Koordinaten werden übermittelt; es wird kein Name mitgeteilt).",
+            "EWR/USA"
+          ],
+          [
+            "Google (Maps)",
+            "Kartenanzeige auf Android und Routenberechnung, sofern aktiviert.",
+            "EWR/USA"
+          ],
+          [
+            "Apple (Karten)",
+            "Kartenanzeige auf iOS.",
+            "EWR/USA"
+          ],
+          [
+            "Expo / Firebase (Google)",
+            "Zustellung von Push-Benachrichtigungen an die Geräte.",
+            "EWR/USA"
+          ],
+          [
+            "Twilio",
+            "Versand von Verifizierungscodes und telefonische Verbindung mit verdeckter Nummer.",
+            "EWR/USA"
+          ],
+          [
+            "Resend",
+            "Versand von Service-E-Mails (Erinnerungen, Sicherheitswarnungen, Antworten des Supports).",
+            "EWR/USA"
+          ],
+          [
+            "Sentry",
+            "Überwachung technischer Fehler der App (personenbezogene Daten auf das Minimum reduziert).",
+            "EWR/USA"
           ]
-        ]
+        ],
+        "p2b": "Insbesondere werden geteilt: die Einsatzadresse mit dem gewählten Dienstleister, die Position des Dienstleisters mit dem Kunden während der Anfahrt (Status „unterwegs“) und, im Fall eines SOS-Alarms, der Vorname, die Position und die ungefähre Adresse der Person mit Kunden in der Nähe."
       },
       "social": {
         "h": "Soziale Medien",
@@ -5685,6 +5733,10 @@
       "final": {
         "h": "Schlussbestimmungen (Hinweis)",
         "p": "Wir behalten uns das Recht vor, die Bedingungen dieses Hinweises nach eigenem Ermessen zu ändern. Eine geänderte Fassung wird auf unserer Plattform veröffentlicht."
+      },
+      "sos": {
+        "h": "Wie funktioniert der SOS-Alarm?",
+        "p": "Der SOS-Alarm wird von einem Kunden freiwillig ausgelöst. Er wird nur an Kunden mit einem neediu-Konto in der Nähe gesendet (von neediu festgelegter Radius, höchstens 2 km), unabhängig davon, ob sie in der App angemeldet sind; Dienstleister erhalten ihn nie. Die Empfänger erhalten ausschließlich den Vornamen der Person, ihre GPS-Position und eine ungefähre Adresse, um ihr Hilfe leisten zu können; sie können die Route in der App anzeigen und die Navigation starten. Der Kunde, der den Alarm auslöst, kann von seinem Telefon aus auch seinen Vertrauenskontakt anrufen oder ihm seine Position per SMS senden. Die Schaltfläche „112 anrufen“ öffnet lediglich den nativen Telefonanruf des Geräts. Der SOS-Alarm ersetzt keine Notdienste: Rufen Sie bei Lebensgefahr die 112 (oder die lokale Notrufnummer) an."
       }
     },
     "cgu": {
@@ -5718,12 +5770,12 @@
       "s4TelecomTitle": "Telekommunikation.",
       "s4Telecom": "Wir sind kein Telekommunikationsanbieter. Anruf- und Chat-Funktionen laufen über das Internet (VoIP/Daten) und sind nicht mit Mobil- oder Festnetzen verbunden. Nutzen Sie diese nicht für Notfalldienste.",
       "s5H": "5. Funktionen und Dienste",
-      "s5": "Die Plattform bietet einen digitalen Service, der Nutzern ermöglicht, sich mit Fachleuten oder Privatpersonen zu verbinden, die Hilfe bei häuslichen Bedürfnissen anbieten. Die Plattform erleichtert den ersten Kontakt, greift aber nicht in die Erbringung der Dienste ein. Wir übernehmen keine Verantwortung für Qualität, Pünktlichkeit oder Ergebnis der von Dritten erbrachten Dienste.",
+      "s5": "Die Plattform bietet einen digitalen Service, der Nutzern ermöglicht, sich mit Fachleuten oder Privatpersonen zu verbinden, die lokale Dienstleistungen anbieten. Die Plattform erleichtert den ersten Kontakt, greift aber nicht in die Erbringung der Dienste ein. Wir übernehmen keine Verantwortung für Qualität, Pünktlichkeit oder Ergebnis der von Dritten erbrachten Dienste.",
       "s6H": "6. Nutzung der Plattform",
       "s6RightTitle": "Nutzungsrecht.",
-      "s6Right": "Ihnen wird ein widerrufliches, nicht-exklusives, nicht übertragbares Recht gewährt, auf die Plattform zuzugreifen und sie ausschließlich zum Zweck der Suche, des Angebots oder der Inanspruchnahme von Haushaltsdienstleistungen zu nutzen.",
+      "s6Right": "Ihnen wird ein widerrufliches, nicht-exklusives, nicht übertragbares Recht gewährt, auf die Plattform zuzugreifen und sie ausschließlich zum Zweck der Suche, des Angebots oder der Inanspruchnahme von lokalen Dienstleistungen zu nutzen.",
       "s6RestrictTitle": "Einschränkungen.",
-      "s6Restrict": "Es ist strengstens untersagt: (i) die Plattform für andere als die vorgesehenen Zwecke zu nutzen; (ii) die Plattform zu reproduzieren, zu modifizieren oder abgeleitete Werke zu erstellen; (iii) durch Dekompilierung oder Reverse Engineering auf den Quellcode zuzugreifen; (iv) E-Mail-Adressen für Spam-Zwecke zu sammeln.",
+      "s6Restrict": "Es ist strengstens untersagt: (i) die Plattform für andere als die vorgesehenen Zwecke zu nutzen; (ii) die Plattform zu reproduzieren, zu modifizieren oder abgeleitete Werke zu erstellen; (iii) durch Dekompilierung oder Reverse Engineering auf den Quellcode zuzugreifen; (iv) E-Mail-Adressen für Spam-Zwecke zu sammeln; (v) einen SOS-Alarm ohne echten Bedarf auszulösen, ihn zur Belästigung oder Ortung einer Person zu nutzen oder die Informationen eines Alarms für einen anderen Zweck als Hilfeleistung zu verwenden.",
       "s7H": "7. Nutzerinhalte",
       "s7ContentTitle": "Nutzergenerierte Inhalte.",
       "s7Content": "Nutzer haben die Möglichkeit, Texte, Dateien, Bilder, Fotos oder andere Materialien (Nutzerinhalte) auf der Plattform und/oder über die Dienste anzuzeigen, zu übermitteln oder zu verlinken. Insbesondere können Nutzer anderen Nutzern ein Problem in Textform beschreiben, um einen beschädigten Gegenstand zu veranschaulichen oder die Art der benötigten Dienstleistung zu erläutern.",
@@ -5735,15 +5787,6 @@
       "s7Warranty": "Für alle auf der Plattform veröffentlichten, übermittelten oder referenzierten Nutzerinhalte ist ausschließlich der Nutzer verantwortlich, der diese erstellt hat. Wir überwachen Nutzerinhalte nicht systematisch, ebenso wenig wie die Nutzung der Plattform durch andere Nutzer. Wir übernehmen keine ausdrückliche oder stillschweigende Gewährleistung für die Richtigkeit, Aktualität oder Vollständigkeit der Nutzerinhalte und haften nicht in dieser Hinsicht.",
       "s8H": "8. Zahlungen und Gebühren",
       "s8": "Alle über die Plattform getätigten Zahlungen werden von Drittanbietern für Zahlungsdienste abgewickelt. Wir speichern oder verarbeiten Ihre Zahlungskarteninformationen nicht direkt.",
-      "s8ClientFeeTitle": "Kundenentgelt.",
-      "s8ClientFee": "Als Kunde werden Ihnen nur Dienste in Rechnung gestellt, die Sie über die Plattform ausgewählt und ausdrücklich genehmigt haben. Der Gesamtpreis einschließlich aller anwendbaren Steuern, Servicegebühren oder zusätzlichen Kosten wird Ihnen klar angezeigt, bevor Sie Ihre Anfrage bestätigen.",
-      "s8FeesTitle": "Gebühren für Dienstleister.",
-      "s8FeesIntro": "Als Dienstleister unterliegen Sie einer Provision für jeden erfolgreich abgeschlossenen Dienst:",
-      "s8Fees": [
-        "Starter-Niveau (weniger als 150 Aufträge): 20 %",
-        "Pro-Niveau (150 bis 300 Aufträge): 17,5 %",
-        "Elite-Niveau (mehr als 300 Aufträge): 15 %"
-      ],
       "s8TierTitle": "Statusniveau.",
       "s8Tier": "Das Statusniveau wird regelmäßig überprüft, um eine korrekte Anwendung der Provisionssätze zu gewährleisten. Wiederholte Stornierungen nach Ankunft, Verstöße gegen unsere Richtlinien oder andere Verfehlungen können sich negativ auf Ihr Statusniveau und Ihren Zugang zu zukünftigen Aufträgen auf der Plattform auswirken. Schwerwiegende oder wiederholte Verstöße können zu einer Überprüfung Ihres Kontos und zu einer Sperrung oder dauerhaften Entfernung führen.",
       "s8Payout": "Auszahlungen werden in der Regel innerhalb von 5 bis 7 Werktagen nach Abschluss des Dienstes verarbeitet, sofern kein Streit oder Erstattungsantrag vom Kunden eingeleitet wurde. Wir behalten uns das Recht vor, Auszahlungen bei Verdacht auf Betrug, Verstoß gegen diese NB oder ausstehender Streitbeilegung zu verzögern oder zurückzuhalten.",
@@ -5781,7 +5824,47 @@
       "s17JurisTitle": "Gerichtsstand.",
       "s17Juris": "Jeder Streit unterliegt der ausschließlichen Zuständigkeit der zuständigen Gerichte am Sitz von Aegryn.",
       "s18H": "18. Kontakt",
-      "s18": "Sie können uns unter legal@boha-group.com kontaktieren."
+      "s18": "Sie können uns unter legal@boha-group.com kontaktieren.",
+      "s3VerifTitle": "Überprüfung der Dienstleister.",
+      "s3Verif": "Ein Dienstleister muss eine gültige Berufshaftpflichtversicherung nachweisen. Sein Profil und sein Versicherungsnachweis werden von unserem Team innerhalb von 48 Stunden geprüft; er wird per Benachrichtigung über die Annahme oder die (begründete) Ablehnung informiert. neediu kann die Vollständigkeit der Angaben in seinem Konto einsehen (Identität, Services, Verfügbarkeiten, Zahlungsverifizierung, Versicherung).",
+      "s3WaitlistTitle": "Vorabanmeldung von Dienstleistern.",
+      "s3Waitlist": "Die Vorabanmeldung auf der Warteliste begründet kein Konto, verpflichtet weder Aegryn noch den Profi, gilt nicht als Annahme seines Profils und garantiert kein Anfragevolumen. Die Aktivierung eines Kontos bei der Eröffnung unterliegt weiterhin diesen Nutzungsbedingungen, der Überprüfung des Profils und der Berufshaftpflichtversicherung. Die Daten der Vorabanmeldung werden gemäß dem Datenschutzhinweis verarbeitet.",
+      "s5SosTitle": "SOS-Alarm.",
+      "s5Sos": "Die SOS-Funktion ermöglicht es einem Kunden, Kunden in der Nähe zu alarmieren und seinen Vertrauenskontakt zu benachrichtigen. Sie ist kein Notdienst: Sie garantiert weder den Empfang des Alarms noch, dass jemand helfen kann oder will, und ersetzt nie den Anruf bei den Rettungsdiensten (112 oder lokale Notrufnummer). Jeder Nutzer, der einen Alarm erhält, handelt frei und auf eigene Verantwortung, ohne seine eigene Sicherheit zu gefährden. Mit dem Auslösen eines Alarms stimmen Sie zu, dass Ihr Vorname, Ihre Position und eine ungefähre Adresse an Kunden in der Nähe mitgeteilt werden. Sie stellen sicher, dass die als Vertrauenskontakt registrierte Person zugestimmt hat, es zu sein. Missbrauch kann zur Sperrung des Kontos führen.",
+      "s7CoordTitle": "Verbotene persönliche Kontaktdaten.",
+      "s7Coord": "Zum Schutz der Daten unserer Kunden und Dienstleister ist es untersagt, eine E-Mail-Adresse oder Telefonnummer in der Nachrichtenfunktion der App oder in der Notiz an den Dienstleister anzugeben. Die Plattform erkennt und blockiert solche Eingaben vor dem Senden oder der Bestellung. Anrufe laufen über die App und geben die Nummer des Gesprächspartners nicht preis. Nur der Gebäudecode, die Tür oder das Stockwerk dürfen für die Dauer des Einsatzes angegeben werden: Diese Angaben werden in der Notiz an den Dienstleister, im Chat und im Verlauf automatisch maskiert („*******“), sobald der Auftrag den Status „abgeschlossen“ erreicht.",
+      "s8PriceTitle": "Preise der Dienste.",
+      "s8Price": "Die Preise der Dienste werden von den Dienstleistern frei festgelegt. Der Kunde zahlt nur für die Dienste, die er ausdrücklich genehmigt hat; der Gesamtpreis, einschließlich aller Steuern und Gebühren, wird in der App vor der Bestätigung der Bestellung angezeigt. Der bei der Bestellung angezeigte Richtpreis ist nur ein Anhaltspunkt.",
+      "s8CommTitle": "Provision der Plattform.",
+      "s8Comm": "neediu erhebt auf jeden erfolgreich erbrachten Dienst eine Provision; der für den Dienstleister geltende Satz wird in der App mitgeteilt.",
+      "s8CancelTitle": "Stornierung durch den Dienstleister.",
+      "s8Cancel": "Storniert ein Dienstleister einen bereits bezahlten Auftrag, wird dem Kunden der volle Betrag erstattet. Storniert der Dienstleister nach seinem Aufbruch (unterwegs oder angekommen) oder am selben Tag einen geplanten, bereits bezahlten Auftrag, wird von seiner nächsten Zahlung eine dem Auftragspreis angemessene Strafe zwischen 5 und 50 EUR/CHF abgezogen. Ein laufender Auftrag kann nicht mehr storniert werden.",
+      "s8MethodsTitle": "Akzeptierte Zahlungsmittel.",
+      "s8Methods": "Bankkarte (Visa, Mastercard, American Express), Apple Pay (iPhone), Google Pay (Android), gehostete Zahlung über Stripe Checkout und TWINT (Kunden in der Schweiz, Zahlung in CHF). Die Zahlung wird bei Bestätigung der Bestellung belastet; die Gelder werden von neediu gehalten und erst nach Bestätigung der Leistung durch den Kunden an den Dienstleister ausgezahlt. Zahlungen werden von Stripe abgewickelt; neediu speichert keine Kartennummer.",
+      "s8CreditTitle": "neediu-Guthaben.",
+      "s8Credit": "Wird eine Stornierung in Form von Guthaben erstattet, wurde der vom Kunden gezahlte Betrag bereits von seinem Zahlungsmittel abgebucht und bleibt bei neediu gehalten: Das Guthaben ist eine Forderung des Kunden gegenüber neediu, die bei der nächsten Bestellung sofort verwendet werden kann (sie verringert den von der Karte abgebuchten Betrag). Das Guthaben ist nicht in bar erstattbar. Es wird im Bereich „Cagnotte“ der App mit seinem Verlauf angezeigt. Etwaige Anfahrtskosten (5 EUR / CHF 5) bleiben dem Dienstleister geschuldet, wenn die Stornierung erfolgt, während er unterwegs oder angekommen ist.",
+      "s8ExtTitle": "Auftragsverlängerungen.",
+      "s8Ext": "Eine Verlängerung ist eine neue, mit dem ersten verknüpfte Bestellung mit eigener Zahlung, eigener Rechnung und eigener Bestätigung. Die Zahlung für den ursprünglichen Auftrag wird zuerst bestätigt und freigegeben; die Verlängerung wird dann vom Dienstleister vorgeschlagen (oder vom Kunden angefragt) und vom Kunden innerhalb von 15 Minuten bestätigt und bezahlt. Der Betrag einer Verlängerung wird vom Dienstleister festgelegt und aus Sicherheitsgründen für den Kunden auf 500 (EUR oder CHF) begrenzt.",
+      "s8ReportTitle": "Ein Problem melden.",
+      "s8Report": "Vor der Bestätigung einer Leistung kann der Kunde ein Problem melden (Leistung nicht erbracht, unvollständig, Schaden, unangemessenes Verhalten). Die Meldung setzt die Freigabe der Zahlung aus und eröffnet einen vorrangigen Fall beim neediu-Support, der nach Anhörung beider Parteien entscheidet.",
+      "s8IndicTitle": "Richtpreis.",
+      "s8Indic": "Der vor der Bestellung angezeigte Richtpreis ist der festgestellte Durchschnitt der bezahlten Aufträge für denselben Service in derselben Stadt in den letzten 180 Tagen (ersatzweise über alle Orte). Er dient nur als Anhaltspunkt; maßgeblich ist der vom Dienstleister vorgeschlagene Preis.",
+      "s8RewardsTitle": "Guthaben, Rabattgutscheine und Empfehlungen (neediu Rewards).",
+      "s8Rewards": "neediu Rewards umfasst die Guthaben, Rabattgutscheine und Empfehlungen der Plattform, für die die folgenden Regeln gelten.",
+      "s8FriendTitle": "Gutscheine für Freundesempfehlungen.",
+      "s8Friend": "Jeder Nutzer verfügt über einen eindeutigen Empfehlungscode für Freunde. Wendet eine empfohlene Person den Code eines Empfehlenden an und bezahlt dann ihre erste Leistung im Wert von mindestens 10 EUR/CHF, erhalten die empfohlene Person und der Empfehlende jeweils einen Rabattgutschein von 10 % auf ihren nächsten bezahlten Service. Jeder Gutschein trägt einen eindeutigen Code und ein Ablaufdatum (360 Tage ab Ausstellung). Ein Nutzer kann nur einen Empfehlungscode anwenden, nur einmal und nur vor dem ersten Kauf. Ein Empfehlender kann bis zu 10 Personen empfehlen.",
+      "s8ProvRefTitle": "Empfehlung von Dienstleistern.",
+      "s8ProvRef": "Ein Dienstleister verfügt über einen Empfehlungscode für Dienstleister, der sich vom Freundescode unterscheidet. Ein empfohlener Dienstleister kann ihn nur einmal verwenden. Schließt die empfohlene Person ihren ersten bezahlten Auftrag ab, erhält sie, ebenso wie ihr Empfehlender, sofern er Dienstleister ist, 50 % Rabatt auf die Provision der Plattform für den nächsten bezahlten Auftrag. Ein empfehlender Kunde erhält dann einen Gutschein von 10 % auf seinen nächsten bezahlten Service. Die Plattform kann Dienstleistern vorbehaltene Aktionscodes anbieten, die zeitlich begrenzt und pro Dienstleister nur einmal verwendbar sind.",
+      "s8CancelCreditTitle": "Stornoguthaben.",
+      "s8CancelCredit": "Eine nach den Regeln der Plattform erfolgte Stornierung kann zu einem neediu-Guthaben führen, das bei der nächsten Zahlung automatisch vom Betrag des bestellten Services abgezogen wird.",
+      "s8CondTitle": "Bedingungen der Rabatte.",
+      "s8Cond": "Jeder Rabatt: (i) gilt für einen einzigen Service und ist nicht kumulierbar; (ii) ist auf 50 EUR/CHF und 50 % des Preises des Services begrenzt; (iii) verfällt 360 Tage nach der Freischaltung; (iv) ist niemals in Bargeld umwandelbar oder übertragbar; (v) wird von der Plattform berechnet, wobei der Kunde vor der Zahlung den anzuwendenden Gutschein wählt; ohne Auswahl wird zuerst der Gutschein vorgeschlagen, der am frühesten verfällt. Die Kosten der Rabatte trägt vollständig Aegryn: Der Dienstleister wird immer auf Basis des von ihm verlangten Preises inklusive Steuern bezahlt; der Rabatt mindert weder sein Einkommen noch die Provision der Plattform.",
+      "s8DisputeRwTitle": "Stornierung und Streitfall.",
+      "s8DisputeRw": "Ein Rabatt, der auf einen vor der Erbringung stornierten oder nach einem Streitfall erstatteten Service angewendet wurde, wird dem Kunden zurückgegeben (sofern nicht abgelaufen). Gutscheine, die durch einen stornierten oder erstatteten Service gewährt wurden, werden annulliert.",
+      "s8FraudTitle": "Betrug.",
+      "s8Fraud": "Gegenseitige oder zirkuläre Empfehlungen, mehrere Konten derselben Person (Alias-E-Mails, gleiche Telefonnummer) und jede Absprache zwischen einem Kunden und einem Dienstleister sind untersagt. Bei festgestelltem Betrug oder Manipulation werden die betreffenden Punkte und Rabatte annulliert, und das Konto kann gesperrt oder gelöscht werden.",
+      "s9PayTitle": "Zahlung und Stornierung.",
+      "s9Pay": "Der Betrag des Services wird bei der Buchung sofort abgebucht und sicher auf dem Konto der Plattform gehalten: Der Dienstleister wird erst nach abgeschlossener und vom Kunden bestätigter Leistung bezahlt: Das ist die neediu-Garantie. Die Stornierung ist kostenlos, solange der Dienstleister noch nicht unterwegs ist (vor seiner Abfahrt): Die Erstattung als neediu-Guthaben erfolgt sofort, ist immer kostenlos und unbegrenzt; die Erstattung auf das Bankkonto erfolgt vollständig, begrenzt auf eine pro Monat und Kunde. Darüber hinaus (Dienstleister unterwegs oder angekommen oder eine zusätzliche Bankerstattung im selben Monat) werden Gebühren von 5 EUR/CHF zuzüglich der Zahlungsabwicklungsgebühren von der Erstattung abgezogen; die vom Zahlungsdienstleister erhobenen Gebühren werden nie zurückerstattet, auch nicht bei einer Erstattung. Sobald die Leistung begonnen hat, ist eine Stornierung über die Plattform nicht mehr möglich, und die Zahlung bleibt geschuldet. Die Erstattung kann als neediu-Guthaben verlangt werden: sofort und ohne Bankgebühren (nur die bereits erfolgte Anfahrt des Dienstleisters bleibt abgezogen), sofort bei der nächsten Buchung wiederverwendbar."
     }
   },
   "experts": {
@@ -6516,8 +6599,8 @@
     "press": {
       "label": "Pressestimmen",
       "neediu": {
-        "context": "Berichterstattung im Magazin Gala, einem führenden Publikumsmagazin. Videoreportage über neediu, ein Aegryn-Asset im Bereich Haushaltsdienstleistungen.",
-        "excerpt": "neediu, die Plattform zur Vermittlung zwischen Privatpersonen und Dienstleistern für Haushaltsdienste, war Gegenstand einer Videoreportage im Magazin Gala.",
+        "context": "Berichterstattung im Magazin Gala, einem führenden Publikumsmagazin. Videoreportage über neediu, ein Signature-Projekt von Aegryn im Bereich lokaler Dienstleistungen.",
+        "excerpt": "neediu, die Plattform zur Vermittlung zwischen Privatpersonen und Profis für lokale Dienstleistungen, war Gegenstand einer Videoreportage im Magazin Gala.",
         "title": "neediu im Magazin Gala"
       },
       "readArticle": "Artikel lesen",
@@ -7183,10 +7266,22 @@
       "responseLead": "Aegryn vereint beides.",
       "response": "Ein Fundament für Unternehmensberatung, <strong>die integrierte Firma</strong>, die die Entscheidungen von Führungskräften rahmt, umsetzt und begleitet. Und ein unternehmerisches Vertikal, <strong>La Boutique</strong>, das eine begrenzte Zahl Signature-Projekte von Anfang bis Ende führt. Was es seinen Kunden empfiehlt, wendet Aegryn auf sich selbst an.",
       "reasoning": [
-        { "lead": "Rahmen ohne Umsetzen", "consequence": "heisst, eine Karte ohne Gelände zu liefern." },
-        { "lead": "Umsetzen ohne Rahmen", "consequence": "heisst, ohne Kurs auszuführen." },
-        { "lead": "Begleiten, ohne gebaut zu haben,", "consequence": "heisst, von aussen zu beraten." },
-        { "lead": "Auswählen ohne Projekt", "consequence": "heisst, ins Leere zu rekrutieren." }
+        {
+          "lead": "Rahmen ohne Umsetzen",
+          "consequence": "heisst, eine Karte ohne Gelände zu liefern."
+        },
+        {
+          "lead": "Umsetzen ohne Rahmen",
+          "consequence": "heisst, ohne Kurs auszuführen."
+        },
+        {
+          "lead": "Begleiten, ohne gebaut zu haben,",
+          "consequence": "heisst, von aussen zu beraten."
+        },
+        {
+          "lead": "Auswählen ohne Projekt",
+          "consequence": "heisst, ins Leere zu rekrutieren."
+        }
       ],
       "closingLead": "Bei Aegryn stärkt jede Art zu handeln die nächste.",
       "closing": "Diese Kette ist es, die ein Projekt tragfähig macht, für unsere Kunden wie für uns.",
@@ -7909,5 +8004,86 @@
     "sovereignty": "Souveränität",
     "method": "Methode",
     "quit": "Schliessen"
+  },
+  "neediuPro": {
+    "meta": {
+      "title": "Vorabanmeldung für Profis | neediu",
+      "desc": "Melden Sie sich in 2 Minuten und ohne Verpflichtung vorab an, um vor der Eröffnung in Ihrer Stadt bei neediu dabei zu sein."
+    },
+    "back": "Das Projekt neediu entdecken",
+    "eyebrow": "Für Profis",
+    "title": "Seien Sie vor der Eröffnung bei neediu dabei",
+    "intro": "Die App für lokale Dienstleistungen startet bald. Melden Sie sich in 2 Minuten vorab an:\nWir informieren Sie, sobald Ihr Service in Ihrer Nähe verfügbar ist.",
+    "soon": "Bald",
+    "stepsLabel": "Drei Schritte",
+    "steps": [
+      {
+        "t": "Ich melde mich vorab an",
+        "d": "2 Minuten"
+      },
+      {
+        "t": "Ich bereite meine Unterlagen vor",
+        "d": "wann ich möchte"
+      },
+      {
+        "t": "Ich aktiviere mein Konto",
+        "d": "Einladung bei Eröffnung"
+      }
+    ],
+    "trust": [
+      "Ich lege meine Preise und Verfügbarkeiten fest",
+      "Ich nehme jede Anfrage an oder lehne sie ab",
+      "Anmeldung ohne Verpflichtung"
+    ],
+    "reassurance": "Ihre Vorabanmeldung gilt nicht als Annahme und garantiert kein Anfragevolumen.",
+    "form": {
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "country": "Land",
+      "city": "Stadt",
+      "services": "Angebotene Services",
+      "servicesHint": "Einen oder mehrere Services wählen",
+      "servicesCount": "ausgewählt",
+      "consentBefore": "Ich bin damit einverstanden, dass Aegryn als Verantwortliche diese Angaben verwendet, um mich zu meiner Vorabanmeldung zu kontaktieren und mich zu informieren, sobald neediu in meiner Nähe startet, gemäß dem ",
+      "consentLink": "Datenschutzhinweis",
+      "consentAfter": ".",
+      "submit": "Auf die Warteliste setzen",
+      "sending": "Wird gesendet…",
+      "closed": "Das Formular öffnet bald. Es ist noch nicht aktiv.",
+      "success": "Prüfen Sie Ihre E-Mails, um Ihre Vorabanmeldung zu bestätigen.",
+      "confirmed": "Ihre Vorabanmeldung ist bestätigt. Wir schreiben Ihnen, sobald Ihre Stadt startet.",
+      "notConfirmed": "Dieser Bestätigungslink ist nicht mehr gültig. Sie können sich erneut vorab anmelden.",
+      "error": "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+      "validation": "Bitte prüfen Sie die markierten Felder.",
+      "companyName": "Firmenname",
+      "vat": "MWST-Nr. / USt-IdNr.",
+      "cityPlaceholder": "Stadt auswählen",
+      "cities": {
+        "bruxelles": "Brüssel",
+        "paris": "Paris",
+        "geneve": "Genf",
+        "lausanne": "Lausanne"
+      },
+      "testMode": "Testmodus (Preview): Ihre Eingabe wurde nicht gespeichert.",
+      "dialCode": "Vorwahl",
+      "countryAuto": "Je nach Stadt",
+      "phoneInvalid": "Bitte prüfen Sie die Telefonnummer."
+    },
+    "stores": {
+      "label": "Bald verfügbar bei",
+      "apple": "App Store",
+      "google": "Google Play"
+    },
+    "heroLink": "Sie sind Profi? Auf die Warteliste",
+    "sideTab": "Profis: Vorabanmeldung",
+    "fiche": {
+      "availability": "Verfügbarkeit",
+      "availabilityValue": "Bald im App Store\nund bei Google Play",
+      "docs": "Rechtliche Dokumente",
+      "cgu": "Allgemeine Nutzungs- und Verkaufsbedingungen (AGB)",
+      "notice": "Datenschutzhinweis"
+    }
   }
 }

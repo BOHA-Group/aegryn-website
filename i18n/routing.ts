@@ -103,6 +103,7 @@ export const routing = defineRouting({
     '/security':                          '/security',
     '/help/faq':                          '/help/faq',
     '/data-protection-notice-neediu':     '/data-protection-notice-neediu',
+    '/neediu/pro':                        '/neediu/pro',
     '/client/buyer':                      '/client/buyer',
     '/sitemap':                           '/sitemap',
     '/magazine':                          '/magazine',

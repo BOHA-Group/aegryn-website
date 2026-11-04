@@ -104,8 +104,8 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     image:            '/images/portfolio/neediu-roomservice.jpg',
     namePublic:       true,
     badge:            'B2C — Marketplace',
-    tagline:          'Services à domicile, mise en relation intelligente',
-    description:      'Connecte particuliers et professionnels aux meilleurs prestataires de services à domicile, basé sur la localisation et les avis vérifiés.',
+    tagline:          'Services de proximité, mise en relation avec des pros',
+    description:      'Connecte particuliers et professionnels de services de proximité, selon la localisation et les avis publiés après chaque service.',
     category:         'lifestyle',
     industrySector:   { industry: 'commerce-services-experience-client', sectorIndex: 0 },
     transposeSectors: [

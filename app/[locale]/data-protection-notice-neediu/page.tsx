@@ -35,7 +35,7 @@ export default async function NeediuLegalPage({ params }: Props) {
           {' / '}{t('breadcrumb')}
         </p>
 
-        <p className="font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex-ink mb-4">{t('sectionDpn')}</p>
+        <p id="notice" className="scroll-mt-28 font-sans font-semibold text-[10px] uppercase tracking-[0.2em] text-ag-apex-ink mb-4">{t('sectionDpn')}</p>
 
         <WaveReveal delay={0.1}>
           <h1 className="font-sans font-bold text-ag-black tracking-[-0.03em] leading-[1.1] mb-4"
@@ -98,8 +98,15 @@ export default async function NeediuLegalPage({ params }: Props) {
           <p>{t('dpn.categories.accountP')}</p>
           <h3>{t('dpn.categories.economicH')}</h3>
           <p>{t('dpn.categories.economicP')}</p>
+          <p>{t('dpn.categories.economicRewards')}</p>
           <h3>{t('dpn.categories.internetH')}</h3>
           <p>{t('dpn.categories.internetP')}</p>
+          <h3>{t('dpn.categories.locationH')}</h3>
+          <p>{t('dpn.categories.locationP')}</p>
+          <h3>{t('dpn.categories.trustedH')}</h3>
+          <p>{t('dpn.categories.trustedP')}</p>
+          <h3>{t('dpn.categories.waitlistH')}</h3>
+          <p>{t('dpn.categories.waitlistP')}</p>
           <h3>{t('dpn.categories.otherH')}</h3>
           <p>{t('dpn.categories.otherP')}</p>
 
@@ -111,6 +118,11 @@ export default async function NeediuLegalPage({ params }: Props) {
 
           <h2>{t('dpn.why.h')}</h2>
           <p>{t('dpn.why.p')}</p>
+          <p>{t('dpn.why.p2')}</p>
+          <p>{t('dpn.why.p3')}</p>
+
+          <h2>{t('dpn.sos.h')}</h2>
+          <p>{t('dpn.sos.p')}</p>
 
           <h2>{t('dpn.automated.h')}</h2>
           <p>{t('dpn.automated.p')}</p>
@@ -130,10 +142,12 @@ export default async function NeediuLegalPage({ params }: Props) {
 
           <h2>{t('dpn.storage.h')}</h2>
           <p>{t('dpn.storage.p')}</p>
+          <p>{t('dpn.storage.p2')}</p>
 
           <h2>{t('dpn.sharing.h')}</h2>
           <p>{t('dpn.sharing.p1')}</p>
           <p>{t('dpn.sharing.p2')}</p>
+          <p>{t('dpn.sharing.p2b')}</p>
           <p>{t('dpn.sharing.p3')}</p>
           <h3>{t('dpn.sharing.providersH')}</h3>
           <table>
@@ -160,7 +174,7 @@ export default async function NeediuLegalPage({ params }: Props) {
           {/* ── CGU ── */}
           <hr className="my-14 border-ag-border" />
 
-          <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('cgu.sectionLabel')}</p>
+          <p id="cgu" className="scroll-mt-28 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex-ink"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('cgu.sectionLabel')}</p>
           <h2 className="!mt-4">{t('cgu.h2')}</h2>
           <p className="border-l-2 border-ag-border pl-4 text-[14px]">{t('cgu.disclaimer')}</p>
 
@@ -178,7 +192,9 @@ export default async function NeediuLegalPage({ params }: Props) {
           <p><strong>{t('cgu.s3MemberTitle')}</strong> {t('cgu.s3Member')}</p>
           <p><strong>{t('cgu.s3ConfidTitle')}</strong> {t('cgu.s3Confid')}</p>
           <p><strong>{t('cgu.s3InfoTitle')}</strong> {t('cgu.s3Info')}</p>
+          <p><strong>{t('cgu.s3VerifTitle')}</strong> {t('cgu.s3Verif')}</p>
           <p><strong>{t('cgu.s3KycTitle')}</strong> {t('cgu.s3Kyc')}</p>
+          <p><strong>{t('cgu.s3WaitlistTitle')}</strong> {t('cgu.s3Waitlist')}</p>
 
           <h3>{t('cgu.s4H')}</h3>
           <p><strong>{t('cgu.s4AccessTitle')}</strong> {t('cgu.s4Access')}</p>
@@ -187,12 +203,14 @@ export default async function NeediuLegalPage({ params }: Props) {
 
           <h3>{t('cgu.s5H')}</h3>
           <p>{t('cgu.s5')}</p>
+          <p><strong>{t('cgu.s5SosTitle')}</strong> {t('cgu.s5Sos')}</p>
 
           <h3>{t('cgu.s6H')}</h3>
           <p><strong>{t('cgu.s6RightTitle')}</strong> {t('cgu.s6Right')}</p>
           <p><strong>{t('cgu.s6RestrictTitle')}</strong> {t('cgu.s6Restrict')}</p>
 
           <h3>{t('cgu.s7H')}</h3>
+          <p><strong>{t('cgu.s7CoordTitle')}</strong> {t('cgu.s7Coord')}</p>
           <p><strong>{t('cgu.s7ContentTitle')}</strong> {t('cgu.s7Content')}</p>
           <p><strong>{t('cgu.s7ReviewTitle')}</strong> {t('cgu.s7Review')}</p>
           <p><strong>{t('cgu.s7LicenseTitle')}</strong> {t('cgu.s7License')}</p>
@@ -200,18 +218,27 @@ export default async function NeediuLegalPage({ params }: Props) {
 
           <h3>{t('cgu.s8H')}</h3>
           <p>{t('cgu.s8')}</p>
-          <p><strong>{t('cgu.s8ClientFeeTitle')}</strong> {t('cgu.s8ClientFee')}</p>
-          <p><strong>{t('cgu.s8FeesTitle')}</strong> {t('cgu.s8FeesIntro')}</p>
-          <ul>
-            {(t.raw('cgu.s8Fees') as string[]).map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
+          <p><strong>{t('cgu.s8PriceTitle')}</strong> {t('cgu.s8Price')}</p>
+          <p><strong>{t('cgu.s8CommTitle')}</strong> {t('cgu.s8Comm')}</p>
           <p><strong>{t('cgu.s8TierTitle')}</strong> {t('cgu.s8Tier')}</p>
+          <p><strong>{t('cgu.s8CancelTitle')}</strong> {t('cgu.s8Cancel')}</p>
           <p>{t('cgu.s8Payout')}</p>
+          <p><strong>{t('cgu.s8MethodsTitle')}</strong> {t('cgu.s8Methods')}</p>
+          <p><strong>{t('cgu.s8CreditTitle')}</strong> {t('cgu.s8Credit')}</p>
+          <p><strong>{t('cgu.s8ExtTitle')}</strong> {t('cgu.s8Ext')}</p>
+          <p><strong>{t('cgu.s8ReportTitle')}</strong> {t('cgu.s8Report')}</p>
+          <p><strong>{t('cgu.s8IndicTitle')}</strong> {t('cgu.s8Indic')}</p>
+          <p><strong>{t('cgu.s8RewardsTitle')}</strong> {t('cgu.s8Rewards')}</p>
+          <p><strong>{t('cgu.s8FriendTitle')}</strong> {t('cgu.s8Friend')}</p>
+          <p><strong>{t('cgu.s8ProvRefTitle')}</strong> {t('cgu.s8ProvRef')}</p>
+          <p><strong>{t('cgu.s8CancelCreditTitle')}</strong> {t('cgu.s8CancelCredit')}</p>
+          <p><strong>{t('cgu.s8CondTitle')}</strong> {t('cgu.s8Cond')}</p>
+          <p><strong>{t('cgu.s8DisputeRwTitle')}</strong> {t('cgu.s8DisputeRw')}</p>
+          <p><strong>{t('cgu.s8FraudTitle')}</strong> {t('cgu.s8Fraud')}</p>
 
           <h3>{t('cgu.s9H')}</h3>
           <p>{t('cgu.s9')}</p>
+          <p><strong>{t('cgu.s9PayTitle')}</strong> {t('cgu.s9Pay')}</p>
           <p><strong>{t('cgu.s9DisputeTitle')}</strong> {t('cgu.s9Dispute')}</p>
 
           <h3>{t('cgu.s10H')}</h3>

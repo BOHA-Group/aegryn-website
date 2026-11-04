@@ -241,10 +241,10 @@
       },
       "neediu": {
         "badge": "B2C · Marktplaats",
-        "tagline": "Thuisdiensten, intelligente koppeling",
-        "description": "Verbindt particulieren en professionals met de beste aanbieders van thuisdiensten, op basis van locatie en geverifieerde beoordelingen.",
+        "tagline": "Diensten dichtbij, slimme koppeling met professionals",
+        "description": "Verbindt particulieren en professionals voor diensten dichtbij, op basis van locatie en reviews die na elke dienst worden gepubliceerd.",
         "capability": "Een netwerk van onafhankelijke aanbieders orkestreren",
-        "keywords": "aanbiedernetwerk · directe boeking · geverifieerde reviews · nabijheid"
+        "keywords": "netwerk van professionals · diensten dichtbij · online boeken · reviews na de dienst"
       },
       "movtoo": {
         "badge": "B2C · Transport",
@@ -1244,17 +1244,18 @@
         "orgs": "Advocatenkantoren, family offices en juridische afdelingen (white-label-licentie), kmo’s en ondernemers die contracten ondertekenen zonder eigen juridische dienst."
       },
       "neediu": {
-        "longDesc": "Verbindt particulieren met de beste thuisserviceproviders. Schoonmaken, tuinieren, klussen, kinderopvang: slimme koppeling op basis van locatie en geverifieerde beoordelingen.",
+        "longDesc": "Verbindt particulieren met professionals voor diensten dichtbij: koppeling op basis van locatie, met reviews die na elke dienst worden gepubliceerd.",
         "audience": "Particulieren, professionals",
         "features": [
-          "Real-time koppeling",
-          "Geverifieerde en beoordeelde aanbieders",
+          "Koppeling op basis van locatie",
+          "Profielen worden vóór activering door het team gecontroleerd",
+          "Beroepsaansprakelijkheidsverzekering vereist voor aanbieders",
+          "Reviews na elke dienst",
           "Geïntegreerde veilige betaling",
-          "Live opdrachttracking",
-          "Prestatieverzekering inbegrepen",
-          "Dekking Zwitserland en Europa"
+          "Live opvolging van de opdracht",
+          "Geleidelijke opening, stad per stad"
         ],
-        "need": "Een betrouwbare aanbieder aan huis vinden blijft traag en onzeker: verouderde directories, niet-geverifieerde reviews, ondoorzichtige beschikbaarheid.",
+        "need": "Een betrouwbare professional in de buurt vinden blijft traag en onzeker: verouderde directories, niet-geverifieerde reviews, ondoorzichtige beschikbaarheid.",
         "skills": [
           "Conceptontwikkeling",
           "Haalbaarheidsstudie",
@@ -1266,7 +1267,7 @@
           "Technische ontwikkeling",
           "Lanceringsstrategie"
         ],
-        "orgs": "Verzekeringen en banken (reparatienetwerken, assistentie), Gezondheid (thuiszorg), Handel & Diensten (installatie, nazorg), overheden."
+        "orgs": "Verzekeringen en banken (reparatienetwerken, assistentie), Gezondheid (zorg dichtbij), Handel & Diensten (installatie, nazorg), overheden."
       },
       "primiom": {
         "longDesc": "Hervindt vastgoedtransacties door de verkoper centraal te stellen in het koop- en verkoopproces. Nauwkeurige waardering, real-time marktanalyse en persoonlijke begeleiding van A tot Z.",
@@ -1464,8 +1465,8 @@
         "status": "Beperkt, alleen op uitnodiging"
       },
       "neediu": {
-        "headline": "Slimme koppeling voor thuisservices.",
-        "p1": "neediu verbindt particulieren met gekwalificeerde aanbieders voor al hun thuisbehoeften: schoonmaken, tuinieren, klussen, kinderopvang en meer.",
+        "headline": "De slimme koppeling voor diensten dichtbij.",
+        "p1": "neediu verbindt particulieren met professionals voor hun behoeften dichtbij.",
         "p2": "Het algoritme analyseert beschikbaarheid, locatie en beoordelingen om de ideale aanbieder in seconden voor te stellen.",
         "market": "B2C · Marktplaats",
         "zone": "Regio Parijs → Frankrijk",
@@ -1738,7 +1739,8 @@
     "col5Title": "Volg ons",
     "taglines": "Built to Last · Rare by selection",
     "col2Verify": "Certificaat verifiëren",
-    "footerCraftFrameDeliver": "Kaderen en realiseren"
+    "footerCraftFrameDeliver": "Kaderen en realiseren",
+    "storeTrademarks": "App Store is een handelsmerk van Apple Inc. Google Play is een handelsmerk van Google LLC."
   },
   "gradingSystem": {
     "meta": {
@@ -5549,11 +5551,11 @@
     "sectionDpn": "(01)",
     "h1": "Kennisgeving gegevensbescherming, Aegryn neediu",
     "disclaimer": "Disclaimer: deze kennisgeving gegevensbescherming is een door AI gegenereerde vertaling die uitsluitend ter informatie wordt verstrekt. In geval van discrepanties of inconsistenties prevaleert de Engelse versie.",
-    "updated": "Laatst bijgewerkt: 01/03/2026",
+    "updated": "Laatst bijgewerkt: 04/11/2026",
     "dpn": {
       "intro": {
         "h": "Inleiding",
-        "p1": "neediu is een platform dat gebruikers in staat stelt snel vertrouwde professionals of particulieren te identificeren en te contacteren die hulp bieden bij woninggerelateerde behoeften in hun regio. Omdat wij veel belang hechten aan de bescherming van uw gegevens en uw privacy, hebben wij deze kennisgeving gegevensbescherming opgesteld om uit te leggen wat wij met uw gegevens doen wanneer u ons platform gebruikt.",
+        "p1": "neediu is een platform dat gebruikers in staat stelt snel vertrouwde professionals of particulieren te identificeren en te contacteren die diensten dichtbij aanbieden in hun regio. Omdat wij veel belang hechten aan de bescherming van uw gegevens en uw privacy, hebben wij deze kennisgeving gegevensbescherming opgesteld om uit te leggen wat wij met uw gegevens doen wanneer u ons platform gebruikt.",
         "p2": "Deze kennisgeving gegevensbescherming dekt alleen de gegevensverwerking in verband met ons platform. Ons doel is een adequate bescherming van persoonsgegevens te garanderen overeenkomstig alle toepasselijke gegevensbeschermingswetten, inclusief maar niet beperkt tot de Zwitserse Federale Wet op de Gegevensbescherming (FADP) en de Algemene Verordening Gegevensbescherming (AVG).",
         "p3": "In Zwitserland is de bescherming van uw gegevens met name gebaseerd op de Federale Wet van 25 september 2020 op de Gegevensbescherming (FADP), alsook op de Federale Verordening van 31 augustus inzake Gegevensbescherming (DPO). Onze kennisgeving gegevensbescherming en onze praktijken zijn afgestemd op de wettelijke bepalingen in de genoemde wetgeving.",
         "p4": "Hoewel wij alles in het werk stellen om onze kennisgeving gegevensbescherming te vereenvoudigen, vloeit de moeilijkheid om haar te begrijpen voort uit de taal die eigen is aan het juridische kader. Daarom hebben wij het initiatief genomen de belangrijkste definities te groeperen om onze kennisgeving beter begrijpelijk te maken; deze zijn ontleend aan de FADP.",
@@ -5614,9 +5616,16 @@
         "economicH": "Economische gegevens",
         "economicP": "Betalingsmethode, betaalde of ontvangen bedragen, transactiehistoriek, toepasselijke commissies, factuuradres, bankgegevens voor uitbetalingen. Gegevens van betaalmethoden worden uitsluitend verwerkt door onze externe dienstverleners; wij verwerken geen creditcardnummers of CVC-codes.",
         "internetH": "Internet- en verbindingsgegevens",
-        "internetP": "IP-adres, informatie over uw internetprovider en het besturingssysteem van uw apparaat, verwijzende URL, gebruikte browser, datum en tijd van toegang, bekeken inhoud.",
+        "internetP": "IP-adres, informatie over uw internetprovider en het besturingssysteem van uw apparaat, verwijzende URL, gebruikte browser, datum en tijd van toegang, bekeken inhoud. Wanneer de app een fout tegenkomt, wordt een technisch rapport (betreffend scherm, foutmelding, systeem en versie van de app, accountidentificatie) geregistreerd om het probleem te verhelpen; het wordt zes maanden bewaard.",
         "otherH": "Andere gegevens",
-        "otherP": "Type en omvang van de taak, grootte of staat van de woning of lokalen, gewenste datum en tijd, foto's of beschrijvingen die de aard van de opdracht verduidelijken, identificatiegegevens in het kader van het KYC-proces."
+        "otherP": "Type en omvang van de taak, grootte of staat van de woning of lokalen, gewenste datum en tijd, foto's of beschrijvingen die de aard van de opdracht verduidelijken, identificatiegegevens in het kader van het KYC-proces, bewijs van beroepsaansprakelijkheidsverzekering van Dienstverleners (document, geldigheidsdatum, validatiebeslissing).",
+        "economicRewards": "Deze verwerking omvat ook de gegevens over tegoeden, kortingsbonnen en doorverwijzingen van neediu Rewards: tegoeden, verkregen, gebruikte of verlopen bonnen en de doorverwijzingen die aan uw persoonlijke code zijn gekoppeld.",
+        "locationH": "Locatiegegevens",
+        "locationP": "GPS-positie van uw toestel, die alleen wordt gebruikt wanneer u dit toestaat in de instellingen van uw telefoon: bepalen van het interventieadres, zoeken naar beschikbare dienstverleners in de buurt, berekening van de route en de aankomsttijd, en SOS-melding. Voor een Dienstverlener wordt de positie alleen tijdens een opdracht met de status “onderweg” gedeeld met de betrokken Klant (hoogstens om de 5 minuten, of na een verplaatsing van ongeveer 300 meter) en stopt bij aankomst. Om aanvragen in de buurt te ontvangen, stuurt een beschikbare Dienstverlener van wie de app geopend is bovendien zijn positie naar neediu bij het openen, bij elke nieuwe aanvraag en hoogstens om de 30 minuten; ze is voor geen enkele andere gebruiker zichtbaar en wordt alleen gebruikt als ze minder dan een uur oud is. Uw laatst bekende positie dient om de stad en de actieradius te bepalen; ze wordt niet verkocht of voor reclamedoeleinden gebruikt.",
+        "trustedH": "Gegevens over uw vertrouwenscontacten",
+        "trustedP": "Als u een vertrouwenscontact opslaat (naam en telefoonnummer), worden deze gegevens in uw account bewaard, zodat u hem of haar kunt bellen of vanaf uw eigen telefoon een sms met uw positie kunt sturen. neediu stuurt geen sms naar dit contact en neemt geen contact met hem of haar op. Het is uw verantwoordelijkheid om hem of haar te informeren dat hij of zij als vertrouwenscontact is opgenomen en om zijn of haar instemming te verkrijgen.",
+        "waitlistH": "Voorinschrijvingsgegevens van professionals",
+        "waitlistP": "Als u zich als professional vooraf inschrijft op de wachtlijst van neediu: voornaam, achternaam, e-mailadres, telefoonnummer, bedrijfsnaam en btw-nummer, land, stad, aangeboden diensten, taal van de pagina, en de datum en het tijdstip van uw toestemming en van de bevestiging van uw inschrijving. Deze gegevens worden verzameld door Aegryn, de verwerkingsverantwoordelijke, op basis van uw toestemming."
       },
       "sensitive": {
         "h": "Hoe zit het met gevoelige gegevens?",
@@ -5628,7 +5637,9 @@
       },
       "why": {
         "h": "Waarom verwerken wij uw gegevens?",
-        "p": "Wij verwerken uw persoonsgegevens om u toegang te geven tot de functionaliteiten van ons platform en deze te laten gebruiken, en om de correcte uitvoering van de via het platform aangeboden diensten te waarborgen. Dit omvat met name het aanmaken en beheren van uw gebruikersaccount, de verbinding tussen Klanten en Dienstverleners, de verwerking van betalingen, de verzending van berichten tussen gebruikers en de weergave van relevante informatie op basis van uw profiel en voorkeuren. Wij verwerken uw gegevens ook om met u te communiceren, in het bijzonder om uw verzoeken te beantwoorden en uw rechten uit te oefenen, alsook om u te informeren over onze diensten. Wij verwerken uw persoonsgegevens eveneens om verkeersstatistieken te genereren die nuttig zijn voor het verbeteren van ons platform. Ten slotte verwerken wij uw persoonsgegevens om wetten, richtlijnen en aanbevelingen van autoriteiten na te leven."
+        "p": "Wij verwerken uw persoonsgegevens om u toegang te geven tot de functionaliteiten van ons platform en deze te laten gebruiken, en om de correcte uitvoering van de via het platform aangeboden diensten te waarborgen. Dit omvat met name het aanmaken en beheren van uw gebruikersaccount, de verbinding tussen Klanten en Dienstverleners, de verwerking van betalingen, de verzending van berichten tussen gebruikers en de weergave van relevante informatie op basis van uw profiel en voorkeuren. Wij verwerken uw gegevens ook om met u te communiceren, in het bijzonder om uw verzoeken te beantwoorden en uw rechten uit te oefenen, alsook om u te informeren over onze diensten. Wij verwerken uw persoonsgegevens eveneens om verkeersstatistieken te genereren die nuttig zijn voor het verbeteren van ons platform. Ten slotte verwerken wij uw persoonsgegevens om wetten, richtlijnen en aanbevelingen van autoriteiten na te leven.",
+        "p2": "Locatiegegevens dienen ook voor de veiligheid van personen (SOS-melding) en voor de berekening van routes; meldingen (push en in de app) worden u gestuurd in de taal die u in uw account hebt gekozen.",
+        "p3": "Wij gebruiken de gegevens van de voorinschrijving uitsluitend om uw inschrijving per e-mail te bevestigen (dubbele bevestiging), u te laten weten wanneer neediu in uw stad opent, u uit te nodigen uw account te activeren en contact met u op te nemen over uw voorinschrijving. De voorinschrijving is vrijblijvend, geldt niet als acceptatie van uw profiel en garandeert geen aantal aanvragen. U kunt uw toestemming op elk moment intrekken door contact met ons op te nemen (zie “Wat zijn uw rechten?”)."
       },
       "automated": {
         "h": "Nemen wij geautomatiseerde individuele beslissingen?",
@@ -5654,7 +5665,8 @@
       },
       "storage": {
         "h": "Waar en hoe lang worden uw gegevens opgeslagen?",
-        "p": "Persoonsgegevens worden opgeslagen op onze locaties en in verwerkingscentra die door onze externe dienstverleners worden beheerd. Wij bewaren ze zolang als het doel van de verwerking vereist, of zolang wij een gerechtvaardigd belang hebben ze te bewaren. Voor bepaalde gegevens kan de bewaartermijn tot tien jaar bedragen. Na afloop van deze termijnen vernietigen wij uw persoonsgegevens."
+        "p": "Persoonsgegevens worden opgeslagen op onze locaties en in verwerkingscentra die door onze externe dienstverleners worden beheerd. Wij bewaren ze zolang als het doel van de verwerking vereist, of zolang wij een gerechtvaardigd belang hebben ze te bewaren. Voor bepaalde gegevens kan de bewaartermijn tot tien jaar bedragen. Na afloop van deze termijnen vernietigen wij uw persoonsgegevens.",
+        "p2": "Voorinschrijvingen die niet zijn bevestigd, dat wil zeggen waarvan de per e-mail ontvangen bevestigingslink niet is geopend, worden na 60 dagen verwijderd. Bevestigde voorinschrijvingen worden bewaard tot u uw toestemming intrekt of tot uw account is geactiveerd, en daarna verwijderd of overgenomen in uw account."
       },
       "sharing": {
         "h": "Met wie delen wij uw gegevens?",
@@ -5682,8 +5694,44 @@
             "Google Analytics",
             "Analyticsdienst om het platformgebruik te volgen en activiteitenrapporten op te stellen.",
             "EER/VS"
+          ],
+          [
+            "Mapbox",
+            "Berekening van routes en aankomsttijden, geocodering en adreszoekfunctie (de voor de berekening nodige coördinaten worden doorgegeven; er wordt geen naam meegedeeld).",
+            "EER/VS"
+          ],
+          [
+            "Google (Maps)",
+            "Weergave van kaarten op Android en routeberekening wanneer geactiveerd.",
+            "EER/VS"
+          ],
+          [
+            "Apple (Kaarten)",
+            "Weergave van kaarten op iOS.",
+            "EER/VS"
+          ],
+          [
+            "Expo / Firebase (Google)",
+            "Bezorging van pushmeldingen op de toestellen.",
+            "EER/VS"
+          ],
+          [
+            "Twilio",
+            "Verzenden van verificatiecodes en telefonisch contact met verborgen nummer.",
+            "EER/VS"
+          ],
+          [
+            "Resend",
+            "Verzenden van servicemails (herinneringen, beveiligingsmeldingen, antwoorden van de support).",
+            "EER/VS"
+          ],
+          [
+            "Sentry",
+            "Bewaking van technische fouten van de app (persoonsgegevens tot een minimum beperkt).",
+            "EER/VS"
           ]
-        ]
+        ],
+        "p2b": "Met name worden gedeeld: het interventieadres met de gekozen Dienstverlener, de positie van de Dienstverlener met de Klant tijdens de rit (status “onderweg”) en, bij een SOS-melding, de voornaam, de positie en het indicatieve adres van de persoon met Klanten in de buurt."
       },
       "social": {
         "h": "Sociale media",
@@ -5692,6 +5740,10 @@
       "final": {
         "h": "Slotbepalingen (Kennisgeving)",
         "p": "Wij behouden ons het recht voor de voorwaarden van deze kennisgeving naar eigen goeddunken te wijzigen. Elke gewijzigde versie wordt op ons platform gepubliceerd."
+      },
+      "sos": {
+        "h": "Hoe werkt de SOS-melding?",
+        "p": "De SOS-melding wordt vrijwillig geactiveerd door een Klant. Ze wordt alleen verzonden naar Klanten met een neediu-account die zich in de buurt bevinden (straal bepaald door neediu, hoogstens 2 km), ongeacht of ze in de app zijn aangemeld; Dienstverleners ontvangen ze nooit. De ontvangers krijgen uitsluitend de voornaam van de persoon, haar GPS-positie en een indicatief adres, zodat ze haar kunnen helpen; ze kunnen de route in de app weergeven en de navigatie starten. De Klant die de melding activeert, kan vanaf zijn telefoon ook zijn vertrouwenscontact bellen of hem of haar zijn positie per sms sturen. De knop “112 bellen” opent gewoon het oorspronkelijke belscherm van het toestel. De SOS-melding vervangt de hulpdiensten niet: bel bij levensgevaar 112 (of het lokale noodnummer)."
       }
     },
     "cgu": {
@@ -5725,12 +5777,12 @@
       "s4TelecomTitle": "Telecommunicatie.",
       "s4Telecom": "Wij zijn geen telecommunicatieprovider. Bel- en chatfuncties werken via internet (VoIP/data) en zijn niet verbonden met mobiele of vaste netwerken. Gebruik ze niet voor hulpdiensten.",
       "s5H": "5. Functies en diensten",
-      "s5": "Het Platform biedt een digitale dienst waarmee gebruikers in contact kunnen komen met professionals of particulieren die woninggerelateerde hulp aanbieden. Het Platform faciliteert het eerste contact maar intervenieert niet in de uitvoering van de diensten. Wij aanvaarden geen verantwoordelijkheid voor de kwaliteit, tijdigheid of het resultaat van door derden uitgevoerde diensten.",
+      "s5": "Het Platform biedt een digitale dienst waarmee gebruikers in contact kunnen komen met professionals of particulieren die diensten dichtbij aanbieden. Het Platform faciliteert het eerste contact maar intervenieert niet in de uitvoering van de diensten. Wij aanvaarden geen verantwoordelijkheid voor de kwaliteit, tijdigheid of het resultaat van door derden uitgevoerde diensten.",
       "s6H": "6. Gebruik van het Platform",
       "s6RightTitle": "Gebruiksrecht.",
-      "s6Right": "U krijgt een herroepelijk, niet-exclusief, niet-overdraagbaar recht om het Platform te openen en te gebruiken, uitsluitend met het doel woninghulpdiensten te zoeken, aan te bieden of ervan te profiteren.",
+      "s6Right": "U krijgt een herroepelijk, niet-exclusief, niet-overdraagbaar recht om het Platform te openen en te gebruiken, uitsluitend met het doel diensten dichtbij te zoeken, aan te bieden of ervan te profiteren.",
       "s6RestrictTitle": "Beperkingen.",
-      "s6Restrict": "Het is strikt verboden om: (i) het Platform te gebruiken voor andere dan de beoogde doeleinden; (ii) het Platform te reproduceren, te wijzigen of er afgeleide werken van te maken; (iii) toegang tot de broncode te verkrijgen via decompilatie of reverse engineering; (iv) e-mailadressen te verzamelen voor spamdoeleinden.",
+      "s6Restrict": "Het is strikt verboden om: (i) het Platform te gebruiken voor andere dan de beoogde doeleinden; (ii) het Platform te reproduceren, te wijzigen of er afgeleide werken van te maken; (iii) toegang tot de broncode te verkrijgen via decompilatie of reverse engineering; (iv) e-mailadressen te verzamelen voor spamdoeleinden; (v) een SOS-melding te activeren zonder echte noodzaak, deze te gebruiken om iemand lastig te vallen of te lokaliseren, of de informatie van een melding te gebruiken voor een ander doel dan het verlenen van hulp.",
       "s7H": "7. Gebruikerscontent",
       "s7ContentTitle": "Gebruikerscontent.",
       "s7Content": "Gebruikers hebben de mogelijkheid om vanaf het Platform en/of de Diensten teksten, bestanden, afbeeldingen, foto's of ander materiaal weer te geven, over te dragen of ernaar te linken (de Gebruikerscontent). Een Gebruiker kan met name aan andere Gebruikers een probleem beschrijven om een beschadigd item te illustreren of het type vereiste dienst uit te leggen.",
@@ -5742,15 +5794,6 @@
       "s7Warranty": "Alle Gebruikerscontent die op het Platform wordt gepubliceerd, overgedragen of waarnaar wordt verwezen valt onder de uitsluitende verantwoordelijkheid van de Gebruiker die er de oorsprong van is. Wij monitoren Gebruikerscontent niet systematisch, noch enig gebruik van het Platform door andere Gebruikers. Wij geven geen garantie, uitdrukkelijk of impliciet, over de juistheid, tijdigheid of volledigheid van de Gebruikerscontent en aanvaarden ter zake geen aansprakelijkheid.",
       "s8H": "8. Betalingen en kosten",
       "s8": "Alle via het Platform gedane betalingen worden verwerkt door externe betalingsdienstverleners. Wij slaan uw betaalkaartgegevens niet op en verwerken ze niet rechtstreeks.",
-      "s8ClientFeeTitle": "Kosten voor de Klant.",
-      "s8ClientFee": "Als Klant worden u alleen kosten in rekening gebracht voor Diensten die u via het Platform heeft geselecteerd en uitdrukkelijk heeft goedgekeurd. De totaalprijs, inclusief alle toepasselijke belastingen, servicekosten of bijkomende kosten, wordt duidelijk weergegeven voordat u uw verzoek bevestigt.",
-      "s8FeesTitle": "Kosten voor de Dienstverlener.",
-      "s8FeesIntro": "Als Dienstverlener bent u een commissie verschuldigd op elke met succes voltooide dienst:",
-      "s8Fees": [
-        "Starter-niveau (minder dan 150 opdrachten): 20%",
-        "Pro-niveau (150 tot 300 opdrachten): 17,5%",
-        "Elite-niveau (meer dan 300 opdrachten): 15%"
-      ],
       "s8TierTitle": "Niveaustatus.",
       "s8Tier": "De niveaustatus wordt regelmatig herzien om een correcte toepassing van de commissietarieven te garanderen. Herhaalde annuleringen na aankomst op een opdracht, niet-naleving van ons beleid of andere inbreuken kunnen uw niveaustatus en toegang tot toekomstige kansen op het Platform negatief beïnvloeden. Ernstige of herhaalde inbreuken kunnen leiden tot een herziening van uw account en tot opschorting of definitieve verwijdering.",
       "s8Payout": "Uitbetalingen worden doorgaans verwerkt binnen 5 tot 7 werkdagen na voltooiing van de dienst, mits de Klant geen geschil of terugbetalingsverzoek heeft geïnitieerd. Wij behouden ons het recht voor uitbetalingen te vertragen of in te houden in geval van vermoedelijke fraude, schending van deze ToU of hangende beslechting van een geschil.",
@@ -5788,7 +5831,47 @@
       "s17JurisTitle": "Jurisdictie.",
       "s17Juris": "Elk geschil in verband met deze ToU valt onder de exclusieve jurisdictie van de bevoegde rechtbanken van de zetel van Aegryn, behoudens een dwingende forumkeuze.",
       "s18H": "18. Contact",
-      "s18": "U kunt contact met ons opnemen via het contactformulier op ons platform."
+      "s18": "U kunt contact met ons opnemen via het contactformulier op ons platform.",
+      "s3VerifTitle": "Verificatie van Dienstverleners.",
+      "s3Verif": "Een Dienstverlener moet een geldige beroepsaansprakelijkheidsverzekering kunnen aantonen. Zijn profiel en zijn bewijs worden binnen 48 uur door ons team beoordeeld; hij wordt via een melding op de hoogte gebracht van de acceptatie of de (gemotiveerde) weigering. neediu kan de volledigheid van de gegevens van zijn account raadplegen (identiteit, diensten, beschikbaarheid, betalingsverificatie, verzekering).",
+      "s3WaitlistTitle": "Voorinschrijving van Dienstverleners.",
+      "s3Waitlist": "De voorinschrijving op de wachtlijst creëert geen Account, verbindt noch Aegryn noch de professional, geldt niet als acceptatie van zijn profiel en garandeert geen aantal aanvragen. De activering van een Account bij de opening blijft onderworpen aan deze Gebruiksvoorwaarden, aan de verificatie van het profiel en aan de beroepsaansprakelijkheidsverzekering. De gegevens van de voorinschrijving worden verwerkt overeenkomstig de Kennisgeving Gegevensbescherming.",
+      "s5SosTitle": "SOS-melding.",
+      "s5Sos": "Met de SOS-functie kan een Klant Klanten in de buurt waarschuwen en zijn vertrouwenscontact op de hoogte brengen. Het is geen hulpdienst: ze garandeert noch de ontvangst van de melding, noch dat iemand kan of wil ingrijpen, en vervangt nooit het bellen van de hulpdiensten (112 of lokaal noodnummer). Elke gebruiker die een melding ontvangt, handelt vrij en op eigen verantwoordelijkheid, zonder zijn eigen veiligheid in gevaar te brengen. Door een melding te activeren, gaat u ermee akkoord dat uw voornaam, uw positie en een indicatief adres aan Klanten in de buurt worden meegedeeld. U zorgt ervoor dat de als vertrouwenscontact geregistreerde persoon ermee heeft ingestemd dit te zijn. Misbruik kan leiden tot schorsing van het Account.",
+      "s7CoordTitle": "Verboden persoonlijke contactgegevens.",
+      "s7Coord": "Voor de veiligheid van de gegevens van onze Klanten en Dienstverleners is het verboden een e-mailadres of telefoonnummer te vermelden in de berichtenfunctie van de app of in de notitie aan de Dienstverlener. Het Platform detecteert en blokkeert dergelijke invoer vóór verzending of bestelling. Oproepen lopen via de app en onthullen het nummer van de gesprekspartner niet. Alleen de toegangscode van het gebouw, de deur of de verdieping mogen worden vermeld, voor de duur van de interventie: deze informatie wordt automatisch gemaskeerd (“*******”) in de notitie aan de Dienstverlener, de chat en de geschiedenis zodra de opdracht de status “voltooid” bereikt.",
+      "s8PriceTitle": "Prijzen van de Diensten.",
+      "s8Price": "De prijzen van de Diensten worden vrij bepaald door de Dienstverleners. De Klant betaalt alleen de Diensten die hij uitdrukkelijk heeft goedgekeurd; de totale prijs, inclusief alle belastingen en kosten, wordt in de app getoond voordat de bestelling wordt bevestigd. De indicatieve prijs die bij de bestelling wordt getoond, is slechts een indicatie.",
+      "s8CommTitle": "Commissie van het Platform.",
+      "s8Comm": "neediu ontvangt een commissie op elke met succes voltooide dienst; het voor de Dienstverlener geldende percentage wordt in de app meegedeeld.",
+      "s8CancelTitle": "Annulering door de Dienstverlener.",
+      "s8Cancel": "Wanneer een Dienstverlener een reeds betaalde opdracht annuleert, wordt de Klant volledig terugbetaald. Als de Dienstverlener annuleert nadat hij is vertrokken (onderweg of aangekomen) of op dezelfde dag als een geplande, reeds betaalde opdracht, wordt een boete in verhouding tot de prijs van de opdracht, tussen 5 en 50 EUR/CHF, op zijn volgende betaling ingehouden. Een lopende opdracht kan niet meer worden geannuleerd.",
+      "s8MethodsTitle": "Geaccepteerde betaalmiddelen.",
+      "s8Methods": "Bankkaart (Visa, Mastercard, American Express), Apple Pay (iPhone), Google Pay (Android), gehoste betaling via Stripe Checkout en TWINT (Klanten in Zwitserland, betaling in CHF). De betaling wordt afgeschreven bij bevestiging van de bestelling; de gelden worden door neediu bewaard en pas aan de Dienstverlener uitbetaald nadat de Klant de dienst heeft gevalideerd. Betalingen worden verwerkt door Stripe; neediu bewaart geen kaartnummers.",
+      "s8CreditTitle": "neediu-tegoed.",
+      "s8Credit": "Wanneer een annulering in de vorm van tegoed wordt terugbetaald, is het door de Klant betaalde bedrag al van zijn betaalmiddel afgeschreven en blijft het door neediu aangehouden: het tegoed is een vordering van de Klant op neediu, direct bruikbaar bij zijn volgende bestelling (het verlaagt het van de kaart afgeschreven bedrag). Het tegoed is niet in contanten terug te betalen. Het wordt met zijn geschiedenis getoond in het onderdeel “Cagnotte” van de app. Eventuele reiskosten (5 EUR / CHF 5) blijven verschuldigd aan de Dienstverlener bij annulering terwijl hij onderweg of aangekomen is.",
+      "s8ExtTitle": "Verlengingen van opdrachten.",
+      "s8Ext": "Een verlenging is een nieuwe bestelling die aan de eerste is gekoppeld, met eigen betaling, eigen factuur en eigen validatie. De betaling van de oorspronkelijke opdracht wordt eerst gevalideerd en vrijgegeven; de verlenging wordt daarna voorgesteld door de Dienstverlener (of gevraagd door de Klant) en binnen 15 minuten door de Klant bevestigd en betaald. Het bedrag van een verlenging wordt bepaald door de Dienstverlener en voor de veiligheid van de Klant beperkt tot 500 (EUR of CHF).",
+      "s8ReportTitle": "Een probleem melden.",
+      "s8Report": "Voordat hij een prestatie valideert, kan de Klant een probleem melden (prestatie niet uitgevoerd, onvolledig, schade, ongepast gedrag). De melding schort de vrijgave van de betaling op en opent een prioritair dossier bij de neediu-support, die haar beslissing neemt na beide partijen te hebben gehoord.",
+      "s8IndicTitle": "Indicatieve prijs.",
+      "s8Indic": "De vóór de bestelling getoonde indicatieve prijs is het vastgestelde gemiddelde van de betaalde opdrachten voor dezelfde dienst in dezelfde stad over de laatste 180 dagen (bij gebreke daarvan, alle plaatsen samen). Hij wordt ter indicatie gegeven; de toepasselijke prijs is die welke door de Dienstverlener wordt voorgesteld.",
+      "s8RewardsTitle": "Tegoeden, kortingsbonnen en doorverwijzing (neediu Rewards).",
+      "s8Rewards": "neediu Rewards bundelt de tegoeden, kortingsbonnen en doorverwijzingen van het Platform, die door de volgende regels worden beheerst.",
+      "s8FriendTitle": "Bonnen voor het doorverwijzen van vrienden.",
+      "s8Friend": "Elke gebruiker beschikt over een unieke doorverwijscode voor vrienden. Wanneer een doorverwezen persoon de code van een doorverwijzer toepast en vervolgens zijn eerste prestatie van minstens 10 EUR/CHF betaalt, ontvangen de doorverwezen persoon en de doorverwijzer elk een kortingsbon van 10 % op hun volgende betaalde dienst. Elke bon draagt een unieke code en een vervaldatum (360 dagen na uitgifte). Een gebruiker kan slechts één doorverwijscode toepassen, slechts één keer, en alleen vóór een eerste aankoop. Een doorverwijzer kan maximaal 10 personen doorverwijzen.",
+      "s8ProvRefTitle": "Doorverwijzing van Dienstverleners.",
+      "s8ProvRef": "Een Dienstverlener beschikt over een doorverwijscode voor Dienstverleners, die verschilt van de vriendencode. Een doorverwezen Dienstverlener kan deze slechts één keer gebruiken. Wanneer de doorverwezen persoon zijn eerste betaalde opdracht voltooit, krijgt hij, evenals zijn doorverwijzer als die Dienstverlener is, 50 % korting op de commissie van het Platform voor zijn volgende betaalde opdracht. Een doorverwijzer die Klant is, ontvangt dan een bon van 10 % op zijn volgende betaalde dienst. Het Platform kan promotiecodes aanbieden die zijn voorbehouden aan Dienstverleners, van beperkte duur en slechts één keer per Dienstverlener bruikbaar.",
+      "s8CancelCreditTitle": "Annuleringstegoed.",
+      "s8CancelCredit": "Een annulering die volgens de regels van het Platform is gedaan, kan aanleiding geven tot een neediu-tegoed, dat bij de volgende betaling automatisch wordt gebruikt als aftrek van het bedrag van de bestelde dienst.",
+      "s8CondTitle": "Voorwaarden van de kortingen.",
+      "s8Cond": "Elke korting: (i) geldt voor één enkele dienst en is niet cumuleerbaar; (ii) is beperkt tot 50 EUR/CHF en tot 50 % van de prijs van de dienst; (iii) verloopt 360 dagen na de ontgrendeling; (iv) is nooit converteerbaar in contanten of overdraagbaar; (v) wordt berekend door het Platform, waarbij de Klant vóór de betaling de toe te passen bon kiest; bij gebrek aan keuze wordt eerst de bon voorgesteld die het eerst verloopt. De kosten van de kortingen worden volledig gedragen door Aegryn: de Dienstverlener wordt altijd betaald op basis van het tarief inclusief belastingen dat hij heeft gevraagd; de korting verlaagt nooit zijn inkomen of de commissie van het Platform.",
+      "s8DisputeRwTitle": "Annulering en geschil.",
+      "s8DisputeRw": "Een korting die is gebruikt op een dienst die vóór de uitvoering is geannuleerd, of die na een geschil is terugbetaald, wordt aan de Klant teruggegeven (indien niet verlopen). Bonnen die door een geannuleerde of terugbetaalde dienst zijn toegekend, worden geannuleerd.",
+      "s8FraudTitle": "Fraude.",
+      "s8Fraud": "Kruislingse of circulaire doorverwijzingen, meerdere accounts van dezelfde persoon (alias-e-mails, hetzelfde telefoonnummer) en elke collusie tussen een Klant en een Dienstverlener zijn verboden. Bij vastgestelde fraude of manipulatie worden de betrokken punten en kortingen geannuleerd en kan het Account worden geschorst of verwijderd.",
+      "s9PayTitle": "Betaling en annulering.",
+      "s9Pay": "Het bedrag van de dienst wordt onmiddellijk bij de boeking afgeschreven en veilig bewaard op de rekening van het Platform: de Dienstverlener wordt pas betaald na de voltooide en door de Klant gevalideerde prestatie: dat is de neediu-garantie. Annuleren is gratis zolang de Dienstverlener nog niet onderweg is (vóór zijn vertrek): de terugbetaling in neediu-tegoed is onmiddellijk, altijd gratis en onbeperkt; de terugbetaling op de bankrekening is volledig binnen de limiet van één per maand en per Klant. Daarboven (Dienstverlener onderweg of aangekomen, of een extra bankterugbetaling in dezelfde maand) worden kosten van 5 EUR/CHF, verhoogd met de verwerkingskosten van de betaling, van de terugbetaling afgetrokken; de door de betalingsdienstverlener ingehouden kosten worden nooit terugbetaald, ook niet bij een terugbetaling. Zodra de prestatie is begonnen, is annuleren via het Platform niet meer mogelijk en blijft de betaling verschuldigd. De terugbetaling kan worden gevraagd in neediu-tegoed: onmiddellijk en zonder bankkosten (alleen de reeds gemaakte rit van de Dienstverlener blijft afgetrokken), direct opnieuw bruikbaar bij de volgende boeking."
     }
   },
   "experts": {
@@ -6520,8 +6603,8 @@
       },
       "neediu": {
         "title": "neediu in de spotlight in magazine Gala",
-        "excerpt": "neediu, het platform dat particulieren verbindt met woningdienstverleners, werd belicht in een videoreportage in magazine Gala.",
-        "context": "Berichtgeving in Gala, een toonaangevend mainstream magazine. Videoreportage over neediu, het Aegryn-actief in de woningdienstensector."
+        "excerpt": "neediu, het platform dat particulieren verbindt met professionals voor diensten dichtbij, werd belicht in een videoreportage in magazine Gala.",
+        "context": "Berichtgeving in Gala, een toonaangevend mainstream magazine. Videoreportage over neediu, een signatuurproject van Aegryn in de sector van diensten dichtbij."
       }
     },
     "kyc": {
@@ -7183,10 +7266,22 @@
       "responseLead": "Aegryn brengt beide samen.",
       "response": "Een fundament van corporate advies, <strong>het geïntegreerde bureau</strong>, dat de beslissingen van leidinggevenden kadert, realiseert en begeleidt. En een ondernemende vertical, <strong>La Boutique</strong>, die een beperkt aantal signatuurprojecten van begin tot eind leidt. Wat het zijn klanten aanbeveelt, past Aegryn op zichzelf toe.",
       "reasoning": [
-        { "lead": "Kaderen zonder realiseren", "consequence": "is een kaart leveren zonder het terrein." },
-        { "lead": "Realiseren zonder kaderen", "consequence": "is uitvoeren zonder koers." },
-        { "lead": "Begeleiden zonder gebouwd te hebben", "consequence": "is adviseren van buitenaf." },
-        { "lead": "Selecteren zonder project", "consequence": "is rekruteren in het luchtledige." }
+        {
+          "lead": "Kaderen zonder realiseren",
+          "consequence": "is een kaart leveren zonder het terrein."
+        },
+        {
+          "lead": "Realiseren zonder kaderen",
+          "consequence": "is uitvoeren zonder koers."
+        },
+        {
+          "lead": "Begeleiden zonder gebouwd te hebben",
+          "consequence": "is adviseren van buitenaf."
+        },
+        {
+          "lead": "Selecteren zonder project",
+          "consequence": "is rekruteren in het luchtledige."
+        }
       ],
       "closingLead": "Bij Aegryn versterkt elke manier van handelen de volgende.",
       "closing": "Die ketting is wat een project doet standhouden, voor onze klanten zoals voor onszelf.",
@@ -7909,5 +8004,86 @@
     "sovereignty": "Soevereiniteit",
     "method": "Methode",
     "quit": "Sluiten"
+  },
+  "neediuPro": {
+    "meta": {
+      "title": "Voorinschrijving voor professionals | neediu",
+      "desc": "Schrijf je in 2 minuten en zonder verplichting vooraf in om vóór de opening in jouw stad bij neediu aan te sluiten."
+    },
+    "back": "Ontdek het neediu-project",
+    "eyebrow": "Voor professionals",
+    "title": "Sluit je aan bij neediu vóór de opening",
+    "intro": "De app voor diensten dichtbij opent binnenkort. Schrijf je in 2 minuten vooraf in:\nwe laten het je weten zodra jouw dienst bij jou in de buurt beschikbaar is.",
+    "soon": "Binnenkort",
+    "stepsLabel": "Drie stappen",
+    "steps": [
+      {
+        "t": "Ik schrijf me vooraf in",
+        "d": "2 minuten"
+      },
+      {
+        "t": "Ik bereid mijn dossier voor",
+        "d": "wanneer ik wil"
+      },
+      {
+        "t": "Ik activeer mijn account",
+        "d": "uitnodiging bij de opening"
+      }
+    ],
+    "trust": [
+      "Ik bepaal mijn tarieven en beschikbaarheid",
+      "Ik accepteer of weiger elke aanvraag",
+      "Inschrijving zonder verplichting"
+    ],
+    "reassurance": "Je voorinschrijving geldt niet als acceptatie en garandeert geen aantal aanvragen.",
+    "form": {
+      "firstName": "Voornaam",
+      "lastName": "Achternaam",
+      "email": "E-mail",
+      "phone": "Telefoon",
+      "country": "Land",
+      "city": "Stad",
+      "services": "Aangeboden diensten",
+      "servicesHint": "Kies een of meer diensten",
+      "servicesCount": "geselecteerd",
+      "consentBefore": "Ik ga ermee akkoord dat Aegryn, de verwerkingsverantwoordelijke, deze gegevens gebruikt om contact met mij op te nemen over mijn voorinschrijving en mij te informeren wanneer neediu bij mij in de buurt opent, in overeenstemming met de ",
+      "consentLink": "kennisgeving gegevensbescherming",
+      "consentAfter": ".",
+      "submit": "Op de wachtlijst",
+      "sending": "Verzenden…",
+      "closed": "Het formulier opent binnenkort. Het is nog niet actief.",
+      "success": "Controleer je e-mail om je voorinschrijving te bevestigen.",
+      "confirmed": "Je voorinschrijving is bevestigd. We schrijven je zodra jouw stad opent.",
+      "notConfirmed": "Deze bevestigingslink is niet meer geldig. Je kunt je opnieuw vooraf inschrijven.",
+      "error": "Er is iets misgegaan. Probeer het opnieuw.",
+      "validation": "Controleer de gemarkeerde velden.",
+      "companyName": "Bedrijfsnaam",
+      "vat": "Btw-nummer",
+      "cityPlaceholder": "Kies een stad",
+      "cities": {
+        "bruxelles": "Brussel",
+        "paris": "Parijs",
+        "geneve": "Genève",
+        "lausanne": "Lausanne"
+      },
+      "testMode": "Testmodus (preview): je invoer is niet opgeslagen.",
+      "dialCode": "Landcode",
+      "countryAuto": "Op basis van de stad",
+      "phoneInvalid": "Controleer het telefoonnummer."
+    },
+    "stores": {
+      "label": "Binnenkort op",
+      "apple": "App Store",
+      "google": "Google Play"
+    },
+    "heroLink": "Ben je professional? Op de wachtlijst",
+    "sideTab": "Pros: voorinschrijving",
+    "fiche": {
+      "availability": "Beschikbaarheid",
+      "availabilityValue": "Binnenkort in de App Store\nen Google Play",
+      "docs": "Juridische documenten",
+      "cgu": "Algemene gebruiks- en verkoopvoorwaarden (CGU/CGV)",
+      "notice": "Kennisgeving gegevensbescherming"
+    }
   }
 }

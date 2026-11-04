@@ -9,6 +9,8 @@ import { getTranslations }    from 'next-intl/server'
 import type { Metadata }      from 'next'
 import { ProjectStage } from '@/components/ui/ProjectStage'
 import { ConfidentialStamp } from '@/components/ui/ConfidentialStamp'
+import { ProSideTab } from '@/components/neediu/ProSideTab'
+import { isNeediuProVisible } from '@/lib/neediuPro'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -38,16 +40,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
   const isNeediu = asset.id === 'neediu'
   const neediuKeywords = isNeediu ? [
-    'neediu', 'neediu app', 'services à domicile', 'marketplace services maison',
+    'neediu', 'neediu app', 'services de proximité', 'application services de proximité',
     'paru dans Gala', 'Gala 27 novembre 2025', 'neediu Gala presse',
-    'booking prestataire domicile', 'aide à domicile app', 'service à la personne digital',
-    'application home services', 'jardinage app', 'bricolage app', 'babysitting app',
+    'réservation de professionnels', 'service à la personne digital',
+    'local services app', 'jardinage app', 'bricolage app', 'babysitting app',
     'An Aegryn company',
   ] : []
   return generateAegrynMetadata({
-    title: isNeediu ? 'neediu : Services à domicile, paru dans Gala | Aegryn' : asset.name,
+    title: isNeediu ? 'neediu : Services de proximité, paru dans Gala | Aegryn' : asset.name,
     description: isNeediu
-      ? 'neediu, application de mise en relation avec des prestataires à domicile. Paru dans Gala, 27 novembre 2025. Un actif propriétaire Aegryn.'
+      ? 'neediu, application de mise en relation avec des professionnels de services de proximité. Paru dans Gala, 27 novembre 2025. Un projet signature Aegryn.'
       : tItemsMeta(`${asset.id}.tagline`),
     path: assetPath(slug),
     image: asset.image,
@@ -120,6 +122,9 @@ export default async function AssetPage({ params }: Props) {
   const orgs      = hasAssetI18n ? t(`assets.${assetId}.orgs`) : ''
 
   const isLive   = !!asset.url
+  const tPro     = asset.id === 'neediu' ? await getTranslations({ locale, namespace: 'neediuPro' }) : null
+  const isNeediu = asset.id === 'neediu'
+  const showPro  = isNeediu && isNeediuProVisible()
 
   /* Secteur de rattachement (eyebrow hero) */
   const sectorRef = asset.industrySector
@@ -168,6 +173,13 @@ export default async function AssetPage({ params }: Props) {
           </h1>
           {asset.id === 'subblink' && <div className="mb-6"><ProjectStage status={asset.status} onDark /></div>}
 
+          {showPro && tPro && (
+            <Link href="/neediu/pro" className="mb-6 inline-flex flex-wrap items-center gap-3 font-sans text-[14px] text-white/85 underline-offset-4 transition-colors hover:text-white hover:underline">
+              {tPro('heroLink')}
+              <span className="rounded-full bg-ag-apex px-2.5 py-1 font-mono text-[9px] font-semibold uppercase tracking-[0.18em] text-ag-navy no-underline">{tPro('soon')}</span>
+            </Link>
+          )}
+
           {isLive && (
             <a
               href={asset.url!}
@@ -182,16 +194,18 @@ export default async function AssetPage({ params }: Props) {
         </div>
       </section>
 
+      {isNeediu && tPro && <ProSideTab label={tPro('sideTab')} soon={tPro('soon')} targetId="perimetre" href={showPro ? '/neediu/pro' : undefined} />}
+
       {/* Divider strip */}
       <div className="h-px bg-gradient-to-r from-transparent via-ag-apex/40 to-transparent" />
 
       {/* Rubriques en cartes — template carte du site */}
-      <section className="border-b border-ag-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
+      <section id="perimetre" className="border-b border-ag-border">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-12">
           <div className="grid md:grid-cols-2 gap-3">
 
             {/* Carte : Le besoin + Savoir-faire mobilisé */}
-            <div className="rounded-2xl border border-ag-border p-8 md:p-10 flex flex-col gap-10">
+            <div className="rounded-2xl border border-ag-border p-7 md:p-8 flex flex-col gap-7">
               <div>
                 <p className="font-sans font-semibold text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-6">
                   {t('rubricNeed')}
@@ -208,13 +222,13 @@ export default async function AssetPage({ params }: Props) {
                   <p className="font-sans font-semibold text-[10px] tracking-[0.22em] uppercase text-ag-gray-light mb-6">
                     {t('rubricSkills')}
                   </p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-1">
                     {skills.map((s, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <span className="mt-0.75 w-4 h-4 shrink-0 flex items-center justify-center">
+                      <li key={i} className="flex items-start gap-3 text-[15px] leading-relaxed">
+                        <span className="h-[1.625em] w-4 shrink-0 flex items-center justify-center">
                           <span className="w-1.5 h-1.5 rounded-full bg-ag-apex" />
                         </span>
-                        <span className="text-[15px] text-ag-gray leading-relaxed">{s}</span>
+                        <span className="text-ag-gray">{s}</span>
                       </li>
                     ))}
                   </ul>
@@ -223,7 +237,7 @@ export default async function AssetPage({ params }: Props) {
             </div>
 
             {/* Carte navy : Ce que nous avons mis en place */}
-            <div className="rounded-2xl bg-ag-navy p-8 md:p-10 flex flex-col gap-10">
+            <div className="rounded-2xl bg-ag-navy p-7 md:p-8 flex flex-col gap-7">
               <div>
                 <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-white/70 mb-6">
                   {asset.id === 'subblink' ? t('rubricSetup') : t('projectScope')}
@@ -231,20 +245,35 @@ export default async function AssetPage({ params }: Props) {
                 <p className="text-[15px] text-white leading-[1.8] mb-6">
                   {longDesc}
                 </p>
-                <ul className="space-y-2">
+                <ul className="space-y-1">
                   {features.map((f, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="mt-0.75 w-4 h-4 shrink-0 flex items-center justify-center">
+                    <li key={i} className="flex items-start gap-3 text-[15px] leading-relaxed">
+                      <span className="h-[1.625em] w-4 shrink-0 flex items-center justify-center">
                         <span className="w-1.5 h-1.5 rounded-full bg-ag-apex" />
                       </span>
-                      <span className="text-[15px] text-white/70 leading-relaxed">{f}</span>
+                      <span className="text-white/70">{f}</span>
                     </li>
                   ))}
                 </ul>
                 {audience && (
-                  <div className="mt-8 pt-6">
+                  <div className="mt-6 pt-2">
                     <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex mb-2"><span className="inline-block h-px w-5 bg-ag-apex/50" />{t('audience')}</p>
                     <p className="text-[15px] text-white/70">{audience}</p>
+                  </div>
+                )}
+                {tPro && (
+                  <div className="mt-6 grid gap-5 sm:grid-cols-2">
+                    <div>
+                      <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex mb-2"><span className="inline-block h-px w-5 bg-ag-apex/50" />{tPro('fiche.availability')}</p>
+                      <p className="whitespace-pre-line text-[15px] text-white/70">{tPro('fiche.availabilityValue')}</p>
+                    </div>
+                    <div>
+                      <p className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-ag-apex mb-2"><span className="inline-block h-px w-5 bg-ag-apex/50" />{tPro('fiche.docs')}</p>
+                      <ul className="space-y-1 text-[15px] text-white/70">
+                        <li><Link href={{ pathname: '/data-protection-notice-neediu', hash: 'cgu' }} className="underline underline-offset-4 hover:text-white">{tPro('fiche.cgu')}</Link></li>
+                        <li><Link href={{ pathname: '/data-protection-notice-neediu', hash: 'notice' }} className="underline underline-offset-4 hover:text-white">{tPro('fiche.notice')}</Link></li>
+                      </ul>
+                    </div>
                   </div>
                 )}
               </div>
@@ -307,7 +336,7 @@ export default async function AssetPage({ params }: Props) {
             '@context':    'https://schema.org',
             '@type':       'NewsArticle',
             headline:      'neediu : Services à domicile à 360° | Paru dans Gala',
-            description:   'neediu, l\'application de mise en relation avec des prestataires à domicile de confiance, présentée dans le magazine Gala le 27 novembre 2025.',
+            description:   'neediu, l\'application de mise en relation avec des professionnels de services de proximité, présentée dans le magazine Gala le 27 novembre 2025.',
             datePublished: '2025-11-27',
             url:           'https://aegryn.com/fr/boutique/projets/neediu',
             image:         'https://aegryn.com/images/press/press-gala-neediu-ad.png',
@@ -318,7 +347,7 @@ export default async function AssetPage({ params }: Props) {
               name:        'neediu',
               applicationCategory: 'LifestyleApplication',
               operatingSystem: 'iOS, Android',
-              description: 'Application de mise en relation avec des prestataires de services à domicile : ménage, jardinage, bricolage, babysitting, aide aux seniors.',
+              description: 'Application de mise en relation avec des professionnels de services de proximité : ménage, jardinage, bricolage, garde d\'enfants, aide aux seniors.',
             },
             isPartOf: {
               '@type':   'Periodical',
