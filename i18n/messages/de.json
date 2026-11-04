@@ -5585,7 +5585,7 @@
       },
       "whoWeAre": {
         "h": "Wer sind wir und wie können Sie uns kontaktieren?",
-        "p": "Aegryn ist der Name unseres Unternehmens. Bei Fragen zur Datenverarbeitung im Zusammenhang mit unserer Plattform können Sie uns per Post kontaktieren: Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Schweiz. Sie können uns auch per E-Mail unter legal@boha-group.com erreichen."
+        "p": "Aegryn ist der Name unseres Unternehmens. Bei Fragen zur Datenverarbeitung im Zusammenhang mit unserer Plattform können Sie uns per Post kontaktieren: Aegryn (BOHA-Group Sàrl) , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Schweiz. Sie können uns auch per E-Mail unter legal@boha-group.com erreichen."
       },
       "ourRole": {
         "h": "Welche Rolle spielen wir beim Datenschutz?",
@@ -5667,58 +5667,48 @@
         "p3": "Wenn personenbezogene Daten an einen Drittanbieter außerhalb der Schweiz oder des Europäischen Wirtschaftsraums (EWR) übermittelt werden, der kein angemessenes Schutzniveau bietet, verlangen wir, dass sich der Drittanbieter verpflichtet, die anwendbare Datenschutzgesetzgebung einzuhalten (hierfür verwenden wir die überarbeiteten Standardvertragsklauseln der Europäischen Kommission), sofern der Drittanbieter nicht bereits einem rechtlich anerkannten Regelwerk unterliegt, das den Datenschutz gewährleistet (Swiss-U.S. Data Privacy Framework), oder wir eine Ausnahme geltend machen können.",
         "providersH": "Unsere Drittanbieter",
         "tableHeaders": [
-          "Anbieter",
+          "Art des Dienstleisters",
           "Zweck",
           "Verarbeitungsort"
         ],
         "providers": [
           [
-            "Supabase",
+            "Hosting und Datenbank",
             "Backend-as-a-Service-Plattform für die App-Entwicklung.",
             "EWR"
           ],
           [
-            "Stripe",
+            "Zahlung und Identitätsprüfung",
             "Globale Zahlungsinfrastruktur, sichere Transaktionsabwicklung und Identitätsprüfung.",
             "EWR/USA"
           ],
           [
-            "Google Analytics",
+            "Reichweitenmessung",
             "Analysedienst zur Überwachung der Plattformnutzung und Erstellung von Aktivitätsberichten.",
             "EWR/USA"
           ],
           [
-            "Mapbox",
-            "Berechnung von Routen und Ankunftszeiten, Geokodierung und Adresssuche (die für die Berechnung nötigen Koordinaten werden übermittelt; es wird kein Name mitgeteilt).",
+            "Karten und Routenplanung",
+            "Kartenanzeige (Android und iOS), Berechnung von Routen und Ankunftszeiten, Geokodierung und Adresssuche (die für die Berechnung nötigen Koordinaten werden übermittelt; es wird kein Name mitgeteilt).",
             "EWR/USA"
           ],
           [
-            "Google (Maps)",
-            "Kartenanzeige auf Android und Routenberechnung, sofern aktiviert.",
-            "EWR/USA"
-          ],
-          [
-            "Apple (Karten)",
-            "Kartenanzeige auf iOS.",
-            "EWR/USA"
-          ],
-          [
-            "Expo / Firebase (Google)",
+            "Push-Benachrichtigungen",
             "Zustellung von Push-Benachrichtigungen an die Geräte.",
             "EWR/USA"
           ],
           [
-            "Twilio",
+            "Telefonische Verifizierung und Anrufe",
             "Versand von Verifizierungscodes und telefonische Verbindung mit verdeckter Nummer.",
             "EWR/USA"
           ],
           [
-            "Resend",
+            "Service-E-Mails",
             "Versand von Service-E-Mails (Erinnerungen, Sicherheitswarnungen, Antworten des Supports).",
             "EWR/USA"
           ],
           [
-            "Sentry",
+            "Überwachung technischer Fehler",
             "Überwachung technischer Fehler der App (personenbezogene Daten auf das Minimum reduziert).",
             "EWR/USA"
           ]
@@ -5742,7 +5732,7 @@
       "sectionLabel": "(02)",
       "h2": "Nutzungsbedingungen, neediu by Aegryn",
       "disclaimer": "Haftungsausschluss: Diese Datenschutzerklärung ist eine KI-generierte Übersetzung und dient nur zu Informationszwecken. Bei Abweichungen oder Widersprüchen gilt die englische Fassung.",
-      "intro": "Diese Nutzungsbedingungen (NB) gelten für jede Nutzung der Aegryn-Plattform, der mobilen App neediu sowie aller über die Plattform zugänglichen oder bereitgestellten Dienste (die Dienste), die von Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Schweiz, bereitgestellt und verwaltet werden.",
+      "intro": "Diese Nutzungsbedingungen (NB) gelten für jede Nutzung der Aegryn-Plattform, der mobilen App neediu sowie aller über die Plattform zugänglichen oder bereitgestellten Dienste (die Dienste), die von Aegryn (BOHA-Group Sàrl) , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Schweiz, bereitgestellt und verwaltet werden.",
       "s1H": "1. Allgemeines",
       "s1AcceptTitle": "Annahme.",
       "s1Accept": "Durch den Zugang zu oder die Nutzung unserer Plattform erklären Sie sich mit diesen NB einverstanden.",
@@ -5769,7 +5759,7 @@
       "s4TelecomTitle": "Telekommunikation.",
       "s4Telecom": "Wir sind kein Telekommunikationsanbieter. Anruf- und Chat-Funktionen laufen über das Internet (VoIP/Daten) und sind nicht mit Mobil- oder Festnetzen verbunden. Nutzen Sie diese nicht für Notfalldienste.",
       "s5H": "5. Funktionen und Dienste",
-      "s5": "Die Plattform bietet einen digitalen Service, der Nutzern ermöglicht, sich mit Fachleuten oder Privatpersonen zu verbinden, die lokale Dienstleistungen anbieten. Die Plattform erleichtert den ersten Kontakt, greift aber nicht in die Erbringung der Dienste ein. Wir übernehmen keine Verantwortung für Qualität, Pünktlichkeit oder Ergebnis der von Dritten erbrachten Dienste.",
+      "s5": "Die Plattform bietet einen digitalen Service, der Nutzern ermöglicht, sich mit Fachleuten zu verbinden, die lokale Dienstleistungen anbieten. Die Plattform erleichtert den ersten Kontakt, greift aber nicht in die Erbringung der Dienste ein. Wir übernehmen keine Verantwortung für Qualität, Pünktlichkeit oder Ergebnis der von Dritten erbrachten Dienste.",
       "s6H": "6. Nutzung der Plattform",
       "s6RightTitle": "Nutzungsrecht.",
       "s6Right": "Ihnen wird ein widerrufliches, nicht-exklusives, nicht übertragbares Recht gewährt, auf die Plattform zuzugreifen und sie ausschließlich zum Zweck der Suche, des Angebots oder der Inanspruchnahme von lokalen Dienstleistungen zu nutzen.",
@@ -5837,9 +5827,9 @@
       "s8CommTitle": "Provision der Plattform.",
       "s8Comm": "neediu erhebt auf jeden erfolgreich erbrachten Dienst eine Provision; der für den Dienstleister geltende Satz wird in der App mitgeteilt.",
       "s8CancelTitle": "Stornierung durch den Dienstleister.",
-      "s8Cancel": "Storniert ein Dienstleister einen bereits bezahlten Auftrag, wird dem Kunden der volle Betrag erstattet. Storniert der Dienstleister nach seinem Aufbruch (unterwegs oder angekommen) oder am selben Tag einen geplanten, bereits bezahlten Auftrag, wird von seiner nächsten Zahlung eine dem Auftragspreis angemessene Strafe zwischen 5 und 50 EUR/CHF abgezogen. Ein laufender Auftrag kann nicht mehr storniert werden.",
+      "s8Cancel": "Storniert ein Dienstleister einen bereits bezahlten Auftrag, wird dem Kunden der volle Betrag erstattet. Storniert der Dienstleister nach seinem Aufbruch (unterwegs oder angekommen) oder am selben Tag einen geplanten, bereits bezahlten Auftrag, wird von seiner nächsten Zahlung eine dem Auftragspreis angemessene Strafe abgezogen. Ein laufender Auftrag kann nicht mehr storniert werden.",
       "s8MethodsTitle": "Akzeptierte Zahlungsmittel.",
-      "s8Methods": "Bankkarte (Visa, Mastercard, American Express), Apple Pay (iPhone), Google Pay (Android), gehostete Zahlung über Stripe Checkout und TWINT (Kunden in der Schweiz, Zahlung in CHF). Die Zahlung wird bei Bestätigung der Bestellung belastet; die Gelder werden von neediu gehalten und erst nach Bestätigung der Leistung durch den Kunden an den Dienstleister ausgezahlt. Zahlungen werden von Stripe abgewickelt; neediu speichert keine Kartennummer.",
+      "s8Methods": "Bankkarte (Visa, Mastercard, American Express), Apple Pay (iPhone), Google Pay (Android), von unserem Zahlungsdienstleister gehostete Zahlung und TWINT (Kunden in der Schweiz, Zahlung in CHF). Die Zahlung wird bei Bestätigung der Bestellung belastet; die Gelder werden von neediu gehalten und erst nach Bestätigung der Leistung durch den Kunden an den Dienstleister ausgezahlt. Zahlungen werden von unserem Zahlungsdienstleister abgewickelt; neediu speichert keine Kartennummer.",
       "s8CreditTitle": "neediu-Guthaben.",
       "s8Credit": "Wird eine Stornierung in Form von Guthaben erstattet, wurde der vom Kunden gezahlte Betrag bereits von seinem Zahlungsmittel abgebucht und bleibt bei neediu gehalten: Das Guthaben ist eine Forderung des Kunden gegenüber neediu, die bei der nächsten Bestellung sofort verwendet werden kann (sie verringert den von der Karte abgebuchten Betrag). Das Guthaben ist nicht in bar erstattbar. Es wird im Bereich „Cagnotte“ der App mit seinem Verlauf angezeigt. Etwaige Anfahrtskosten (5 EUR / CHF 5) bleiben dem Dienstleister geschuldet, wenn die Stornierung erfolgt, während er unterwegs oder angekommen ist.",
       "s8ExtTitle": "Auftragsverlängerungen.",

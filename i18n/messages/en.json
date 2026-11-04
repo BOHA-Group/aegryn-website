@@ -5592,7 +5592,7 @@
       },
       "whoWeAre": {
         "h": "Who are we and how to contact us?",
-        "p": "Aegryn is the name of our company. If you have questions about data processing related to our platform, you may contact us by post: Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Switzerland. You may also reach us via the contact form available on our platform."
+        "p": "Aegryn is the name of our company. If you have questions about data processing related to our platform, you may contact us by post: Aegryn (BOHA-Group Sàrl) , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Switzerland. You may also reach us via the contact form available on our platform."
       },
       "ourRole": {
         "h": "What is our role in data protection?",
@@ -5674,58 +5674,48 @@
         "p3": "Where personal data is transferred to a third-party provider located outside Switzerland or the European Economic Area (EEA) and not offering an adequate level of protection, we require that the third-party provider undertakes to comply with the applicable data protection legislation (for this purpose, we use the revised standard contractual clauses of the European Commission), unless the third-party provider is already subject to a legally accepted set of rules designed to guarantee data protection (Swiss-U.S. Data Privacy Framework) or we can invoke an exception.",
         "providersH": "Our third-party providers",
         "tableHeaders": [
-          "Provider",
+          "Type of provider",
           "Purpose",
           "Processing location"
         ],
         "providers": [
           [
-            "Supabase",
+            "Hosting and database",
             "Backend-as-a-service platform for application development.",
             "EEA"
           ],
           [
-            "Stripe",
+            "Payment and identity verification",
             "Global payment infrastructure, secure transaction processing and identity verification.",
             "EEA/USA"
           ],
           [
-            "Google Analytics",
+            "Audience measurement",
             "Analytics service to monitor platform usage and compile activity reports.",
             "EEA/USA"
           ],
           [
-            "Mapbox",
-            "Route and arrival time calculation, geocoding and address search (the coordinates needed for the calculation are transmitted; no name is communicated).",
+            "Mapping and routing",
+            "Map display (Android and iOS), route and arrival time calculation, geocoding and address search (the coordinates needed for the calculation are transmitted; no name is communicated).",
             "EEA/USA"
           ],
           [
-            "Google (Maps)",
-            "Map display on Android and route calculation when enabled.",
-            "EEA/USA"
-          ],
-          [
-            "Apple (Maps)",
-            "Map display on iOS.",
-            "EEA/USA"
-          ],
-          [
-            "Expo / Firebase (Google)",
+            "Push notifications",
             "Delivery of push notifications to devices.",
             "EEA/USA"
           ],
           [
-            "Twilio",
+            "Phone verification and calls",
             "Sending verification codes and masked-number phone connection.",
             "EEA/USA"
           ],
           [
-            "Resend",
+            "Service emails",
             "Sending service emails (reminders, security alerts, support replies).",
             "EEA/USA"
           ],
           [
-            "Sentry",
+            "Technical error monitoring",
             "Monitoring of the app’s technical errors (personal data reduced to a minimum).",
             "EEA/USA"
           ]
@@ -5749,7 +5739,7 @@
       "sectionLabel": "(02)",
       "h2": "Terms of Use, neediu by Aegryn",
       "disclaimer": "Disclaimer: This data protection statement is an AI-generated translation provided for informational purposes only. In the event of any discrepancies or inconsistencies, the English version shall prevail.",
-      "intro": "These Terms of Use (the ToU) apply to any use of the Aegryn Platform, the neediu mobile application, and any service accessible or provided through the Platform (the Services), which are provided and managed by Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Switzerland.",
+      "intro": "These Terms of Use (the ToU) apply to any use of the Aegryn Platform, the neediu mobile application, and any service accessible or provided through the Platform (the Services), which are provided and managed by Aegryn (BOHA-Group Sàrl) , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Switzerland.",
       "s1H": "1. General",
       "s1AcceptTitle": "Acceptance.",
       "s1Accept": "By accessing or using our Platform, you agree to be bound by these ToU.",
@@ -5776,7 +5766,7 @@
       "s4TelecomTitle": "Telecommunications.",
       "s4Telecom": "We are not a telecommunications provider. Call and chat features operate via the Internet (VoIP/data) and are not connected to mobile or fixed networks. Do not use them for emergency services.",
       "s5H": "5. Features and Services",
-      "s5": "The Platform provides a digital service enabling users to connect with professionals or individuals offering local services. The Platform facilitates initial contact but does not intervene in the execution of services. We assume no responsibility for the quality, timeliness, or outcome of services performed by third parties.",
+      "s5": "The Platform provides a digital service enabling users to connect with professionals offering local services. The Platform facilitates initial contact but does not intervene in the execution of services. We assume no responsibility for the quality, timeliness, or outcome of services performed by third parties.",
       "s6H": "6. Use of the Platform",
       "s6RightTitle": "Right of use.",
       "s6Right": "You are granted a revocable, non-exclusive, non-transferable right to access and use the Platform solely for the purpose of searching, offering, or benefiting from local services.",
@@ -5844,9 +5834,9 @@
       "s8CommTitle": "Platform commission.",
       "s8Comm": "neediu charges a commission on each successfully completed service, the rate applicable to the Provider being communicated in the app.",
       "s8CancelTitle": "Cancellation by the Provider.",
-      "s8Cancel": "When a Provider cancels a mission that has already been paid, the Client is refunded in full. If the Provider cancels after setting off (on the way or arrived) or on the same day as a scheduled mission already paid, a penalty proportionate to the price of the mission, between EUR/CHF 5 and 50, is deducted from their next payment. A mission in progress can no longer be cancelled.",
+      "s8Cancel": "When a Provider cancels a mission that has already been paid, the Client is refunded in full. If the Provider cancels after setting off (on the way or arrived) or on the same day as a scheduled mission already paid, a penalty proportionate to the price of the mission is deducted from their next payment. A mission in progress can no longer be cancelled.",
       "s8MethodsTitle": "Accepted payment methods.",
-      "s8Methods": "Bank card (Visa, Mastercard, American Express), Apple Pay (iPhone), Google Pay (Android), Stripe Checkout hosted payment and TWINT (Clients in Switzerland, payment in CHF). Payment is debited when the order is confirmed; the funds are held by neediu and are only paid out to the Provider after the Client has validated the service. Payments are processed by Stripe; neediu does not keep any card number.",
+      "s8Methods": "Bank card (Visa, Mastercard, American Express), Apple Pay (iPhone), Google Pay (Android), payment hosted by our payment provider and TWINT (Clients in Switzerland, payment in CHF). Payment is debited when the order is confirmed; the funds are held by neediu and are only paid out to the Provider after the Client has validated the service. Payments are processed by our payment provider; neediu does not keep any card number.",
       "s8CreditTitle": "neediu credit.",
       "s8Credit": "When a cancellation is refunded in the form of credit, the amount paid by the Client has already been debited from their payment method and remains held by neediu: the credit is a claim of the Client against neediu, usable immediately on their next order (it reduces the amount debited from the card). The credit is not refundable in cash. It is shown in the “Cagnotte” area of the app, with its history. Any travel costs (EUR/CHF 5) remain due to the Provider in the event of cancellation while they are on the way or have arrived.",
       "s8ExtTitle": "Mission extensions.",

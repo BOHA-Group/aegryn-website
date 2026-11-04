@@ -5592,7 +5592,7 @@
       },
       "whoWeAre": {
         "h": "Wie zijn wij en hoe kunt u contact met ons opnemen?",
-        "p": "Aegryn is de naam van ons bedrijf. Als u vragen heeft over de gegevensverwerking in verband met ons platform, kunt u per post contact met ons opnemen: Aegryn, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Zwitserland. U kunt ons ook bereiken via het contactformulier op ons platform."
+        "p": "Aegryn is de naam van ons bedrijf. Als u vragen heeft over de gegevensverwerking in verband met ons platform, kunt u per post contact met ons opnemen: Aegryn (BOHA-Group Sàrl) , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Zwitserland. U kunt ons ook bereiken via het contactformulier op ons platform."
       },
       "ourRole": {
         "h": "Wat is onze rol in gegevensbescherming?",
@@ -5674,58 +5674,48 @@
         "p3": "Wanneer persoonsgegevens worden overgedragen aan een dienstverlener gevestigd buiten Zwitserland of de Europese Economische Ruimte (EER) die geen adequaat beschermingsniveau biedt, vereisen wij dat de dienstverlener zich verbindt tot naleving van de toepasselijke gegevensbeschermingswetgeving (hiervoor gebruiken wij de herziene standaardcontractbepalingen van de Europese Commissie), tenzij de dienstverlener reeds onderworpen is aan een wettelijk aanvaarde regelgeving die gegevensbescherming garandeert (Swiss-U.S. Data Privacy Framework) of wij een uitzondering kunnen inroepen.",
         "providersH": "Onze externe dienstverleners",
         "tableHeaders": [
-          "Aanbieder",
+          "Type dienstverlener",
           "Doel",
           "Verwerkingslocatie"
         ],
         "providers": [
           [
-            "Supabase",
+            "Hosting en database",
             "Backend-as-a-service-platform voor applicatieontwikkeling.",
             "EER"
           ],
           [
-            "Stripe",
+            "Betaling en identiteitsverificatie",
             "Wereldwijde betalingsinfrastructuur, beveiligde transactieverwerking en identiteitsverificatie.",
             "EER/VS"
           ],
           [
-            "Google Analytics",
+            "Publieksmeting",
             "Analyticsdienst om het platformgebruik te volgen en activiteitenrapporten op te stellen.",
             "EER/VS"
           ],
           [
-            "Mapbox",
-            "Berekening van routes en aankomsttijden, geocodering en adreszoekfunctie (de voor de berekening nodige coördinaten worden doorgegeven; er wordt geen naam meegedeeld).",
+            "Kaarten en routes",
+            "Weergave van kaarten (Android en iOS), berekening van routes en aankomsttijden, geocodering en adreszoekfunctie (de voor de berekening nodige coördinaten worden doorgegeven; er wordt geen naam meegedeeld).",
             "EER/VS"
           ],
           [
-            "Google (Maps)",
-            "Weergave van kaarten op Android en routeberekening wanneer geactiveerd.",
-            "EER/VS"
-          ],
-          [
-            "Apple (Kaarten)",
-            "Weergave van kaarten op iOS.",
-            "EER/VS"
-          ],
-          [
-            "Expo / Firebase (Google)",
+            "Pushmeldingen",
             "Bezorging van pushmeldingen op de toestellen.",
             "EER/VS"
           ],
           [
-            "Twilio",
+            "Telefonische verificatie en oproepen",
             "Verzenden van verificatiecodes en telefonisch contact met verborgen nummer.",
             "EER/VS"
           ],
           [
-            "Resend",
+            "Servicemails",
             "Verzenden van servicemails (herinneringen, beveiligingsmeldingen, antwoorden van de support).",
             "EER/VS"
           ],
           [
-            "Sentry",
+            "Bewaking van technische fouten",
             "Bewaking van technische fouten van de app (persoonsgegevens tot een minimum beperkt).",
             "EER/VS"
           ]
@@ -5749,7 +5739,7 @@
       "sectionLabel": "(02)",
       "h2": "Gebruiksvoorwaarden, neediu by Aegryn",
       "disclaimer": "Disclaimer: deze kennisgeving gegevensbescherming is een door AI gegenereerde vertaling die uitsluitend ter informatie wordt verstrekt. In geval van discrepanties of inconsistenties prevaleert de Engelse versie.",
-      "intro": "Deze Gebruiksvoorwaarden (de ToU) zijn van toepassing op elk gebruik van het Aegryn-Platform, de neediu-mobiele applicatie en elke dienst die via het Platform toegankelijk is of wordt geleverd (de Diensten), die worden verstrekt en beheerd door Aegryn, c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Zwitserland.",
+      "intro": "Deze Gebruiksvoorwaarden (de ToU) zijn van toepassing op elk gebruik van het Aegryn-Platform, de neediu-mobiele applicatie en elke dienst die via het Platform toegankelijk is of wordt geleverd (de Diensten), die worden verstrekt en beheerd door Aegryn (BOHA-Group Sàrl) , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Zwitserland.",
       "s1H": "1. Algemeen",
       "s1AcceptTitle": "Aanvaarding.",
       "s1Accept": "Door toegang te krijgen tot of gebruik te maken van ons Platform gaat u ermee akkoord gebonden te zijn aan deze ToU.",
@@ -5776,7 +5766,7 @@
       "s4TelecomTitle": "Telecommunicatie.",
       "s4Telecom": "Wij zijn geen telecommunicatieprovider. Bel- en chatfuncties werken via internet (VoIP/data) en zijn niet verbonden met mobiele of vaste netwerken. Gebruik ze niet voor hulpdiensten.",
       "s5H": "5. Functies en diensten",
-      "s5": "Het Platform biedt een digitale dienst waarmee gebruikers in contact kunnen komen met professionals of particulieren die diensten dichtbij aanbieden. Het Platform faciliteert het eerste contact maar intervenieert niet in de uitvoering van de diensten. Wij aanvaarden geen verantwoordelijkheid voor de kwaliteit, tijdigheid of het resultaat van door derden uitgevoerde diensten.",
+      "s5": "Het Platform biedt een digitale dienst waarmee gebruikers in contact kunnen komen met professionals die diensten dichtbij aanbieden. Het Platform faciliteert het eerste contact maar intervenieert niet in de uitvoering van de diensten. Wij aanvaarden geen verantwoordelijkheid voor de kwaliteit, tijdigheid of het resultaat van door derden uitgevoerde diensten.",
       "s6H": "6. Gebruik van het Platform",
       "s6RightTitle": "Gebruiksrecht.",
       "s6Right": "U krijgt een herroepelijk, niet-exclusief, niet-overdraagbaar recht om het Platform te openen en te gebruiken, uitsluitend met het doel diensten dichtbij te zoeken, aan te bieden of ervan te profiteren.",
@@ -5844,9 +5834,9 @@
       "s8CommTitle": "Commissie van het Platform.",
       "s8Comm": "neediu ontvangt een commissie op elke met succes voltooide dienst; het voor de Dienstverlener geldende percentage wordt in de app meegedeeld.",
       "s8CancelTitle": "Annulering door de Dienstverlener.",
-      "s8Cancel": "Wanneer een Dienstverlener een reeds betaalde opdracht annuleert, wordt de Klant volledig terugbetaald. Als de Dienstverlener annuleert nadat hij is vertrokken (onderweg of aangekomen) of op dezelfde dag als een geplande, reeds betaalde opdracht, wordt een boete in verhouding tot de prijs van de opdracht, tussen 5 en 50 EUR/CHF, op zijn volgende betaling ingehouden. Een lopende opdracht kan niet meer worden geannuleerd.",
+      "s8Cancel": "Wanneer een Dienstverlener een reeds betaalde opdracht annuleert, wordt de Klant volledig terugbetaald. Als de Dienstverlener annuleert nadat hij is vertrokken (onderweg of aangekomen) of op dezelfde dag als een geplande, reeds betaalde opdracht, wordt een boete in verhouding tot de prijs van de opdracht op zijn volgende betaling ingehouden. Een lopende opdracht kan niet meer worden geannuleerd.",
       "s8MethodsTitle": "Geaccepteerde betaalmiddelen.",
-      "s8Methods": "Bankkaart (Visa, Mastercard, American Express), Apple Pay (iPhone), Google Pay (Android), gehoste betaling via Stripe Checkout en TWINT (Klanten in Zwitserland, betaling in CHF). De betaling wordt afgeschreven bij bevestiging van de bestelling; de gelden worden door neediu bewaard en pas aan de Dienstverlener uitbetaald nadat de Klant de dienst heeft gevalideerd. Betalingen worden verwerkt door Stripe; neediu bewaart geen kaartnummers.",
+      "s8Methods": "Bankkaart (Visa, Mastercard, American Express), Apple Pay (iPhone), Google Pay (Android), betaling gehost door onze betalingsdienstverlener en TWINT (Klanten in Zwitserland, betaling in CHF). De betaling wordt afgeschreven bij bevestiging van de bestelling; de gelden worden door neediu bewaard en pas aan de Dienstverlener uitbetaald nadat de Klant de dienst heeft gevalideerd. Betalingen worden verwerkt door onze betalingsdienstverlener; neediu bewaart geen kaartnummers.",
       "s8CreditTitle": "neediu-tegoed.",
       "s8Credit": "Wanneer een annulering in de vorm van tegoed wordt terugbetaald, is het door de Klant betaalde bedrag al van zijn betaalmiddel afgeschreven en blijft het door neediu aangehouden: het tegoed is een vordering van de Klant op neediu, direct bruikbaar bij zijn volgende bestelling (het verlaagt het van de kaart afgeschreven bedrag). Het tegoed is niet in contanten terug te betalen. Het wordt met zijn geschiedenis getoond in het onderdeel “Cagnotte” van de app. Eventuele reiskosten (5 EUR / CHF 5) blijven verschuldigd aan de Dienstverlener bij annulering terwijl hij onderweg of aangekomen is.",
       "s8ExtTitle": "Verlengingen van opdrachten.",

@@ -5552,7 +5552,7 @@
       },
       "whoWeAre": {
         "h": "Qui sommes-nous et comment nous contacter ?",
-        "p": "Aegryn est le nom de notre entreprise. Si vous avez des questions concernant le traitement des données relatives à notre plateforme, vous pouvez nous contacter par courrier : Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Suisse. Vous pouvez également nous contacter via le formulaire de contact disponible sur notre plateforme."
+        "p": "Aegryn est le nom de notre entreprise. Si vous avez des questions concernant le traitement des données relatives à notre plateforme, vous pouvez nous contacter par courrier : Aegryn (BOHA-Group Sàrl) , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Suisse. Vous pouvez également nous contacter via le formulaire de contact disponible sur notre plateforme."
       },
       "ourRole": {
         "h": "Quel est notre rôle en matière de protection des données ?",
@@ -5634,58 +5634,48 @@
         "p3": "Lorsque des données personnelles sont transférées à un prestataire tiers situé en dehors de la Suisse ou de l'Espace économique européen (EEE) et n'offrant pas un niveau de protection adéquat, nous exigeons que le prestataire tiers s'engage à respecter la législation applicable en matière de protection des données (à cette fin, nous utilisons les clauses contractuales types révisées de la Commission européenne), sauf si le prestataire tiers est déjà soumis à un ensemble de règles légalement acceptées garantissant la protection des données (Swiss-U.S. Data Privacy Framework) ou si nous pouvons invoquer une exception.",
         "providersH": "Nos prestataires tiers",
         "tableHeaders": [
-          "Prestataire",
+          "Type de prestataire",
           "Objectif",
           "Lieu de traitement"
         ],
         "providers": [
           [
-            "Supabase",
+            "Hébergement et base de données",
             "Plateforme backend-as-a-service pour le développement de l'application.",
             "EEE"
           ],
           [
-            "Stripe",
+            "Paiement et vérification d’identité",
             "Infrastructure de paiement mondial, traitement sécurisé des transactions et vérification d'identité.",
             "EEE/USA"
           ],
           [
-            "Google Analytics",
+            "Mesure d’audience",
             "Service d'analyse pour surveiller l'utilisation de la plateforme et compiler des rapports d'activité.",
             "EEE/USA"
           ],
           [
-            "Mapbox",
-            "Calcul d'itinéraires et d'heures d'arrivée, géocodage et recherche d'adresses (les coordonnées nécessaires au calcul sont transmises ; aucun nom n'est communiqué).",
+            "Cartographie et itinéraires",
+            "Affichage des cartes (Android et iOS), calcul d’itinéraires et d’heures d’arrivée, géocodage et recherche d’adresses (les coordonnées nécessaires au calcul sont transmises ; aucun nom n’est communiqué).",
             "EEE/USA"
           ],
           [
-            "Google (Maps)",
-            "Affichage des cartes sur Android et calcul d'itinéraires lorsqu'il est activé.",
-            "EEE/USA"
-          ],
-          [
-            "Apple (Plans)",
-            "Affichage des cartes sur iOS.",
-            "EEE/USA"
-          ],
-          [
-            "Expo / Firebase (Google)",
+            "Notifications push",
             "Acheminement des notifications push vers les appareils.",
             "EEE/USA"
           ],
           [
-            "Twilio",
+            "Vérification et appels téléphoniques",
             "Envoi de codes de vérification et mise en relation téléphonique à numéro masqué.",
             "EEE/USA"
           ],
           [
-            "Resend",
+            "E-mails de service",
             "Envoi des e-mails de service (rappels, alertes de sécurité, réponses du support).",
             "EEE/USA"
           ],
           [
-            "Sentry",
+            "Suivi des erreurs techniques",
             "Surveillance des erreurs techniques de l'application (données personnelles réduites au minimum).",
             "EEE/USA"
           ]
@@ -5709,7 +5699,7 @@
       "sectionLabel": "(02)",
       "h2": "Conditions d'utilisation, neediu by Aegryn",
       "disclaimer": "Exclusion de responsabilité : La présente déclaration de protection des données est une traduction IA fournie à titre informatif uniquement. En cas de divergences ou d'incohérences, la version anglaise fera foi.",
-      "intro": "Les présentes Conditions d'utilisation (les CdU) s'appliquent à toute utilisation de la Plateforme Aegryn, de l'application mobile neediu, ainsi qu'à tout service accessible ou fourni via la Plateforme (les Services), qui sont fournis et gérés par Aegryn , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Suisse.",
+      "intro": "Les présentes Conditions d'utilisation (les CdU) s'appliquent à toute utilisation de la Plateforme Aegryn, de l'application mobile neediu, ainsi qu'à tout service accessible ou fourni via la Plateforme (les Services), qui sont fournis et gérés par Aegryn (BOHA-Group Sàrl) , c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Suisse.",
       "s1H": "1. Généralités",
       "s1AcceptTitle": "Acceptation.",
       "s1Accept": "En accédant ou en utilisant notre Plateforme, vous acceptez d'être lié par les présentes CdU.",
@@ -5736,7 +5726,7 @@
       "s4TelecomTitle": "Télécommunication.",
       "s4Telecom": "Nous ne sommes pas un fournisseur de télécommunications. Les fonctionnalités d'appel et de chat fonctionnent via Internet (VoIP/données) et ne sont pas liées aux réseaux mobiles ou fixes. Ne les utilisez pas pour les services d'urgence.",
       "s5H": "5. Fonctionnalités et Services",
-      "s5": "La Plateforme fournit un service numérique permettant aux utilisateurs de se connecter avec des professionnels ou particuliers offrant des services de proximité. La Plateforme facilite le contact initial mais n'intervient pas dans l'exécution des services. Nous n'assumons aucune responsabilité quant à la qualité, la ponctualité ou le résultat des services effectués par des tiers.",
+      "s5": "La Plateforme fournit un service numérique permettant aux utilisateurs de se connecter avec des professionnels offrant des services de proximité. La Plateforme facilite le contact initial mais n'intervient pas dans l'exécution des services. Nous n'assumons aucune responsabilité quant à la qualité, la ponctualité ou le résultat des services effectués par des tiers.",
       "s6H": "6. Utilisation de la Plateforme",
       "s6RightTitle": "Droit d'utilisation.",
       "s6Right": "Il vous est accordé un droit révocable, non-exclusif, non-transférable d'accéder et d'utiliser la Plateforme uniquement dans le but de rechercher, d'offrir ou de bénéficier de services de proximité.",
@@ -5804,9 +5794,9 @@
       "s8CommTitle": "Commission de la Plateforme.",
       "s8Comm": "neediu perçoit une commission sur chaque service accompli avec succès, dont le taux applicable au Prestataire est communiqué dans l'application.",
       "s8CancelTitle": "Annulation par le Prestataire.",
-      "s8Cancel": "Lorsqu'un Prestataire annule une mission déjà payée, le Client est remboursé intégralement. Si le Prestataire annule après son départ (en route ou arrivé) ou le jour même d'une mission planifiée déjà payée, une pénalité proportionnée au prix de la mission, comprise entre 5 et 50 EUR/CHF, est déduite de son prochain paiement. Une mission en cours ne peut plus être annulée.",
+      "s8Cancel": "Lorsqu'un Prestataire annule une mission déjà payée, le Client est remboursé intégralement. Si le Prestataire annule après son départ (en route ou arrivé) ou le jour même d'une mission planifiée déjà payée, une pénalité proportionnée au prix de la mission est déduite de son prochain paiement. Une mission en cours ne peut plus être annulée.",
       "s8MethodsTitle": "Moyens de paiement acceptés.",
-      "s8Methods": "Carte bancaire (Visa, Mastercard, American Express), Apple Pay (iPhone), Google Pay (Android), paiement hébergé Stripe Checkout et TWINT (Clients en Suisse, paiement en CHF). Le paiement est débité au moment de la confirmation de la commande ; les fonds sont conservés par neediu et ne sont reversés au Prestataire qu'après validation de la prestation par le Client. Les paiements sont traités par Stripe ; neediu ne conserve aucun numéro de carte.",
+      "s8Methods": "Carte bancaire (Visa, Mastercard, American Express), Apple Pay (iPhone), Google Pay (Android), paiement hébergé par notre prestataire de paiement et TWINT (Clients en Suisse, paiement en CHF). Le paiement est débité au moment de la confirmation de la commande ; les fonds sont conservés par neediu et ne sont reversés au Prestataire qu'après validation de la prestation par le Client. Les paiements sont traités par notre prestataire de paiement ; neediu ne conserve aucun numéro de carte.",
       "s8CreditTitle": "Crédit neediu.",
       "s8Credit": "Lorsqu'une annulation est remboursée sous forme de crédit, le montant payé par le Client a déjà été débité sur son moyen de paiement et reste détenu par neediu : le crédit est une créance du Client sur neediu, utilisable immédiatement lors de sa prochaine commande (il réduit le montant débité sur la carte). Le crédit n'est pas remboursable en espèces. Il est affiché dans l'espace « Cagnotte » de l'application, avec son historique. Les frais de déplacement éventuels (5 EUR / CHF 5) restent dus au Prestataire en cas d'annulation alors qu'il est en route ou arrivé.",
       "s8ExtTitle": "Extensions de mission.",
