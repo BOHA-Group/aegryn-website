@@ -39,6 +39,15 @@ export async function POST(req: NextRequest) {
     const data = schema.parse(await req.json())
     if (!db) return NextResponse.json({ ok: true, dryRun: true })
 
+    // Limite de requêtes (table et fonction côté neediu) : 10 envois par heure et par IP, 1 par 10 minutes et 5 par jour par adresse.
+    // Une adresse déjà servie reçoit la même réponse « ok » sans nouvel e-mail, pour ne pas révéler son état ni servir de relais d'envoi.
+    const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown'
+    const ipHash = createHash('sha256').update(`${process.env.IP_HASH_SALT ?? ''}${ip}`).digest('hex')
+    const { data: gate, error: gateErr } = await db.rpc('prereg_throttle', { p_ip_hash: ipHash, p_email: data.email })
+    if (gateErr) { console.error('[neediu/waitlist] throttle', gateErr.message); return NextResponse.json({ error: 'internal' }, { status: 500 }) }
+    if (gate === 'ip') return NextResponse.json({ error: 'rate_limited' }, { status: 429 })
+    if (gate === 'email') return NextResponse.json({ ok: true })
+
     const preset = NEEDIU_CITIES.find(c => c.key === data.cityKey)!
     const { data: existing } = await db.from('provider_preregistrations').select('confirmed_at').eq('email', data.email).maybeSingle()
     if (existing?.confirmed_at) return NextResponse.json({ ok: true })
@@ -56,8 +65,10 @@ export async function POST(req: NextRequest) {
     if (error) { console.error('[neediu/waitlist] insert', error.message); return NextResponse.json({ error: 'internal' }, { status: 500 }) }
 
     const site = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com').replace(/\/$/, '')
-    const mail = neediuProConfirmMail(data.locale, data.firstName, `${site}/api/neediu/waitlist/confirm?token=${token}&locale=${data.locale}`)
-    await sendEmail(data.email, mail.subject, mail.html, 'neediu-waitlist')
+    const mail = neediuProConfirmMail(data.locale, data.firstName, `${site}/api/neediu/waitlist/confirm?token=${token}&locale=${data.locale}`, {
+      company: data.companyName, vat: data.vat, city: preset.name, phone: data.phone, services: data.services,
+    })
+    await sendEmail(data.email, mail.subject, mail.html, 'neediu-waitlist', undefined, { fromName: 'neediu', replyTo: 'support.neediu@boha-group.com' })
     return NextResponse.json({ ok: true })
   } catch (err) {
     if (err instanceof z.ZodError) return NextResponse.json({ error: 'validation' }, { status: 400 })

@@ -13,10 +13,11 @@ export async function sendEmail(
   html: string,
   tag?: string,
   attachments?: EmailAttachment[],
+  opts?: { fromName?: string; replyTo?: string },
 ): Promise<void> {
   const key  = process.env.RESEND_API_KEY
   const from = process.env.RESEND_FROM ?? 'no-reply@boha-group.com'
-  const name = process.env.RESEND_FROM_NAME ?? 'Aegryn'
+  const name = opts?.fromName ?? process.env.RESEND_FROM_NAME ?? 'Aegryn'
   if (!key) {
     console.warn(`[sendEmail] RESEND_API_KEY manquant — skip email to ${to}`)
     return
@@ -26,7 +27,7 @@ export async function sendEmail(
     headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
       from:     `${name} <${from}>`,
-      reply_to: process.env.RESEND_REPLY_TO ?? 'contact@boha-group.com',
+      reply_to: opts?.replyTo ?? process.env.RESEND_REPLY_TO ?? 'contact@boha-group.com',
       to:       [to],
       subject,
       html,
