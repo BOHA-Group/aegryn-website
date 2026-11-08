@@ -17,7 +17,7 @@ export const TOC_01: TocSection[] = [
     { anchor: 'editorial-why-a-consulting-firm-publishes', title: "Why a Consulting Firm Publishes a Magazine", page: 13 },
   ] },
   { id: 's-tech-and-ai', label: "Tech and AI", pillar: 'ai', pageRange: 'p.14–40', articles: [
-    { anchor: 'tech-and-ai-european-tech-certified-and-', title: "European tech. Certified and ready to\u2026", page: 14 },
+    { anchor: 'tech-and-ai-european-tech-certified-and-', title: "European tech. Certified and built to\u2026", page: 14 },
     { anchor: 'tech-and-ai-founder-diary', title: "Founder Diary", page: 17 },
     { anchor: 'tech-and-ai-she-quit-on-a-tuesday', title: "She Quit on a Tuesday", page: 18 },
     { anchor: 'tech-and-ai-building-from-anywhere', title: "Building From Anywhere", page: 20 },
