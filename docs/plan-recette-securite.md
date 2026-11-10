@@ -15,6 +15,7 @@ Test versionné : `scripts/security-attack-test.mjs` (dépôt d'images, insertio
 | S-05 | 10/11/2026 | Serveur local | Limite de requêtes sur 16 formulaires publics : 3 demandes acceptées puis refus 429 (experts/apply). Avant : aucune limite ni protection anti-robot. |
 | S-06 | 10/11/2026 | Dépendances | Next.js 16.3.3 vulnérable (exécution de code à distance dans `next/og`, cache empoisonné) : mis à 16.4.3 ; sharp 0.35.5, puppeteer-core 25.16 ; compilation complète réussie (861 pages), tsc et eslint propres. Reste zod 3 (mémoire sur très grandes collections), correctif en version majeure. |
 | S-07 | 10/11/2026 | Production (en-têtes) | CSP, HSTS (2 ans, preload), X-Frame-Options, nosniff, Referrer-Policy, Permissions-Policy présents ; la CSP autorise `unsafe-inline` et `unsafe-eval` (Next et balises de mesure). |
+| S-08 | 10/11/2026 | Production actuelle (`aegryn.com`, ancien code), script `scripts/preview-security-check.mjs` | Avant déploiement : en-têtes, redirections `/admin`, routes admin et client refusées, faux paiement refusé (400), préinscription fermée (404) ; **1 écart attendu** : les formulaires publics ne sont pas encore limités (5 demandes acceptées). Le déploiement de test est protégé par Vercel : rejouer le script avec `VERCEL_BYPASS` ou protection levée temporairement ; le CI (tsc, lint) a échoué sur une variable inutilisée du script d'attaque, corrigé (`e94f9f1a`). |
 
 ## 2. Anomalies
 
