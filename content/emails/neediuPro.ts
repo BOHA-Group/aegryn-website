@@ -93,31 +93,31 @@ export function neediuProConfirmMail(locale: string, name: string, url: string, 
     [m.services, summary.services.map(serviceLabel).join(', ')],
   ]
   const recap = rows.map(([k, v]) =>
-    `<tr><td style="padding:6px 12px 6px 0;font-size:13px;color:#6b7280;vertical-align:top;white-space:nowrap">${esc(k)}</td><td style="padding:6px 0;font-size:13px;color:#111827;line-height:1.5">${esc(v)}</td></tr>`).join('')
+    `<tr><td class="t-sub" style="padding:6px 12px 6px 0;font-size:13px;color:#6b7280;vertical-align:top;white-space:nowrap">${esc(k)}</td><td class="t-main" style="padding:6px 0;font-size:13px;color:#111827;line-height:1.5">${esc(v)}</td></tr>`).join('')
   const steps = m.steps.map((s, i) =>
-    `<tr><td style="padding:0 12px 10px 0;vertical-align:top"><div style="width:24px;height:24px;border-radius:12px;background:#000000;color:#ffffff;font-size:12px;font-weight:700;line-height:24px;text-align:center">${i + 1}</div></td><td style="padding:2px 0 10px;font-size:14px;color:#374151;line-height:1.55">${esc(s)}</td></tr>`).join('')
+    `<tr><td style="padding:0 12px 10px 0;vertical-align:top"><div class="c-dot" style="width:24px;height:24px;border-radius:12px;background:#000000;color:#ffffff;font-size:12px;font-weight:700;line-height:24px;text-align:center">${i + 1}</div></td><td class="t-main" style="padding:2px 0 10px;font-size:14px;color:#374151;line-height:1.55">${esc(s)}</td></tr>`).join('')
   const html = `<!DOCTYPE html>
 <html lang="${l}">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
-<body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif">
-  <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="background:#f9fafb;padding:40px 0">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style>:root{color-scheme:light dark;supported-color-schemes:light dark}@media (prefers-color-scheme: dark){.c-page{background:#000000!important}.c-card{background:#1c1c1e!important}.c-head,.c-foot{background:#2c2c2e!important}.t-main{color:#f2f2f7!important}.t-sub{color:#d1d1d6!important}.c-btn{background:#ffffff!important;color:#000000!important;border-color:#ffffff!important}.c-dot{background:#ffffff!important;color:#000000!important}.c-line{border-color:#48484a!important}}</style></head>
+<body class="c-page" bgcolor="#f9fafb" style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif">
+  <table class="c-page" width="100%" cellpadding="0" cellspacing="0" role="presentation" bgcolor="#f9fafb" style="background:#f9fafb;padding:40px 0">
     <tr><td align="center">
-      <table width="520" cellpadding="0" cellspacing="0" role="presentation" style="max-width:520px;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.08)">
-        <tr><td style="background:#000000;padding:28px 40px;text-align:center"><span style="color:#ffffff;font-size:24px;font-weight:700;letter-spacing:-0.5px">neediu</span></td></tr>
+      <table class="c-card" width="520" cellpadding="0" cellspacing="0" role="presentation" bgcolor="#ffffff" style="max-width:520px;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.08)">
+        <tr><td class="c-head" bgcolor="#000000" style="background:#000000;padding:28px 40px;text-align:center"><span style="color:#ffffff;font-size:24px;font-weight:700;letter-spacing:-0.5px">neediu</span></td></tr>
         <tr><td style="padding:32px 40px 8px">
-          <p style="margin:0 0 14px;font-size:15px;color:#374151">${esc(m.hello.replace('{name}', name))}</p>
-          <p style="margin:0 0 22px;font-size:14px;color:#374151;line-height:1.6">${esc(m.intro)}</p>
-          <p style="margin:0 0 8px"><a href="${esc(url)}" style="display:inline-block;background:#000000;color:#ffffff;font-weight:700;font-size:15px;text-decoration:none;padding:14px 26px;border-radius:12px">${esc(m.button)}</a></p>
-          <p style="margin:0 0 26px;font-size:12px;color:#9ca3af">${esc(m.validity)}</p>
-          <p style="margin:0 0 6px;font-size:14px;font-weight:700;color:#111827">${esc(m.recap)}</p>
-          <table cellpadding="0" cellspacing="0" role="presentation" style="margin:0 0 26px;width:100%;border-top:1px solid #e5e7eb">${recap}</table>
-          <p style="margin:0 0 12px;font-size:14px;font-weight:700;color:#111827">${esc(m.next)}</p>
+          <p class="t-main" style="margin:0 0 14px;font-size:15px;color:#374151">${esc(m.hello.replace('{name}', name))}</p>
+          <p class="t-main" style="margin:0 0 22px;font-size:14px;color:#374151;line-height:1.6">${esc(m.intro)}</p>
+          <p style="margin:0 0 8px"><a class="c-btn" href="${esc(url)}" style="display:inline-block;background:#000000;border:2px solid #000000;color:#ffffff;font-weight:700;font-size:15px;text-decoration:none;padding:14px 26px;border-radius:12px">${esc(m.button)}</a></p>
+          <p class="t-sub" style="margin:0 0 26px;font-size:12px;color:#6b7280">${esc(m.validity)}</p>
+          <p class="t-main" style="margin:0 0 6px;font-size:14px;font-weight:700;color:#111827">${esc(m.recap)}</p>
+          <table class="c-line" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 0 26px;width:100%;border-top:1px solid #e5e7eb">${recap}</table>
+          <p class="t-main" style="margin:0 0 12px;font-size:14px;font-weight:700;color:#111827">${esc(m.next)}</p>
           <table cellpadding="0" cellspacing="0" role="presentation" style="margin:0 0 12px">${steps}</table>
         </td></tr>
-        <tr><td style="background:#f3f4f6;padding:18px 40px;text-align:center">
-          <p style="margin:0 0 6px;font-size:12px;color:#6b7280;line-height:1.5">${esc(m.privacy)}</p>
+        <tr><td class="c-foot" bgcolor="#f3f4f6" style="background:#f3f4f6;padding:18px 40px;text-align:center">
+          <p class="t-sub" style="margin:0 0 6px;font-size:12px;color:#6b7280;line-height:1.5">${esc(m.privacy)}</p>
           <p style="margin:0 0 6px;font-size:12px"><a href="https://www.aegryn.com/${l}/data-protection-notice-neediu" style="color:#6b7280">${esc(m.notice)}</a></p>
-          <p style="margin:0;font-size:12px;color:#9ca3af;line-height:1.5">${esc(m.ignore)}</p>
+          <p class="t-sub" style="margin:0;font-size:12px;color:#6b7280;line-height:1.5">${esc(m.ignore)}</p>
         </td></tr>
       </table>
     </td></tr>
