@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabase'
+import { rateLimited } from '@/lib/rateLimit'
 
 export async function POST(req: NextRequest) {
+  if (await rateLimited(req, 'experts-contact-lead', 10)) return NextResponse.json({ error: 'rate_limited' }, { status: 429 })
   const body = await req.json().catch(() => ({}))
 
   const {

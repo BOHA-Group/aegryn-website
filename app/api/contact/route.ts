@@ -9,6 +9,7 @@ import {
   CONTACT_SUBJECTS, LEGACY_SUBJECTS, FIELD_LABELS, NDA_ROLE_BY_SUBJECT, SUBJECT_LABEL_FR, describeExtra, normalizeLang,
   type ContactSubject,
 } from '@/content/contact/fields'
+import { rateLimited } from '@/lib/rateLimit'
 
 /** Lien admin de création du NDA, prérempli depuis la demande de contact */
 function ndaCreationLink(d: { name: string; email: string; subject: string }): string {
@@ -43,6 +44,7 @@ const schema = z.object({
 })
 
 export async function POST(req: NextRequest) {
+  if (await rateLimited(req, 'contact', 5)) return NextResponse.json({ error: 'rate_limited' }, { status: 429 })
   try {
     const body = await req.json()
     const data = schema.parse(body)

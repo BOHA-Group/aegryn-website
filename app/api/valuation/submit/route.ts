@@ -3,6 +3,7 @@ import { z }                        from 'zod'
 import { captureLead, fmtEur }      from '@/lib/leadCapture'
 import { emailClientAck } from '@/lib/emailAck'
 import { ack } from '@/content/emails/ack'
+import { rateLimited } from '@/lib/rateLimit'
 
 /* ─── Validation ─────────────────────────────────────────── */
 const schema = z.object({
@@ -97,6 +98,7 @@ Breakdown (CIFSO 5000) : C${d.score_breakdown.capital}/I${d.score_breakdown.inte
 
 /* ─── Route handler ──────────────────────────────────────── */
 export async function POST(req: NextRequest) {
+  if (await rateLimited(req, 'valuation-submit', 10)) return NextResponse.json({ error: 'rate_limited' }, { status: 429 })
   try {
     const body = await req.json()
     const data = schema.parse(body)

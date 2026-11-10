@@ -4,6 +4,7 @@ import { createServiceClient }      from '@/lib/supabase'
 import { sendLeadEmails }           from '@/lib/leadCapture'
 import { emailClientAck } from '@/lib/emailAck'
 import { ack } from '@/content/emails/ack'
+import { rateLimited } from '@/lib/rateLimit'
 
 const PROFESSIONS = [
   'M&A Advisor', 'Lawyer', 'Accountant', 'CTO', 'Cybersecurity',
@@ -27,6 +28,7 @@ const schema = z.object({
 })
 
 export async function POST(req: NextRequest) {
+  if (await rateLimited(req, 'experts-apply', 3)) return NextResponse.json({ error: 'rate_limited' }, { status: 429 })
   try {
     const data = schema.parse(await req.json())
     const supa = createServiceClient()

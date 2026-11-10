@@ -1,11 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabaseServer'
 import { sendEmail, emailCifsoWaitlistConfirmation } from '@/lib/sendEmail'
+import { rateLimited } from '@/lib/rateLimit'
 
 // POST /api/valuation/waitlist
 // Inscrit un email à la liste d'attente CIFSO Valuation Index
 // et envoie un email de confirmation via Resend
 export async function POST(req: NextRequest) {
+  if (await rateLimited(req, 'valuation-waitlist', 5)) return NextResponse.json({ error: 'rate_limited' }, { status: 429 })
   try {
     const { email, org_type, sector, locale, source_url } = await req.json()
 

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabaseServer'
+import { rateLimited } from '@/lib/rateLimit'
 
 const MAX_SIZE = 10 * 1024 * 1024 // 10 Mo
 const ALLOWED = [
@@ -9,6 +10,7 @@ const ALLOWED = [
 ]
 
 export async function POST(req: NextRequest) {
+  if (await rateLimited(req, 'talent-candidate-cv', 5)) return NextResponse.json({ error: 'rate_limited' }, { status: 429 })
   try {
     const form = await req.formData()
     const file = form.get('file') as File | null

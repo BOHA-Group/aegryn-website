@@ -5,10 +5,12 @@
  * Délègue à la route canonique /api/newsletter/subscribe.
  */
 import { NextRequest, NextResponse } from 'next/server'
+import { rateLimited } from '@/lib/rateLimit'
 
 export const runtime = 'nodejs'
 
 export async function POST(req: NextRequest) {
+  if (await rateLimited(req, 'report-subscribe', 5)) return NextResponse.json({ error: 'rate_limited' }, { status: 429 })
   const body = await req.json().catch(() => ({}))
   const canonical = new URL('/api/newsletter/subscribe', req.url)
   return fetch(canonical.toString(), {

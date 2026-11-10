@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabase'
+import { rateLimited } from '@/lib/rateLimit'
 
 /**
  * Déverrouille l'accès anticipé à un numéro du magazine pour un lecteur
@@ -21,6 +22,7 @@ const SLUG_BY_PAD: Record<string, string> = {
 const LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl']
 
 export async function GET(req: NextRequest) {
+  if (await rateLimited(req, 'magazine-access', 120)) return NextResponse.json({ error: 'rate_limited' }, { status: 429 })
   const { searchParams } = req.nextUrl
   const issuePad = searchParams.get('issue')
   const token    = searchParams.get('token')

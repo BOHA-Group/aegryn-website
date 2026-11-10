@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabase'
 import { z } from 'zod'
+import { rateLimited } from '@/lib/rateLimit'
 
 const VALID_ROLES = ['client', 'buyer', 'seller', 'partner', 'internal'] as const
 type ValidRole = typeof VALID_ROLES[number]
@@ -16,6 +17,7 @@ const schema = z.object({
 })
 
 export async function POST(req: NextRequest) {
+  if (await rateLimited(req, 'client-register', 5)) return NextResponse.json({ error: 'rate_limited' }, { status: 429 })
   let body: unknown
   try { body = await req.json() } catch { return NextResponse.json({ error: 'INVALID_JSON' }, { status: 400 }) }
 

@@ -6,6 +6,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { NdaError, signNda } from '@/lib/nda/service'
+import { rateLimited } from '@/lib/rateLimit'
 
 export const runtime = 'nodejs'
 export const maxDuration = 30
@@ -17,6 +18,7 @@ const schema = z.object({
 })
 
 export async function POST(req: NextRequest) {
+  if (await rateLimited(req, 'nda-agreements-sign', 20)) return NextResponse.json({ error: 'rate_limited' }, { status: 429 })
   let body: z.infer<typeof schema>
   try { body = schema.parse(await req.json()) }
   catch { return NextResponse.json({ error: 'validation' }, { status: 400 }) }

@@ -5,6 +5,7 @@ import { z } from 'zod'
 import { emailClientAck } from '@/lib/emailAck'
 import { ack } from '@/content/emails/ack'
 import TalentAdminNotification from '@/emails/TalentAdminNotification'
+import { rateLimited } from '@/lib/rateLimit'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -28,6 +29,7 @@ const candidateSchema = z.object({
 })
 
 export async function POST(req: NextRequest) {
+  if (await rateLimited(req, 'talent-candidate', 5)) return NextResponse.json({ error: 'rate_limited' }, { status: 429 })
   try {
     const body = await req.json()
     const validated = candidateSchema.parse(body)

@@ -14,6 +14,7 @@ import { sendEmail, emailAdvisoryLeadConfirmation } from '@/lib/sendEmail'
 import { getAction, REVENUE_BANDS, type Metier, type ActionSlug } from '@/content/advisory/actions'
 import { getCycleAction } from '@/content/franchir/actions'
 import { ACTION_FORM_UI } from '@/content/advisory/actionForm'
+import { rateLimited } from '@/lib/rateLimit'
 
 const CYCLE_SLUGS = ['general', 'lancement', 'croissance', 'restructuration', 'acquisition', 'transmission'] as const
 
@@ -30,6 +31,7 @@ const schema = z.object({
 })
 
 export async function POST(req: NextRequest) {
+  if (await rateLimited(req, 'advisory-lead', 5)) return NextResponse.json({ error: 'rate_limited' }, { status: 429 })
   let data: z.infer<typeof schema>
   try {
     data = schema.parse(await req.json())

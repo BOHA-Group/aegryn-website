@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z }                        from 'zod'
 import { createServiceClient }      from '@/lib/supabase'
+import { rateLimited } from '@/lib/rateLimit'
 
 /**
  * POST /api/valuation/contribute
@@ -35,6 +36,7 @@ const schema = z.object({
 })
 
 export async function POST(req: NextRequest) {
+  if (await rateLimited(req, 'valuation-contribute', 10)) return NextResponse.json({ error: 'rate_limited' }, { status: 429 })
   try {
     const data = schema.parse(await req.json())
     const db = createServiceClient()
