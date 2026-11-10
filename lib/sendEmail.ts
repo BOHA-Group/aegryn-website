@@ -14,13 +14,13 @@ export async function sendEmail(
   tag?: string,
   attachments?: EmailAttachment[],
   opts?: { fromName?: string; replyTo?: string },
-): Promise<void> {
+): Promise<boolean> {
   const key  = process.env.RESEND_API_KEY
   const from = process.env.RESEND_FROM ?? 'no-reply@boha-group.com'
   const name = opts?.fromName ?? process.env.RESEND_FROM_NAME ?? 'Aegryn'
   if (!key) {
     console.warn(`[sendEmail] RESEND_API_KEY manquant — skip email to ${to}`)
-    return
+    return false
   }
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
@@ -36,7 +36,8 @@ export async function sendEmail(
         : {}),
     }),
   })
-  if (!res.ok) console.error(`[sendEmail${tag ? ` ${tag}` : ''}] Resend error (${to})`, await res.text())
+  if (!res.ok) { console.error(`[sendEmail${tag ? ` ${tag}` : ''}] Resend error (${to})`, await res.text()); return false }
+  return true
 }
 
 /* ── Logo AE officiel — coordonnées verbatim depuis AegrynLogo.tsx ────── */

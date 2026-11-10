@@ -68,7 +68,15 @@ export async function POST(req: NextRequest) {
     const mail = neediuProConfirmMail(data.locale, data.firstName, `${site}/api/neediu/waitlist/confirm?token=${token}&locale=${data.locale}`, {
       company: data.companyName, vat: data.vat, city: preset.name, phone: data.phone, services: data.services,
     })
-    await sendEmail(data.email, mail.subject, mail.html, 'neediu-waitlist', undefined, { fromName: 'neediu', replyTo: 'support.neediu@boha-group.com' })
+    const sent = await sendEmail(data.email, mail.subject, mail.html, 'neediu-waitlist', undefined, { fromName: 'neediu', replyTo: 'support.neediu@boha-group.com' })
+    if (!sent) {
+      // Courriel de confirmation non parti (service d'envoi indisponible ou clé absente) : on ne répond jamais « ok » à tort, et on libère la limite
+      // d'une demande par 10 minutes pour que la personne puisse réessayer tout de suite. La préinscription enregistrée reste en attente de confirmation.
+      const emailHash = createHash('sha256').update(data.email.toLowerCase()).digest('hex')
+      await db.from('provider_prereg_attempts').delete().eq('kind', 'email').eq('subject', emailHash)
+      console.error('[neediu/waitlist] courriel de confirmation non envoyé')
+      return NextResponse.json({ error: 'email_failed' }, { status: 502 })
+    }
     return NextResponse.json({ ok: true })
   } catch (err) {
     if (err instanceof z.ZodError) return NextResponse.json({ error: 'validation' }, { status: 400 })
