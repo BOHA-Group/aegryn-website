@@ -28,10 +28,17 @@ Test versionné : `scripts/security-attack-test.mjs` (dépôt d'images, insertio
 | AE-05 | Préinscription : « ok » même si le courriel n'est pas parti | 502 `email_failed`, limite libérée, ligne conservée | Corrigé dans le code, **à déployer** |
 | AE-06 | Fonction `rls_auto_enable` appelable par l'anonyme (fonction vide) | `REVOKE EXECUTE` (migration 125) | Corrigé |
 
-## 3. Reste à faire
+## 3. Reste à faire (au 10/11/2026)
 
-1. Déployer le code (limites, Next.js, préinscription). Pour ouvrir la préinscription : `NEEDIU_PRO_PUBLIC=true`, clé de service de la base neediu, clé d'envoi d'e-mails, `IP_HASH_SALT`.
-2. Tester l'inscription complète du portail client avec la limite de requêtes.
-3. Resserrer la CSP (retirer `unsafe-eval` si possible).
-4. Zod 4 (majeure) : à planifier.
-5. Ajouter une protection anti-robot (type Turnstile) sur les formulaires qui envoient des courriels.
+À ton action (propriétaire) :
+1. Donner l'accès de contrôle au déploiement de test (protégé par Vercel) : jeton de contournement dans « Deployment Protection » du projet, puis `VERCEL_BYPASS=<jeton> node scripts/preview-security-check.mjs <URL>`, ou protection levée le temps du test.
+2. Vérifier que la CI GitHub de la branche `preview` repasse (tsc, lint, compilation).
+3. Valider la fusion de `preview` dans `main` (mise en production) après contrôle.
+4. Pour ouvrir la préinscription des prestataires : `NEEDIU_PRO_PUBLIC=true`, clé de service de la base neediu, clé d'envoi d'e-mails, `IP_HASH_SALT`.
+
+À tester ou décider :
+5. Inscription complète du portail client avec la limite de requêtes (non testée).
+6. Resserrer la politique de contenu (`unsafe-eval`) si possible.
+7. Protection anti-robot (type Turnstile) sur les formulaires qui envoient des courriels.
+8. Zod 3 : le correctif est en version majeure, à planifier.
+9. Quota Supabase : le projet `aegryn-auction` pèse 19 Mo, sans enjeu ; son coût est celui d'un calcul Micro (6,05 $ par mois).
