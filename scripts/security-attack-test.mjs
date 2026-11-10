@@ -27,5 +27,4 @@ await up('connecté (dossier d\'un autre)',U,`00000000-0000-0000-0000-0000000000
 const mand=await j(await fetch(`${SB}/rest/v1/mandates`,{method:'POST',headers:{...H(AK),Prefer:'return=minimal'},body:JSON.stringify({})})); out.push(`mandates anonyme INSERT vide → ${mand.s} ${JSON.stringify(mand.b).slice(0,80)}`);
 console.log(out.join('\n')); const failles=out.filter(l=>l.startsWith('FAILLE')).length; console.log(`RÉSULTAT : ${failles} faille(s)`);
 // nettoyage
-for(const p of ['a.png']) {}
 await fetch(`${SB}/auth/v1/admin/users/${uid}`,{method:'DELETE',headers:H(SK)}); console.log('compte jetable supprimé'); process.exit(failles?1:0);
