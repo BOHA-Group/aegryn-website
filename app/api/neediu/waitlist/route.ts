@@ -64,7 +64,8 @@ export async function POST(req: NextRequest) {
     const { error } = await db.from('provider_preregistrations').upsert(row, { onConflict: 'email' })
     if (error) { console.error('[neediu/waitlist] insert', error.message); return NextResponse.json({ error: 'internal' }, { status: 500 }) }
 
-    const site = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com').replace(/\/$/, '')
+    // Le lien du courriel doit ramener au déploiement qui l'a envoyé : en preview et en local, l'adresse de production est fermée (page introuvable).
+    const site = (process.env.VERCEL_ENV === 'production' ? (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aegryn.com') : req.nextUrl.origin).replace(/\/$/, '')
     const mail = neediuProConfirmMail(data.locale, data.firstName, `${site}/api/neediu/waitlist/confirm?token=${token}&locale=${data.locale}`, {
       company: data.companyName, vat: data.vat, city: preset.name, phone: data.phone, services: data.services,
     })
