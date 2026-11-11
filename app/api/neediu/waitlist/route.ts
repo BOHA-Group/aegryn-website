@@ -17,7 +17,7 @@ const schema = z.object({
   email:       z.string().trim().toLowerCase().email().max(160),
   phone:       z.string().trim().regex(/^\+[1-9]\d{7,14}$/),
   companyName: z.string().trim().min(2).max(160),
-  vat:         z.string().trim().min(5).max(30).regex(/^[A-Za-z0-9 .\-/]+$/),
+  vat:         z.string().trim().min(5).max(30).regex(/^[A-Za-z0-9 .\-/]+$/).transform((v) => v.toUpperCase()),
   cityKey:     z.enum(CITY_KEYS),
   services:    z.array(z.string()).min(1).max(NEEDIU_SERVICE_KEYS.length).refine(a => a.every(k => NEEDIU_SERVICE_KEYS.includes(k))),
   consent:     z.literal(true),
