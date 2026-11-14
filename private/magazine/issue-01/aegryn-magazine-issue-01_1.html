@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Aegryn Magazine Issue 01: Built to Last, January 2027</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet">
+<style>@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:200;font-display:swap;src:url('/fonts/PlusJakartaSans/PlusJakartaSans-ExtraLight-200.woff2') format('woff2')}@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/PlusJakartaSans/PlusJakartaSans-Light-300.woff2') format('woff2')}@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/PlusJakartaSans/PlusJakartaSans-Regular-400.woff2') format('woff2')}@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/PlusJakartaSans/PlusJakartaSans-Medium-500.woff2') format('woff2')}@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/PlusJakartaSans/PlusJakartaSans-SemiBold-600.woff2') format('woff2')}@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/PlusJakartaSans/PlusJakartaSans-Bold-700.woff2') format('woff2')}@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:800;font-display:swap;src:url('/fonts/PlusJakartaSans/PlusJakartaSans-ExtraBold-800.woff2') format('woff2')}@font-face{font-family:'Plus Jakarta Sans';font-style:italic;font-weight:300;font-display:swap;src:url('/fonts/PlusJakartaSans/PlusJakartaSans-LightItalic-300.woff2') format('woff2')}@font-face{font-family:'Plus Jakarta Sans';font-style:italic;font-weight:400;font-display:swap;src:url('/fonts/PlusJakartaSans/PlusJakartaSans-RegularItalic-400.woff2') format('woff2')}@font-face{font-family:'Plus Jakarta Sans';font-style:italic;font-weight:200;font-display:swap;src:url('/fonts/PlusJakartaSans/PlusJakartaSans-ExtraLightItalic-200.woff2') format('woff2')}@font-face{font-family:'Plus Jakarta Sans';font-style:italic;font-weight:500;font-display:swap;src:url('/fonts/PlusJakartaSans/PlusJakartaSans-MediumItalic-500.woff2') format('woff2')}</style>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--K:#0F1A2B;--C:#F7F5F1;--G:#5ADDA4;--W:#fff;--GR:#8A8A8A;--LG:#E4E1DC;--DG:#333;--NAVY:#0F1A2B;--CREAM:#F7F5F1}
@@ -337,7 +337,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
 
 /* ══════════ CSS PAGES, HTML Premium (source de vérité contenu) ══════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500&display=swap');
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --ink:#050505;--navy:#0A1628;--green:#5adda4;--green-dk:#1a8a6e;
@@ -867,7 +866,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#3A3A3A;display:flex;
       </div>
       <!-- QR code scannable, coin bas-droit -->
       <div style="position:absolute;bottom:14px;right:14px;background:#fff;padding:4px;border-radius:2px;box-shadow:0 2px 8px rgba(0,0,0,.3);width:62px;height:62px">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=54x54&data=https%3A%2F%2Faegryn.com%2Fmagazine&color=0F1A2B&bgcolor=ffffff&qzone=0&format=png" width="54" height="54" style="display:block;image-rendering:pixelated" alt="aegryn.com/magazine" />
+        <img src="/images/qr/magazine.svg" width="54" height="54" style="display:block;image-rendering:pixelated" alt="aegryn.com/magazine" />
       </div>
       <!-- Bouton fullscreen Barnes : bas-centre, semi-transparent, au hover -->
       <div id="cover-fs-btn" style="position:absolute;bottom:18px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.92);border:none;padding:8px 18px;cursor:pointer;display:flex;align-items:center;gap:7px;white-space:nowrap;opacity:0;transition:opacity .22s;border-radius:2px;box-shadow:0 2px 14px rgba(0,0,0,.28);z-index:10" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0'" onclick="(function(){var r=document.getElementById('fb-root');if(r)r.requestFullscreen&&r.requestFullscreen()})()">

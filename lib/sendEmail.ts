@@ -13,7 +13,7 @@ export async function sendEmail(
   html: string,
   tag?: string,
   attachments?: EmailAttachment[],
-  opts?: { fromName?: string; replyTo?: string },
+  opts?: { fromName?: string; replyTo?: string; headers?: Record<string, string> },
 ): Promise<boolean> {
   const key  = process.env.RESEND_API_KEY
   const from = process.env.RESEND_FROM ?? 'no-reply@boha-group.com'
@@ -31,6 +31,7 @@ export async function sendEmail(
       to:       [to],
       subject,
       html,
+      ...(opts?.headers ? { headers: opts.headers } : {}),
       ...(attachments?.length
         ? { attachments: attachments.map(a => ({ filename: a.filename, content: Buffer.from(a.content).toString('base64') })) }
         : {}),

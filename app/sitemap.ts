@@ -79,6 +79,7 @@ const STATIC_ROUTES = [
   { path: '/terms/cgv',                          priority: 0.3,  changeFrequency: 'yearly'  as const },
   { path: '/terms/ai-usage',                     priority: 0.3,  changeFrequency: 'yearly'  as const },
   { path: '/privacy',                            priority: 0.3,  changeFrequency: 'yearly'  as const },
+  { path: '/legal-notice',                       priority: 0.3,  changeFrequency: 'yearly'  as const },
   { path: '/security',                           priority: 0.4,  changeFrequency: 'monthly' as const },
   { path: '/data-protection-notice-neediu',      priority: 0.2,  changeFrequency: 'yearly'  as const },
 ]

@@ -57,7 +57,7 @@ export function ProWaitlistForm() {
         body: JSON.stringify({
           firstName: get('firstName'), lastName: get('lastName'), email: get('email'), phone: phoneCountry.dial + national,
           companyName: get('companyName'), vat: get('vat'), cityKey,
-          services, consent: f.get('consent') === 'on', website: get('website'), locale,
+          services, consent: f.get('consent') === 'on', adult: f.get('adult') === 'on', website: get('website'), locale,
         }),
       })
       const body = res.ok ? await res.json().catch(() => ({})) : {}
@@ -139,6 +139,11 @@ export function ProWaitlistForm() {
           <Link href={{ pathname: '/data-protection-notice-neediu', hash: 'notice' }} className="font-semibold text-ag-navy underline underline-offset-2">{t('form.consentLink')}</Link>
           {t('form.consentAfter')}
         </span>
+      </label>
+
+      <label className="flex items-start gap-3 font-sans text-[13px] leading-relaxed text-ag-gray">
+        <input type="checkbox" name="adult" required className="mt-0.5 accent-ag-navy" />
+        <span>{t('form.adultLabel')}</span>
       </label>
 
       <button

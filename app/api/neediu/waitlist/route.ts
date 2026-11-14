@@ -4,7 +4,7 @@ import { z } from 'zod'
 import { isNeediuProVisible, NEEDIU_CITIES } from '@/lib/neediuPro'
 import { NEEDIU_SERVICE_KEYS } from '@/content/neediu/services'
 import { createNeediuServiceClient } from '@/lib/neediuSupabase'
-import { neediuProConfirmMail } from '@/content/emails/neediuPro'
+import { neediuProConfirmMail, NEEDIU_UNSUBSCRIBE_MAILTO } from '@/content/emails/neediuPro'
 import { sendEmail } from '@/lib/sendEmail'
 
 const LOCALES = ['fr', 'en', 'de', 'es', 'it', 'nl'] as const
@@ -21,6 +21,7 @@ const schema = z.object({
   cityKey:     z.enum(CITY_KEYS),
   services:    z.array(z.string()).min(1).max(NEEDIU_SERVICE_KEYS.length).refine(a => a.every(k => NEEDIU_SERVICE_KEYS.includes(k))),
   consent:     z.literal(true),
+  adult:       z.literal(true),
   website:     z.string().max(0).optional().default(''),
   locale:      z.enum(LOCALES).default('fr'),
 })
@@ -69,7 +70,7 @@ export async function POST(req: NextRequest) {
     const mail = neediuProConfirmMail(data.locale, data.firstName, `${site}/api/neediu/waitlist/confirm?token=${token}&locale=${data.locale}`, {
       company: data.companyName, vat: data.vat, city: preset.name, phone: data.phone, services: data.services,
     })
-    const sent = await sendEmail(data.email, mail.subject, mail.html, 'neediu-waitlist', undefined, { fromName: 'neediu', replyTo: 'support.neediu@boha-group.com' })
+    const sent = await sendEmail(data.email, mail.subject, mail.html, 'neediu-waitlist', undefined, { fromName: 'neediu', replyTo: 'support.neediu@boha-group.com', headers: { 'List-Unsubscribe': `<${NEEDIU_UNSUBSCRIBE_MAILTO}>` } })
     if (!sent) {
       // Courriel de confirmation non parti (service d'envoi indisponible ou clé absente) : on ne répond jamais « ok » à tort, et on libère la limite
       // d'une demande par 10 minutes pour que la personne puisse réessayer tout de suite. La préinscription enregistrée reste en attente de confirmation.

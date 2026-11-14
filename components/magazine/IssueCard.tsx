@@ -64,7 +64,7 @@ export function IssueCard({ issue, locale = 'fr', labelReadOnline = 'Explorer en
             {/* QR code */}
             <div style={{ position: 'absolute', bottom: 14, right: 14, background: '#fff', padding: 4, borderRadius: 2, boxShadow: '0 2px 8px rgba(0,0,0,.3)', width: 62, height: 62 }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://api.qrserver.com/v1/create-qr-code/?size=54x54&data=https%3A%2F%2Faegryn.com%2Fmagazine%2Fqr&color=0F1A2B&bgcolor=ffffff&qzone=0&format=png" width={54} height={54} style={{ display: 'block', imageRendering: 'pixelated' }} alt="aegryn.com/magazine" />
+              <img src="/images/qr/magazine-qr.svg" width={54} height={54} style={{ display: 'block', imageRendering: 'pixelated' }} alt="aegryn.com/magazine" />
             </div>
           </div>
         )

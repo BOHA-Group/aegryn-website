@@ -4775,7 +4775,8 @@
     "faq": "FAQ",
     "sitemap": "Mappa del sito",
     "eyebrowLegal": "Aegryn · Legale",
-    "eyebrowHelp": "Aegryn · Aiuto"
+    "eyebrowHelp": "Aegryn · Aiuto",
+    "legalNotice": "Note legali"
   },
   "aiUsage": {
     "meta": {
@@ -5532,7 +5533,8 @@
     "metierTalent": "Talento e Organizzazione",
     "metierProgram": "Gestione di progetti e programmi",
     "metierMA": "M&A, Transazioni e PMI",
-    "culture": "Cultura e valori"
+    "culture": "Cultura e valori",
+    "legalNotice": "Note legali"
   },
   "neediuDpn": {
     "meta": {
@@ -8058,7 +8060,8 @@
       "testMode": "Modalità di prova (preview): i dati inseriti non sono stati salvati.",
       "dialCode": "Prefisso",
       "countryAuto": "In base alla città",
-      "phoneInvalid": "Controlla il numero di telefono."
+      "phoneInvalid": "Controlla il numero di telefono.",
+      "adultLabel": "Confermo di avere almeno 18 anni."
     },
     "stores": {
       "label": "Prossimamente su",
@@ -8073,6 +8076,61 @@
       "docs": "Documenti legali",
       "cgu": "Condizioni generali d’uso e di vendita (CGU/CGV)",
       "notice": "Informativa sulla protezione dei dati"
+    }
+  },
+  "legalNotice": {
+    "meta": {
+      "title": "Note legali | Aegryn",
+      "desc": "Identità dell'editore, responsabile della pubblicazione, contatti, hosting e proprietà intellettuale di aegryn.com e dell'app neediu."
+    },
+    "label": "Note legali",
+    "updated": "Ultimo aggiornamento: 14/11/2026",
+    "publisher": {
+      "h": "Editore",
+      "rows": [
+        [
+          "Ragione sociale",
+          "Aegryn (BOHA-Group Sàrl), società a responsabilità limitata di diritto svizzero"
+        ],
+        [
+          "Sede",
+          "c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, Canton Vaud, Svizzera"
+        ],
+        [
+          "IDI e IVA",
+          "CHE-402.011.821 IVA"
+        ]
+      ]
+    },
+    "director": {
+      "h": "Responsabile della pubblicazione",
+      "p": "Yohann Bollack, CEO."
+    },
+    "contact": {
+      "h": "Contatti",
+      "items": [
+        "Informazioni generali: contact@boha-group.com.",
+        "Questioni legali e dati personali: legal@boha-group.com.",
+        "App neediu: support.neediu@boha-group.com.",
+        "Posta: all'indirizzo della sede indicato sopra."
+      ]
+    },
+    "hosting": {
+      "h": "Hosting",
+      "items": [
+        "Sito web: Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA.",
+        "Database, autenticazione e archiviazione: Supabase.",
+        "Sicurezza e distribuzione del sito: Cloudflare.",
+        "I luoghi di trattamento sono indicati nell'informativa sulla protezione dei dati."
+      ]
+    },
+    "ip": {
+      "h": "Proprietà intellettuale",
+      "p": "I contenuti del sito e dell'app (testi, immagini, video, loghi e segni distintivi) sono protetti dal diritto d'autore e dal diritto dei marchi. È vietata qualsiasi riproduzione senza previa autorizzazione scritta."
+    },
+    "docs": {
+      "h": "Altri documenti",
+      "p": "Le condizioni d'uso, le condizioni generali di vendita e l'informativa sulla protezione dei dati precisano le regole applicabili, compresi il diritto applicabile e il foro competente."
     }
   }
 }

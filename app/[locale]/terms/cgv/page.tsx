@@ -43,10 +43,10 @@ export default async function TermsCgvPage({ params }: Props) {
       {/* Legal nav strip */}
       <div className="bg-ag-off-white sticky top-16 z-20">
         <div className="max-w-4xl mx-auto px-6 py-3 flex flex-wrap gap-x-6 gap-y-1">
-          {(['termsUse','termsCgv','privacy','security','faq'] as const).map((k, i) => (
+          {(['termsUse','termsCgv','privacy','legalNotice','security','faq'] as const).map((k, i) => (
             <Link
               key={k}
-              href={['/terms/use','/terms/cgv','/privacy','/security','/help/faq'][i] as never}
+              href={['/terms/use','/terms/cgv','/privacy','/legal-notice','/security','/help/faq'][i] as never}
               className={`font-mono text-[10px] tracking-[0.18em] uppercase transition-colors ${
                 k === 'termsCgv'
                   ? 'text-ag-black'

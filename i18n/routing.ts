@@ -100,6 +100,7 @@ export const routing = defineRouting({
     '/terms/use':                         '/terms/use',
     '/terms/cgv':                         '/terms/cgv',
     '/privacy':                           '/privacy',
+    '/legal-notice':                      '/legal-notice',
     '/security':                          '/security',
     '/help/faq':                          '/help/faq',
     '/data-protection-notice-neediu':     '/data-protection-notice-neediu',

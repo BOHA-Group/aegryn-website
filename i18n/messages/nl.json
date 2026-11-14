@@ -4782,7 +4782,8 @@
     "faq": "FAQ",
     "sitemap": "Sitemap",
     "eyebrowLegal": "Aegryn · Juridisch",
-    "eyebrowHelp": "Aegryn · Help"
+    "eyebrowHelp": "Aegryn · Help",
+    "legalNotice": "Wettelijke vermeldingen"
   },
   "aiUsage": {
     "meta": {
@@ -5539,7 +5540,8 @@
     "metierTalent": "Talent en Organisatie",
     "metierProgram": "Project- en programmamanagement",
     "metierMA": "M&A, Transacties en PMI",
-    "culture": "Cultuur en waarden"
+    "culture": "Cultuur en waarden",
+    "legalNotice": "Wettelijke vermeldingen"
   },
   "neediuDpn": {
     "meta": {
@@ -8058,7 +8060,8 @@
       "testMode": "Testmodus (preview): je invoer is niet opgeslagen.",
       "dialCode": "Landcode",
       "countryAuto": "Op basis van de stad",
-      "phoneInvalid": "Controleer het telefoonnummer."
+      "phoneInvalid": "Controleer het telefoonnummer.",
+      "adultLabel": "Ik bevestig dat ik 18 jaar of ouder ben."
     },
     "stores": {
       "label": "Binnenkort op",
@@ -8073,6 +8076,61 @@
       "docs": "Juridische documenten",
       "cgu": "Algemene gebruiks- en verkoopvoorwaarden (CGU/CGV)",
       "notice": "Kennisgeving gegevensbescherming"
+    }
+  },
+  "legalNotice": {
+    "meta": {
+      "title": "Wettelijke vermeldingen | Aegryn",
+      "desc": "Identiteit van de uitgever, verantwoordelijke voor de publicatie, contact, hosting en intellectueel eigendom van aegryn.com en de neediu-app."
+    },
+    "label": "Wettelijke vermeldingen",
+    "updated": "Laatst bijgewerkt: 14/11/2026",
+    "publisher": {
+      "h": "Uitgever",
+      "rows": [
+        [
+          "Bedrijfsnaam",
+          "Aegryn (BOHA-Group Sàrl), vennootschap met beperkte aansprakelijkheid naar Zwitsers recht"
+        ],
+        [
+          "Zetel",
+          "c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, kanton Vaud, Zwitserland"
+        ],
+        [
+          "UID en btw",
+          "CHE-402.011.821 btw"
+        ]
+      ]
+    },
+    "director": {
+      "h": "Verantwoordelijke voor de publicatie",
+      "p": "Yohann Bollack, CEO."
+    },
+    "contact": {
+      "h": "Contact",
+      "items": [
+        "Algemene informatie: contact@boha-group.com.",
+        "Juridische vragen en persoonsgegevens: legal@boha-group.com.",
+        "neediu-app: support.neediu@boha-group.com.",
+        "Post: op het hierboven vermelde adres van de zetel."
+      ]
+    },
+    "hosting": {
+      "h": "Hosting",
+      "items": [
+        "Website: Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA.",
+        "Database, authenticatie en opslag: Supabase.",
+        "Beveiliging en levering van de website: Cloudflare.",
+        "De verwerkingslocaties staan in de privacyverklaring."
+      ]
+    },
+    "ip": {
+      "h": "Intellectueel eigendom",
+      "p": "De inhoud van de website en de app (teksten, afbeeldingen, video's, logo's en onderscheidende tekens) wordt beschermd door het auteursrecht en het merkenrecht. Elke reproductie zonder voorafgaande schriftelijke toestemming is verboden."
+    },
+    "docs": {
+      "h": "Andere documenten",
+      "p": "De gebruiksvoorwaarden, de algemene verkoopvoorwaarden en de privacyverklaring bevatten de toepasselijke regels, waaronder het toepasselijke recht en de bevoegde rechter."
     }
   }
 }

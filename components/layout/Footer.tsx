@@ -74,6 +74,7 @@ const legal: { key: string; href: LinkHref; ns: string; external?: boolean }[] =
   { key: 'termsUse',  href: '/terms/use',       ns: 'legalNav' },
   { key: 'termsCgv',  href: '/terms/cgv',       ns: 'legalNav' },
   { key: 'privacy',   href: '/privacy',         ns: 'legalNav' },
+  { key: 'legalNotice', href: '/legal-notice',  ns: 'legalNav' },
   { key: 'aiUsage',   href: '/terms/ai-usage' as never,  ns: 'legalNav' },
   { key: 'security',  href: '/security',        ns: 'legalNav' },
   { key: 'faq',       href: '/help/faq',        ns: 'legalNav' },

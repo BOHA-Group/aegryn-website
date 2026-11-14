@@ -1,10 +1,14 @@
 import { NEEDIU_SERVICES } from '@/content/neediu/services'
 
+/** Identité de l'expéditeur et adresse de retrait du consentement (pied de page de chaque message). */
+export const NEEDIU_SENDER_IDENTITY = 'Aegryn (BOHA-Group Sàrl), c/o Cofidex SA, Rue du Centre 142, 1025 St-Sulpice, CH'
+export const NEEDIU_UNSUBSCRIBE_MAILTO = 'mailto:support.neediu@boha-group.com?subject=unsubscribe'
+
 type Mail = {
   subject: string; hello: string; intro: string; button: string; validity: string
   recap: string; company: string; vat: string; city: string; phone: string; services: string
   next: string; steps: [string, string, string, string]
-  privacy: string; notice: string; ignore: string
+  privacy: string; notice: string; unsub: string; ignore: string
 }
 
 const MAILS: Record<string, Mail> = {
@@ -17,6 +21,7 @@ const MAILS: Record<string, Mail> = {
     steps: ['Vous confirmez votre adresse avec le bouton ci-dessus.', 'À l’ouverture de neediu dans votre ville, nous vous écrivons avec les liens de l’app et un code d’invitation personnel.', 'Vous créez votre compte prestataire avec la même adresse : vos informations sont déjà préparées.', 'Notre équipe examine votre profil sous 48 h, notamment l’assurance responsabilité civile professionnelle, à déposer dans l’espace Compte.'],
     privacy: 'Vos données ne servent qu’à préparer l’ouverture de neediu dans votre ville. Pour les effacer, répondez simplement à cet e-mail.',
     notice: 'Notice de protection des données',
+    unsub: 'Se désinscrire',
     ignore: 'Si vous n’êtes pas à l’origine de cette demande, ignorez ce message : aucune inscription ne sera conservée.',
   },
   en: {
@@ -28,6 +33,7 @@ const MAILS: Record<string, Mail> = {
     steps: ['You confirm your address with the button above.', 'When neediu opens in your city, we write to you with the app links and a personal invitation code.', 'You create your provider account with the same address: your details are already prepared.', 'Our team reviews your profile within 48 hours, including your professional liability insurance, to be uploaded in the Account section.'],
     privacy: 'Your data is only used to prepare the opening of neediu in your city. To delete it, simply reply to this email.',
     notice: 'Data protection notice',
+    unsub: 'Unsubscribe',
     ignore: 'If you did not make this request, ignore this message: no registration will be kept.',
   },
   de: {
@@ -39,6 +45,7 @@ const MAILS: Record<string, Mail> = {
     steps: ['Sie bestätigen Ihre Adresse mit der Schaltfläche oben.', 'Wenn neediu in Ihrer Stadt startet, schreiben wir Ihnen mit den App-Links und einem persönlichen Einladungscode.', 'Sie erstellen Ihr Anbieterkonto mit derselben Adresse: Ihre Angaben sind bereits vorbereitet.', 'Unser Team prüft Ihr Profil innerhalb von 48 Stunden, insbesondere die Berufshaftpflichtversicherung, die Sie im Bereich Konto hochladen.'],
     privacy: 'Ihre Daten dienen nur der Vorbereitung des Starts von neediu in Ihrer Stadt. Um sie zu löschen, antworten Sie einfach auf diese E-Mail.',
     notice: 'Datenschutzhinweis',
+    unsub: 'Abmelden',
     ignore: 'Wenn Sie diese Anfrage nicht gestellt haben, ignorieren Sie diese Nachricht: Es wird keine Anmeldung gespeichert.',
   },
   es: {
@@ -50,6 +57,7 @@ const MAILS: Record<string, Mail> = {
     steps: ['Confirmas tu dirección con el botón de arriba.', 'Cuando neediu abra en tu ciudad, te escribiremos con los enlaces de la app y un código de invitación personal.', 'Creas tu cuenta de profesional con la misma dirección: tus datos ya están preparados.', 'Nuestro equipo revisa tu perfil en 48 h, en particular el seguro de responsabilidad civil profesional, que debes subir en la sección Cuenta.'],
     privacy: 'Tus datos solo sirven para preparar la apertura de neediu en tu ciudad. Para borrarlos, responde a este correo.',
     notice: 'Aviso de protección de datos',
+    unsub: 'Darse de baja',
     ignore: 'Si no has hecho esta solicitud, ignora este mensaje: no se conservará ninguna inscripción.',
   },
   it: {
@@ -61,6 +69,7 @@ const MAILS: Record<string, Mail> = {
     steps: ['Confermi il tuo indirizzo con il pulsante qui sopra.', 'All’apertura di neediu nella tua città, ti scriviamo con i link dell’app e un codice d’invito personale.', 'Crei il tuo account professionista con lo stesso indirizzo: i tuoi dati sono già pronti.', 'Il nostro team esamina il tuo profilo entro 48 ore, in particolare l’assicurazione di responsabilità civile professionale, da caricare nella sezione Account.'],
     privacy: 'I tuoi dati servono solo a preparare l’apertura di neediu nella tua città. Per cancellarli, rispondi semplicemente a questa e-mail.',
     notice: 'Informativa sulla protezione dei dati',
+    unsub: 'Annulla l\'iscrizione',
     ignore: 'Se non hai fatto tu questa richiesta, ignora questo messaggio: nessuna iscrizione verrà conservata.',
   },
   nl: {
@@ -72,6 +81,7 @@ const MAILS: Record<string, Mail> = {
     steps: ['Je bevestigt je adres met de knop hierboven.', 'Zodra neediu in jouw stad opent, schrijven we je met de app-links en een persoonlijke uitnodigingscode.', 'Je maakt je aanbiederaccount aan met hetzelfde adres: je gegevens staan al klaar.', 'Ons team controleert je profiel binnen 48 uur, in het bijzonder de beroepsaansprakelijkheidsverzekering, die je uploadt in het onderdeel Account.'],
     privacy: 'Je gegevens dienen alleen om de opening van neediu in jouw stad voor te bereiden. Om ze te wissen, antwoord je gewoon op deze e-mail.',
     notice: 'Privacyverklaring',
+    unsub: 'Uitschrijven',
     ignore: 'Heb je deze aanvraag niet gedaan, negeer dan dit bericht: er wordt geen inschrijving bewaard.',
   },
 }
@@ -116,8 +126,9 @@ export function neediuProConfirmMail(locale: string, name: string, url: string, 
         </td></tr>
         <tr><td class="c-foot" bgcolor="#f3f4f6" style="background:#f3f4f6;padding:18px 40px;text-align:center">
           <p class="t-sub" style="margin:0 0 6px;font-size:12px;color:#6b7280;line-height:1.5">${esc(m.privacy)}</p>
-          <p style="margin:0 0 6px;font-size:12px"><a href="https://www.aegryn.com/${l}/data-protection-notice-neediu" style="color:#6b7280">${esc(m.notice)}</a></p>
-          <p class="t-sub" style="margin:0;font-size:12px;color:#6b7280;line-height:1.5">${esc(m.ignore)}</p>
+          <p style="margin:0 0 6px;font-size:12px"><a href="https://www.aegryn.com/${l}/data-protection-notice-neediu" style="color:#6b7280">${esc(m.notice)}</a> · <a href="${NEEDIU_UNSUBSCRIBE_MAILTO}" style="color:#6b7280">${esc(m.unsub)}</a></p>
+          <p class="t-sub" style="margin:0 0 6px;font-size:12px;color:#6b7280;line-height:1.5">${esc(m.ignore)}</p>
+          <p class="t-sub" style="margin:0;font-size:11px;color:#6b7280;line-height:1.5">${esc(NEEDIU_SENDER_IDENTITY)}</p>
         </td></tr>
       </table>
     </td></tr>

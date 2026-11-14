@@ -90,6 +90,7 @@ const GROUPS: SitemapGroup[] = [
       { labelKey: 'termsUse',  href: '/terms/use' },
       { labelKey: 'termsCgv',  href: '/terms/cgv' },
       { labelKey: 'privacy',   href: '/privacy' },
+      { labelKey: 'legalNotice', href: '/legal-notice' },
       { labelKey: 'security',  href: '/security' },
       { labelKey: 'faq',       href: '/help/faq' },
     ],
