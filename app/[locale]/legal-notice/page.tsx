@@ -75,14 +75,6 @@ export default async function LegalNoticePage({ params }: Props) {
 
           <h2>{tL('ip.h')}</h2>
           <p>{tL('ip.p')}</p>
-
-          <h2>{tL('docs.h')}</h2>
-          <p>{tL('docs.p')}</p>
-          <ul>
-            <li><LocalizedLink href="/terms/use">{tN('termsUse')}</LocalizedLink></li>
-            <li><LocalizedLink href="/terms/cgv">{tN('termsCgv')}</LocalizedLink></li>
-            <li><LocalizedLink href="/privacy">{tN('privacy')}</LocalizedLink></li>
-          </ul>
         </div>
       </div>
     </main>

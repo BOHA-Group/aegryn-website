@@ -8104,7 +8104,7 @@
     },
     "director": {
       "h": "Person responsible for publication",
-      "p": "The management of BOHA-Group Sàrl."
+      "p": "Yohann Bollack, CEO."
     },
     "contact": {
       "h": "Contact",
@@ -8117,16 +8117,13 @@
     "hosting": {
       "h": "Hosting",
       "items": [
-        "The website is hosted by a professional hosting provider. Processing locations are detailed in the data protection notice."
+        "Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, United States.",
+        "Hosting provider contact: vercel.com/contact."
       ]
     },
     "ip": {
       "h": "Intellectual property",
       "p": "The content of the website (texts, images, videos, logos and distinctive signs) is protected by copyright and trademark law. Any reproduction without prior written permission is prohibited."
-    },
-    "docs": {
-      "h": "Other documents",
-      "p": "The terms of use, the terms of sale and the data protection notice set out the applicable rules, including the governing law and competent jurisdiction."
     }
   }
 }
