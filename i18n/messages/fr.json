@@ -8081,7 +8081,7 @@
   "legalNotice": {
     "meta": {
       "title": "Mentions légales | Aegryn",
-      "desc": "Identité de l'éditeur, responsable de la publication, contact, hébergement et propriété intellectuelle du site aegryn.com et de l'application neediu."
+      "desc": "Identité de l'éditeur, contact, hébergement et propriété intellectuelle du site aegryn.com."
     },
     "label": "Mentions légales",
     "updated": "Dernière mise à jour : 14/11/2026",
@@ -8104,29 +8104,25 @@
     },
     "director": {
       "h": "Responsable de la publication",
-      "p": "Yohann Bollack, CEO."
+      "p": "La direction de BOHA-Group Sàrl."
     },
     "contact": {
       "h": "Contact",
       "items": [
         "Informations générales : contact@boha-group.com.",
         "Questions juridiques et données personnelles : legal@boha-group.com.",
-        "Application neediu : support.neediu@boha-group.com.",
         "Courrier : à l'adresse du siège ci-dessus."
       ]
     },
     "hosting": {
       "h": "Hébergement",
       "items": [
-        "Site web : Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA.",
-        "Base de données, authentification et stockage : Supabase.",
-        "Sécurité et diffusion du site : Cloudflare.",
-        "Les lieux de traitement sont détaillés dans la notice de protection des données."
+        "Le site est hébergé par un prestataire professionnel. Les lieux de traitement des données sont détaillés dans la notice de protection des données."
       ]
     },
     "ip": {
       "h": "Propriété intellectuelle",
-      "p": "Les contenus du site et de l'application (textes, images, vidéos, logos et signes distinctifs) sont protégés par le droit d'auteur et le droit des marques. Toute reproduction sans autorisation écrite préalable est interdite."
+      "p": "Les contenus du site (textes, images, vidéos, logos et signes distinctifs) sont protégés par le droit d'auteur et le droit des marques. Toute reproduction sans autorisation écrite préalable est interdite."
     },
     "docs": {
       "h": "Autres documents",

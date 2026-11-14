@@ -8081,7 +8081,7 @@
   "legalNotice": {
     "meta": {
       "title": "Wettelijke vermeldingen | Aegryn",
-      "desc": "Identiteit van de uitgever, verantwoordelijke voor de publicatie, contact, hosting en intellectueel eigendom van aegryn.com en de neediu-app."
+      "desc": "Identiteit van de uitgever, contact, hosting en intellectueel eigendom van aegryn.com."
     },
     "label": "Wettelijke vermeldingen",
     "updated": "Laatst bijgewerkt: 14/11/2026",
@@ -8104,29 +8104,25 @@
     },
     "director": {
       "h": "Verantwoordelijke voor de publicatie",
-      "p": "Yohann Bollack, CEO."
+      "p": "De directie van BOHA-Group Sàrl."
     },
     "contact": {
       "h": "Contact",
       "items": [
         "Algemene informatie: contact@boha-group.com.",
         "Juridische vragen en persoonsgegevens: legal@boha-group.com.",
-        "neediu-app: support.neediu@boha-group.com.",
         "Post: op het hierboven vermelde adres van de zetel."
       ]
     },
     "hosting": {
       "h": "Hosting",
       "items": [
-        "Website: Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA.",
-        "Database, authenticatie en opslag: Supabase.",
-        "Beveiliging en levering van de website: Cloudflare.",
-        "De verwerkingslocaties staan in de privacyverklaring."
+        "De website wordt gehost door een professionele hostingaanbieder. De verwerkingslocaties staan in de privacyverklaring."
       ]
     },
     "ip": {
       "h": "Intellectueel eigendom",
-      "p": "De inhoud van de website en de app (teksten, afbeeldingen, video's, logo's en onderscheidende tekens) wordt beschermd door het auteursrecht en het merkenrecht. Elke reproductie zonder voorafgaande schriftelijke toestemming is verboden."
+      "p": "De inhoud van de website (teksten, afbeeldingen, video's, logo's en onderscheidende tekens) wordt beschermd door het auteursrecht en het merkenrecht. Elke reproductie zonder voorafgaande schriftelijke toestemming is verboden."
     },
     "docs": {
       "h": "Andere documenten",

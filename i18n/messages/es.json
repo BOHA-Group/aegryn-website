@@ -8081,7 +8081,7 @@
   "legalNotice": {
     "meta": {
       "title": "Aviso legal | Aegryn",
-      "desc": "Identidad del editor, responsable de la publicación, contacto, alojamiento y propiedad intelectual de aegryn.com y de la aplicación neediu."
+      "desc": "Identidad del editor, contacto, alojamiento y propiedad intelectual de aegryn.com."
     },
     "label": "Aviso legal",
     "updated": "Última actualización: 14/11/2026",
@@ -8104,29 +8104,25 @@
     },
     "director": {
       "h": "Responsable de la publicación",
-      "p": "Yohann Bollack, CEO."
+      "p": "La dirección de BOHA-Group Sàrl."
     },
     "contact": {
       "h": "Contacto",
       "items": [
         "Información general: contact@boha-group.com.",
         "Cuestiones jurídicas y datos personales: legal@boha-group.com.",
-        "Aplicación neediu: support.neediu@boha-group.com.",
         "Correo postal: en la dirección del domicilio social indicada arriba."
       ]
     },
     "hosting": {
       "h": "Alojamiento",
       "items": [
-        "Sitio web: Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA.",
-        "Base de datos, autenticación y almacenamiento: Supabase.",
-        "Seguridad y distribución del sitio: Cloudflare.",
-        "Los lugares de tratamiento se detallan en el aviso de protección de datos."
+        "El sitio está alojado por un proveedor profesional de alojamiento. Los lugares de tratamiento se detallan en el aviso de protección de datos."
       ]
     },
     "ip": {
       "h": "Propiedad intelectual",
-      "p": "Los contenidos del sitio y de la aplicación (textos, imágenes, vídeos, logotipos y signos distintivos) están protegidos por el derecho de autor y el derecho de marcas. Queda prohibida toda reproducción sin autorización escrita previa."
+      "p": "Los contenidos del sitio (textos, imágenes, vídeos, logotipos y signos distintivos) están protegidos por el derecho de autor y el derecho de marcas. Queda prohibida toda reproducción sin autorización escrita previa."
     },
     "docs": {
       "h": "Otros documentos",

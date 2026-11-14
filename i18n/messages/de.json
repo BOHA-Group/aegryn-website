@@ -8081,7 +8081,7 @@
   "legalNotice": {
     "meta": {
       "title": "Impressum | Aegryn",
-      "desc": "Angaben zum Herausgeber, Verantwortlichen, Kontakt, Hosting und geistigem Eigentum für aegryn.com und die neediu-App."
+      "desc": "Angaben zum Herausgeber, Kontakt, Hosting und geistigem Eigentum für aegryn.com."
     },
     "label": "Impressum",
     "updated": "Letzte Aktualisierung: 14.11.2026",
@@ -8104,29 +8104,25 @@
     },
     "director": {
       "h": "Verantwortlich für den Inhalt",
-      "p": "Yohann Bollack, CEO."
+      "p": "Die Geschäftsleitung der BOHA-Group Sàrl."
     },
     "contact": {
       "h": "Kontakt",
       "items": [
         "Allgemeine Informationen: contact@boha-group.com.",
         "Rechtliche Fragen und personenbezogene Daten: legal@boha-group.com.",
-        "neediu-App: support.neediu@boha-group.com.",
         "Post: an die oben genannte Sitzadresse."
       ]
     },
     "hosting": {
       "h": "Hosting",
       "items": [
-        "Website: Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA.",
-        "Datenbank, Authentifizierung und Speicher: Supabase.",
-        "Sicherheit und Auslieferung der Website: Cloudflare.",
-        "Die Verarbeitungsorte sind im Datenschutzhinweis aufgeführt."
+        "Die Website wird von einem professionellen Hosting-Anbieter betrieben. Die Verarbeitungsorte sind im Datenschutzhinweis aufgeführt."
       ]
     },
     "ip": {
       "h": "Geistiges Eigentum",
-      "p": "Die Inhalte der Website und der App (Texte, Bilder, Videos, Logos und Kennzeichen) sind urheber- und markenrechtlich geschützt. Jede Vervielfältigung ohne vorherige schriftliche Genehmigung ist untersagt."
+      "p": "Die Inhalte der Website (Texte, Bilder, Videos, Logos und Kennzeichen) sind urheber- und markenrechtlich geschützt. Jede Vervielfältigung ohne vorherige schriftliche Genehmigung ist untersagt."
     },
     "docs": {
       "h": "Weitere Dokumente",
