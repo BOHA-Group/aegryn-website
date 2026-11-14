@@ -8099,12 +8099,16 @@
         [
           "UID en btw",
           "CHE-402.011.821 btw"
+        ],
+        [
+          "Telefoon",
+          "+41 24 539 18 81"
         ]
       ]
     },
     "director": {
       "h": "Verantwoordelijke voor de publicatie",
-      "p": "Yohann Bollack, CEO."
+      "p": "De directie van BOHA-Group Sàrl."
     },
     "contact": {
       "h": "Contact",

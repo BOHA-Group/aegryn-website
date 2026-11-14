@@ -8099,12 +8099,16 @@
         [
           "UID und MWST",
           "CHE-402.011.821 MWST"
+        ],
+        [
+          "Telefon",
+          "+41 24 539 18 81"
         ]
       ]
     },
     "director": {
       "h": "Verantwortlich für den Inhalt",
-      "p": "Yohann Bollack, CEO."
+      "p": "Die Geschäftsleitung der BOHA-Group Sàrl."
     },
     "contact": {
       "h": "Kontakt",

@@ -263,7 +263,7 @@ export default function Footer() {
             <p className="font-sans font-semibold text-[10px] text-white/70">
               {t('legal')}
             </p>
-            <p className="font-sans text-[10px] text-white/70">
+            <p className="font-sans text-[10px] text-white/70 max-w-[460px]">
               {t('aiNotice')}
             </p>
             <p className="font-sans text-[10px] text-white/70">
