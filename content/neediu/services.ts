@@ -79,8 +79,8 @@ export const NEEDIU_SERVICES: { key: string; theme: NeediuTheme; label: Labels }
   { key: "bike-repair", theme: "auto", label: { fr: "Réparation de vélo", en: "Bike Repair", de: "Fahrradreparatur", es: "Reparación de bicicletas", it: "Riparazione biciclette", nl: "Fietsreparatie" } },
   { key: "appliance-install", theme: "maison", label: { fr: "Pose électroménager", en: "Appliance Installation", de: "Elektrogeräte anschließen", es: "Electrodomésticos", it: "Elettrodomestici", nl: "Apparaten installeren" } },
   { key: "digital-help", theme: "tech", label: { fr: "Aide numérique", en: "Digital Help", de: "Digitale Hilfe", es: "Ayuda digital", it: "Aiuto digitale", nl: "Digitale hulp" } },
-  { key: "snow-removal", theme: "maison", label: { fr: "Déneigement", en: "Snow Removal", de: "Schneeräumung", es: "Retirada de nieve", it: "Sgombero neve", nl: "Sneeuwruimen" } },
-  { key: "companion", theme: "bien-etre", label: { fr: "Accompagnement", en: "Companion Care", de: "Begleitung", es: "Acompañamiento", it: "Accompagnamento", nl: "Begeleiding" } },
+  { key: "snow-removal", theme: "maison", label: { fr: "Déneigement", en: "Snow Removal", de: "Schneeräumung", es: "Retirada de nieve", it: "Rimozione neve", nl: "Sneeuwruimen" } },
+  { key: "companion", theme: "bien-etre", label: { fr: "Compagnie", en: "Companionship", de: "Gesellschaft", es: "Compañía", it: "Compagnia", nl: "Gezelschap" } },
 ]
 
 export const NEEDIU_SERVICE_KEYS = NEEDIU_SERVICES.map(s => s.key)
