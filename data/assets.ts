@@ -226,6 +226,7 @@ export const Aegryn_ASSETS: AegrynAsset[] = [
     tier:             1 as const,
     ownership:        'portfolio' as const,
     transactionEligible:  false,
+    confidential:     true,
   },
   {
     id:               'chrosium',
