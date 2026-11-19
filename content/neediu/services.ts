@@ -1,5 +1,5 @@
 /**
- * Services proposables par les pros neediu : les 56 catégories du catalogue neediu (clés = `service_categories.name`
+ * Services proposables par les pros neediu : les 58 catégories du catalogue neediu (clés = `service_categories.name`
  * dans la base neediu-react), avec les libellés exacts de l'app (`neediu-app/apps/mobile/constants/services.ts` : fr, en,
  * es, it, de, nl) et leur thème. L'app est la référence du catalogue et la base valide les clés à l'écriture : à
  * resynchroniser à chaque ajout, retrait ou renommage de service. Ordre alphabétique : calculé à l'affichage selon la
@@ -81,6 +81,8 @@ export const NEEDIU_SERVICES: { key: string; theme: NeediuTheme; label: Labels }
   { key: "digital-help", theme: "tech", label: { fr: "Aide numérique", en: "Digital Help", de: "Digitale Hilfe", es: "Ayuda digital", it: "Aiuto digitale", nl: "Digitale hulp" } },
   { key: "snow-removal", theme: "maison", label: { fr: "Déneigement", en: "Snow Removal", de: "Schneeräumung", es: "Retirada de nieve", it: "Rimozione neve", nl: "Sneeuwruimen" } },
   { key: "companion", theme: "bien-etre", label: { fr: "Compagnie", en: "Companionship", de: "Gesellschaft", es: "Compañía", it: "Compagnia", nl: "Gezelschap" } },
+  { key: "beauty-care", theme: "beaute", label: { fr: "Soins esthétiques", en: "Beauty Care", de: "Kosmetische Pflege", es: "Cuidados estéticos", it: "Cura estetica", nl: "Esthetische zorg" } },
+  { key: "pool-care", theme: "maison", label: { fr: "Entretien piscine", en: "Pool Care", de: "Poolpflege", es: "Cuidado de piscina", it: "Pulizia piscina", nl: "Zwembad onderhoud" } },
 ]
 
 export const NEEDIU_SERVICE_KEYS = NEEDIU_SERVICES.map(s => s.key)
