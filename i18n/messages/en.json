@@ -2298,7 +2298,7 @@
       "wpS9Title": "9. Pricing",
       "wpS9AllTiersDesc": "Full 5-dimension CIFSO 5000 audit · Independent certification report · Official grade · Registration in Aegryn certified register · Certificate validity as stated per tier",
       "wpS10Title": "10. Disclaimer",
-      "wpFooterAddress": "Aegryn SA · Saint-Sulpice, Switzerland",
+      "wpFooterAddress": "Aegryn Sàrl · Saint-Sulpice, Switzerland",
       "isoColDimension": "Dimension",
       "isoColExisting": "Existing standards",
       "isoColCifso": "CIFSO 5000 Certification",
@@ -5552,7 +5552,7 @@
     "sectionDpn": "(01)",
     "h1": "Data Protection Notice, Aegryn neediu",
     "disclaimer": "Disclaimer: This data protection notice is an AI-generated translation provided for informational purposes only. In the event of any discrepancies or inconsistencies, the English version shall prevail.",
-    "updated": "Last updated: 04/11/2026",
+    "updated": "Last updated: 24/11/2026",
     "dpn": {
       "intro": {
         "h": "Introduction",
@@ -5835,6 +5835,8 @@
       "s8Price": "The prices of Services are freely set by the Providers. The Client pays only for the Services they have expressly approved; the total price, including all taxes and fees, is shown in the app before the order is confirmed. The indicative price shown when ordering is only an indication.",
       "s8CommTitle": "Platform commission.",
       "s8Comm": "neediu charges a commission on each successfully completed service, the rate applicable to the Provider being communicated in the app.",
+      "s8ReviseTitle": "Rate revision.",
+      "s8Revise": "neediu reserves the right to change at any time the commission rate of each tier and the mission thresholds that determine them. Any change is announced in the app and applies only to missions accepted after it takes effect, beyond the number of missions already acquired by the Provider on that date; missions already accepted, completed or paid remain subject to the rate applicable when they were accepted.",
       "s8CancelTitle": "Cancellation by the Provider.",
       "s8Cancel": "When a Provider cancels a mission that has already been paid, the Client is refunded in full. If the Provider cancels after setting off (on the way or arrived) or on the same day as a scheduled mission already paid, a penalty proportionate to the price of the mission is deducted from their next payment. A mission in progress can no longer be cancelled.",
       "s8MethodsTitle": "Accepted payment methods.",

@@ -2619,7 +2619,7 @@
       "wpS9Title": "9. Preisgestaltung",
       "wpS9AllTiersDesc": "Vollständiges CIFSO-5000-Audit über 5 Dimensionen · Unabhängiger Zertifizierungsbericht · Offizielle Note · Eintrag ins zertifizierte Aegryn-Register · Zertifikatsgültigkeit gemäß Format",
       "wpS10Title": "10. Haftungsausschluss",
-      "wpFooterAddress": "Aegryn SA · Saint-Sulpice, Schweiz",
+      "wpFooterAddress": "Aegryn Sàrl · Saint-Sulpice, Schweiz",
       "isoColDimension": "Dimension",
       "isoColExisting": "Bestehende Standards",
       "isoColCifso": "CIFSO 5000 Zertifizierung",
@@ -5545,7 +5545,7 @@
     "sectionDpn": "(01)",
     "h1": "Datenschutzhinweis, Aegryn neediu",
     "disclaimer": "Haftungsausschluss: Dieser Datenschutzhinweis ist eine KI-generierte Übersetzung und dient nur zu Informationszwecken. Bei Abweichungen oder Widersprüchen gilt die englische Fassung.",
-    "updated": "Letzte Aktualisierung: 04.11.2026",
+    "updated": "Letzte Aktualisierung: 24.11.2026",
     "dpn": {
       "intro": {
         "h": "Einleitung",
@@ -5828,6 +5828,8 @@
       "s8Price": "Die Preise der Dienste werden von den Dienstleistern frei festgelegt. Der Kunde zahlt nur für die Dienste, die er ausdrücklich genehmigt hat; der Gesamtpreis, einschließlich aller Steuern und Gebühren, wird in der App vor der Bestätigung der Bestellung angezeigt. Der bei der Bestellung angezeigte Richtpreis ist nur ein Anhaltspunkt.",
       "s8CommTitle": "Provision der Plattform.",
       "s8Comm": "neediu erhebt auf jeden erfolgreich erbrachten Dienst eine Provision; der für den Dienstleister geltende Satz wird in der App mitgeteilt.",
+      "s8ReviseTitle": "Anpassung der Sätze.",
+      "s8Revise": "neediu behält sich das Recht vor, den Provisionssatz jeder Stufe und die Auftragsschwellen, die sie bestimmen, jederzeit zu ändern. Jede Änderung wird in der App mitgeteilt und gilt nur für Aufträge, die nach ihrem Inkrafttreten angenommen werden, über die Zahl der vom Dienstleister zu diesem Zeitpunkt bereits erworbenen Aufträge hinaus; bereits angenommene, erbrachte oder bezahlte Aufträge unterliegen weiterhin dem bei ihrer Annahme geltenden Satz.",
       "s8CancelTitle": "Stornierung durch den Dienstleister.",
       "s8Cancel": "Storniert ein Dienstleister einen bereits bezahlten Auftrag, wird dem Kunden der volle Betrag erstattet. Storniert der Dienstleister nach seinem Aufbruch (unterwegs oder angekommen) oder am selben Tag einen geplanten, bereits bezahlten Auftrag, wird von seiner nächsten Zahlung eine dem Auftragspreis angemessene Strafe abgezogen. Ein laufender Auftrag kann nicht mehr storniert werden.",
       "s8MethodsTitle": "Akzeptierte Zahlungsmittel.",

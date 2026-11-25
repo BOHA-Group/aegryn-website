@@ -2619,7 +2619,7 @@
       "wpS9Title": "9. Precios",
       "wpS9AllTiersDesc": "Auditoría CIFSO 5000 completa en 5 dimensiones · Informe de certificación independiente · Calificación oficial · Inscripción en el registro certificado Aegryn · Validez del certificado según el formato",
       "wpS10Title": "10. Aviso legal",
-      "wpFooterAddress": "Aegryn SA · Saint-Sulpice, Suiza",
+      "wpFooterAddress": "Aegryn Sàrl · Saint-Sulpice, Suiza",
       "isoColDimension": "Dimensión",
       "isoColExisting": "Estándares existentes",
       "isoColCifso": "Certificación CIFSO 5000",
@@ -5545,7 +5545,7 @@
     "sectionDpn": "(01)",
     "h1": "Aviso de Protección de Datos, Aegryn neediu",
     "disclaimer": "Descargo de responsabilidad: Este aviso de protección de datos es una traducción generada por inteligencia artificial y se proporciona únicamente con fines informativos. En caso de discrepancias o incoherencias, prevalecerá la versión inglesa.",
-    "updated": "Última actualización: 04/11/2026",
+    "updated": "Última actualización: 24/11/2026",
     "dpn": {
       "intro": {
         "h": "Introducción",
@@ -5828,6 +5828,8 @@
       "s8Price": "Los precios de los Servicios los fijan libremente los Proveedores. El Cliente solo paga los Servicios que ha aprobado expresamente; el precio total, con todos los impuestos y gastos incluidos, se muestra en la aplicación antes de confirmar el pedido. El precio orientativo que se muestra al hacer el pedido es solo una indicación.",
       "s8CommTitle": "Comisión de la Plataforma.",
       "s8Comm": "neediu percibe una comisión por cada servicio completado con éxito; la tasa aplicable al Proveedor se comunica en la aplicación.",
+      "s8ReviseTitle": "Revisión de las tasas.",
+      "s8Revise": "neediu se reserva el derecho de modificar en cualquier momento la tasa de comisión de cada nivel y los umbrales de misiones que los determinan. Toda modificación se comunica en la aplicación y solo se aplica a las misiones aceptadas después de su entrada en vigor, más allá del número de misiones ya adquiridas por el Proveedor en esa fecha; las misiones ya aceptadas, realizadas o pagadas siguen sujetas a la tasa aplicable en el momento de su aceptación.",
       "s8CancelTitle": "Cancelación por el Proveedor.",
       "s8Cancel": "Cuando un Proveedor cancela una misión ya pagada, se reembolsa íntegramente al Cliente. Si el Proveedor cancela después de su salida (en camino o llegado) o el mismo día de una misión programada ya pagada, se deduce de su próximo pago una penalización proporcional al precio de la misión. Una misión en curso ya no puede cancelarse.",
       "s8MethodsTitle": "Medios de pago aceptados.",

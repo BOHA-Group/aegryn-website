@@ -2619,7 +2619,7 @@
       "wpS9Title": "9. Prijzen",
       "wpS9AllTiersDesc": "Volledig CIFSO-5000-audit op 5 dimensies · Onafhankelijk certificeringsrapport · Officiële note · Inschrijving in het gecertificeerde Aegryn-register · Geldigheid certificaat zoals per formaat vermeld",
       "wpS10Title": "10. Disclaimer",
-      "wpFooterAddress": "Aegryn SA · Saint-Sulpice, Zwitserland",
+      "wpFooterAddress": "Aegryn Sàrl · Saint-Sulpice, Zwitserland",
       "isoColDimension": "Dimensie",
       "isoColExisting": "Bestaande standaarden",
       "isoColCifso": "CIFSO 5000 Certificering",
@@ -5552,7 +5552,7 @@
     "sectionDpn": "(01)",
     "h1": "Kennisgeving gegevensbescherming, Aegryn neediu",
     "disclaimer": "Disclaimer: deze kennisgeving gegevensbescherming is een door AI gegenereerde vertaling die uitsluitend ter informatie wordt verstrekt. In geval van discrepanties of inconsistenties prevaleert de Engelse versie.",
-    "updated": "Laatst bijgewerkt: 04/11/2026",
+    "updated": "Laatst bijgewerkt: 24/11/2026",
     "dpn": {
       "intro": {
         "h": "Inleiding",
@@ -5835,6 +5835,8 @@
       "s8Price": "De prijzen van de Diensten worden vrij bepaald door de Dienstverleners. De Klant betaalt alleen de Diensten die hij uitdrukkelijk heeft goedgekeurd; de totale prijs, inclusief alle belastingen en kosten, wordt in de app getoond voordat de bestelling wordt bevestigd. De indicatieve prijs die bij de bestelling wordt getoond, is slechts een indicatie.",
       "s8CommTitle": "Commissie van het Platform.",
       "s8Comm": "neediu ontvangt een commissie op elke met succes voltooide dienst; het voor de Dienstverlener geldende percentage wordt in de app meegedeeld.",
+      "s8ReviseTitle": "Herziening van de tarieven.",
+      "s8Revise": "neediu behoudt zich het recht voor om op elk moment het commissietarief van elk niveau en de opdrachtdrempels die ze bepalen te wijzigen. Elke wijziging wordt in de app meegedeeld en geldt alleen voor opdrachten die na de inwerkingtreding worden aanvaard, boven het aantal opdrachten dat de Dienstverlener op die datum al heeft behaald; reeds aanvaarde, uitgevoerde of betaalde opdrachten blijven onderworpen aan het tarief dat bij hun aanvaarding gold.",
       "s8CancelTitle": "Annulering door de Dienstverlener.",
       "s8Cancel": "Wanneer een Dienstverlener een reeds betaalde opdracht annuleert, wordt de Klant volledig terugbetaald. Als de Dienstverlener annuleert nadat hij is vertrokken (onderweg of aangekomen) of op dezelfde dag als een geplande, reeds betaalde opdracht, wordt een boete in verhouding tot de prijs van de opdracht op zijn volgende betaling ingehouden. Een lopende opdracht kan niet meer worden geannuleerd.",
       "s8MethodsTitle": "Geaccepteerde betaalmiddelen.",

@@ -2619,7 +2619,7 @@
       "wpS9Title": "9. Prezzi",
       "wpS9AllTiersDesc": "Audit CIFSO 5000 completo su 5 dimensioni · Rapporto di certificazione indipendente · Voto ufficiale · Iscrizione al registro certificato Aegryn · Validità del certificato secondo il formato",
       "wpS10Title": "10. Avvertenza",
-      "wpFooterAddress": "Aegryn SA · Saint-Sulpice, Svizzera",
+      "wpFooterAddress": "Aegryn Sàrl · Saint-Sulpice, Svizzera",
       "isoColDimension": "Dimensione",
       "isoColExisting": "Standard esistenti",
       "isoColCifso": "Certificazione CIFSO 5000",
@@ -5545,7 +5545,7 @@
     "sectionDpn": "(01)",
     "h1": "Informativa sulla Protezione dei Dati, Aegryn neediu",
     "disclaimer": "Disclaimer: La presente informativa sulla protezione dei dati è una traduzione generata dall'intelligenza artificiale, fornita a scopo puramente informativo. In caso di divergenze o incongruenze, prevarrà la versione inglese.",
-    "updated": "Ultimo aggiornamento: 04/11/2026",
+    "updated": "Ultimo aggiornamento: 24/11/2026",
     "dpn": {
       "intro": {
         "h": "Introduzione",
@@ -5828,6 +5828,8 @@
       "s8Price": "I prezzi dei Servizi sono fissati liberamente dai Fornitori. Il Cliente paga solo i Servizi che ha espressamente approvato; il prezzo totale, comprensivo di tutte le imposte e spese, è mostrato nell'app prima della conferma dell'ordine. Il prezzo indicativo mostrato al momento dell'ordine è solo un'indicazione.",
       "s8CommTitle": "Commissione della Piattaforma.",
       "s8Comm": "neediu percepisce una commissione su ogni servizio completato con successo; l'aliquota applicabile al Fornitore è comunicata nell'app.",
+      "s8ReviseTitle": "Revisione delle aliquote.",
+      "s8Revise": "neediu si riserva il diritto di modificare in qualsiasi momento l'aliquota di commissione di ciascun livello e le soglie di missioni che li determinano. Ogni modifica è comunicata nell'app e si applica solo alle missioni accettate dopo la sua entrata in vigore, oltre il numero di missioni già acquisite dal Fornitore a tale data; le missioni già accettate, svolte o pagate restano soggette all'aliquota applicabile al momento della loro accettazione.",
       "s8CancelTitle": "Annullamento da parte del Fornitore.",
       "s8Cancel": "Quando un Fornitore annulla una missione già pagata, il Cliente è rimborsato integralmente. Se il Fornitore annulla dopo la partenza (in viaggio o arrivato) o lo stesso giorno di una missione programmata già pagata, una penale proporzionata al prezzo della missione è detratta dal suo prossimo pagamento. Una missione in corso non può più essere annullata.",
       "s8MethodsTitle": "Metodi di pagamento accettati.",

@@ -2258,7 +2258,7 @@
       "wpS9Title": "9. Tarifs",
       "wpS9AllTiersDesc": "Audit CIFSO 5000 complet sur 5 dimensions · Rapport de certification indépendant · Note officielle · Inscription au registre certifié Aegryn · Validité du certificat selon le format",
       "wpS10Title": "10. Avertissement",
-      "wpFooterAddress": "Aegryn SA · Saint-Sulpice, Suisse",
+      "wpFooterAddress": "Aegryn Sàrl · Saint-Sulpice, Suisse",
       "isoColDimension": "Dimension",
       "isoColExisting": "Standards existants",
       "isoColCifso": "Certification CIFSO 5000",
@@ -5512,7 +5512,7 @@
     "sectionDpn": "(01)",
     "h1": "Notice de Protection des Données, Aegryn neediu",
     "disclaimer": "Exclusion de responsabilité : Cette notice de protection des données est une traduction réalisée par intelligence artificielle fournie à titre informatif uniquement. En cas de divergences ou d'incohérences, la version anglaise prévaudra.",
-    "updated": "Dernière mise à jour : 04/11/2026",
+    "updated": "Dernière mise à jour : 24/11/2026",
     "dpn": {
       "intro": {
         "h": "Introduction",
@@ -5795,6 +5795,8 @@
       "s8Price": "Les prix des Services sont fixés librement par les Prestataires. Le Client ne paie que les Services qu'il a expressément approuvés ; le prix total, toutes taxes et frais inclus, est affiché dans l'application avant la confirmation de la commande. Le prix indicatif affiché lors de la commande n'est qu'une indication.",
       "s8CommTitle": "Commission de la Plateforme.",
       "s8Comm": "neediu perçoit une commission sur chaque service accompli avec succès, dont le taux applicable au Prestataire est communiqué dans l'application.",
+      "s8ReviseTitle": "Révision des taux.",
+      "s8Revise": "neediu se réserve le droit de modifier à tout moment le taux de commission de chaque niveau et les seuils de missions qui les déterminent. Toute modification est communiquée dans l'application et ne s'applique qu'aux missions acceptées après son entrée en vigueur, au-delà du nombre de missions déjà acquises par le Prestataire à cette date ; les missions déjà acceptées, réalisées ou payées restent soumises au taux applicable au moment de leur acceptation.",
       "s8CancelTitle": "Annulation par le Prestataire.",
       "s8Cancel": "Lorsqu'un Prestataire annule une mission déjà payée, le Client est remboursé intégralement. Si le Prestataire annule après son départ (en route ou arrivé) ou le jour même d'une mission planifiée déjà payée, une pénalité proportionnée au prix de la mission est déduite de son prochain paiement. Une mission en cours ne peut plus être annulée.",
       "s8MethodsTitle": "Moyens de paiement acceptés.",

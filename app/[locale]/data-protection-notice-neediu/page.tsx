@@ -220,6 +220,7 @@ export default async function NeediuLegalPage({ params }: Props) {
           <p>{t('cgu.s8')}</p>
           <p><strong>{t('cgu.s8PriceTitle')}</strong> {t('cgu.s8Price')}</p>
           <p><strong>{t('cgu.s8CommTitle')}</strong> {t('cgu.s8Comm')}</p>
+          <p><strong>{t('cgu.s8ReviseTitle')}</strong> {t('cgu.s8Revise')}</p>
           <p><strong>{t('cgu.s8TierTitle')}</strong> {t('cgu.s8Tier')}</p>
           <p><strong>{t('cgu.s8CancelTitle')}</strong> {t('cgu.s8Cancel')}</p>
           <p>{t('cgu.s8Payout')}</p>

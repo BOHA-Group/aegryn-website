@@ -5,7 +5,7 @@
 const BOUTIQUE = 'Rare by selection. Discreet by principle.'
 
 const EDITORIAL: [string, string][] = [
-  ['Aegryn SA', 'Aegryn (BOHA-Group Sàrl)'],
+  ['Aegryn SA', 'Aegryn Sàrl'],
   ['We frame, deliver, accompany, select and stay informed.',
     'We frame, deliver, accompany, select and stay informed. Through La Boutique, we also take on a limited number of signature projects.'],
   ['Built to last. In that spirit',
